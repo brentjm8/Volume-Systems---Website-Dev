@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { NetworkBackground } from "./NetworkBackground";
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 pb-32 px-6 md:px-8">
-      <div className="max-w-[1200px] mx-auto w-full">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-32 px-6 md:px-8 overflow-hidden">
+      <NetworkBackground />
+      <div className="relative max-w-[1200px] mx-auto w-full">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight text-text-primary mb-6">
             We build AI-powered products and systems that create leverage.
