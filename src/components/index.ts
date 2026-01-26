@@ -1,0 +1,6 @@
+export { Nav } from "./Nav";
+export { Hero } from "./Hero";
+export { WhatWeBuild } from "./WhatWeBuild";
+export { HowWeWork } from "./HowWeWork";
+export { CTA } from "./CTA";
+export { Footer } from "./Footer";
