@@ -29,6 +29,7 @@
 - [x] Accessibility audit (95% Lighthouse, WCAG AA)
 - [x] Vercel deployment (production live, GitHub auto-deploy enabled)
 - [x] NetworkBackground animation (Hero + CTA sections)
+- [x] CustomCursor component (chevron cursor with smooth follow)
 
 ---
 
@@ -65,6 +66,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added CustomCursor component | Premium chevron cursor with smooth follow, disabled on touch/reduced-motion | Jan 26, 2025 |
 | Added NetworkBackground animation | Premium visual texture for Hero/CTA sections | Jan 26, 2025 |
 | Updated Hero subline copy | Better positioning: "Proprietary AI tools and high-impact business systems" | Jan 26, 2025 |
 | Updated Business Systems card copy | Added "Revenue engines, lead funnels, and scalable processes" | Jan 26, 2025 |
@@ -129,7 +131,7 @@
 ## Session Log
 
 ### Session 2 (continued) — January 26, 2025
-**Focus:** Visual enhancements and copy refinements
+**Focus:** Visual enhancements, copy refinements, custom cursor
 
 **Completed:**
 - NetworkBackground component: Canvas-based animated network with nodes and connections
@@ -141,9 +143,18 @@
   - Applied to Hero and CTA sections
 - Copy update: Hero subline changed to "Proprietary AI tools and high-impact business systems—designed for operators who want speed, clarity, and durable advantage."
 - Copy update: Business Systems card added "Revenue engines, lead funnels, and scalable processes"
+- CustomCursor component: Premium chevron cursor
+  - Inverted V shape (∧) with tip at click point
+  - Size: 18×14px default, 22×16px on hover
+  - White (#EDEDED) with subtle drop-shadow glow
+  - 2px stroke, rounded caps/joins
+  - Smooth lerp-based follow (0.15 factor)
+  - Single ghost trail with blur effect
+  - Disabled on touch devices and reduced-motion
+  - Added to root layout for global coverage
 - All changes auto-deployed via Vercel
 
-**Stopped Because:** Enhancements complete, awaiting next instructions
+**Stopped Because:** Custom cursor complete, awaiting next instructions
 **Resume Point:** Content pages or further refinements
 
 ### Session 2 — January 26, 2025
@@ -199,7 +210,8 @@
 │       ├── HowWeWork.tsx
 │       ├── CTA.tsx
 │       ├── Footer.tsx
-│       ├── NetworkBackground.tsx  # NEW: Animated network canvas
+│       ├── NetworkBackground.tsx  # Animated network canvas
+│       ├── CustomCursor.tsx       # Chevron cursor with smooth follow
 │       └── index.ts
 ├── .vercel/                  # Vercel project config
 ├── CLAUDE.md
@@ -224,6 +236,7 @@ V1 is COMPLETE and LIVE at https://volume-systems.vercel.app
 - Lighthouse: 97/95/100/100
 - GitHub auto-deploy enabled
 - NetworkBackground animation added to Hero/CTA
+- CustomCursor: chevron with smooth follow (desktop only)
 - Copy refined for Hero subline and Business Systems card
 
 Ready for: Content pages (Studio, Systems, Work, Contact) or further refinements
