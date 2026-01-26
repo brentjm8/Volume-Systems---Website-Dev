@@ -18,8 +18,8 @@ export function Hero() {
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
             className="text-lg md:text-xl text-text-secondary max-w-xl mb-10"
           >
-            An applied AI studio for teams who want to ship faster, operate
-            leaner, and compound their advantages.
+            Proprietary AI tools and high-impact business systems—designed for
+            operators who want speed, clarity, and durable advantage.
           </motion.p>
 
           <motion.div
