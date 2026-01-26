@@ -5,3 +5,4 @@ export { HowWeWork } from "./HowWeWork";
 export { CTA } from "./CTA";
 export { Footer } from "./Footer";
 export { NetworkBackground } from "./NetworkBackground";
+export { CustomCursor } from "./CustomCursor";
