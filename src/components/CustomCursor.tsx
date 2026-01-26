@@ -9,13 +9,10 @@ interface CursorPosition {
 
 export function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
-  const trailRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const trailRef = useRef<HTMLDivElement>(null);
   const position = useRef<CursorPosition>({ x: 0, y: 0 });
   const targetPosition = useRef<CursorPosition>({ x: 0, y: 0 });
-  const trailPositions = useRef<CursorPosition[]>([
-    { x: 0, y: 0 },
-    { x: 0, y: 0 },
-  ]);
+  const trailPosition = useRef<CursorPosition>({ x: 0, y: 0 });
   const animationRef = useRef<number>(0);
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -64,27 +61,16 @@ export function CustomCursor() {
       position.current.x = lerp(position.current.x, targetPosition.current.x, 0.15);
       position.current.y = lerp(position.current.y, targetPosition.current.y, 0.15);
 
-      // Update trail positions with cascading delay
-      trailPositions.current[0].x = lerp(
-        trailPositions.current[0].x,
+      // Trail follows main cursor with more lag
+      trailPosition.current.x = lerp(
+        trailPosition.current.x,
         position.current.x,
-        0.1
+        0.08
       );
-      trailPositions.current[0].y = lerp(
-        trailPositions.current[0].y,
+      trailPosition.current.y = lerp(
+        trailPosition.current.y,
         position.current.y,
-        0.1
-      );
-
-      trailPositions.current[1].x = lerp(
-        trailPositions.current[1].x,
-        trailPositions.current[0].x,
-        0.1
-      );
-      trailPositions.current[1].y = lerp(
-        trailPositions.current[1].y,
-        trailPositions.current[0].y,
-        0.1
+        0.08
       );
 
       // Apply transforms (GPU-accelerated)
@@ -92,11 +78,9 @@ export function CustomCursor() {
         cursorRef.current.style.transform = `translate3d(${position.current.x}px, ${position.current.y}px, 0)`;
       }
 
-      trailRefs.current.forEach((ref, i) => {
-        if (ref) {
-          ref.style.transform = `translate3d(${trailPositions.current[i].x}px, ${trailPositions.current[i].y}px, 0)`;
-        }
-      });
+      if (trailRef.current) {
+        trailRef.current.style.transform = `translate3d(${trailPosition.current.x}px, ${trailPosition.current.y}px, 0)`;
+      }
 
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -195,34 +179,44 @@ export function CustomCursor() {
 
   if (!isEnabled) return null;
 
+  // Chevron dimensions
+  const baseWidth = isHovering ? 22 : 18;
+  const baseHeight = isHovering ? 16 : 14;
+  const strokeWidth = 2;
+
   return (
     <>
-      {/* Trail dots */}
-      {[0, 1].map((i) => (
-        <div
-          key={i}
-          ref={(el) => {
-            trailRefs.current[i] = el;
-          }}
-          className="fixed top-0 left-0 pointer-events-none z-[9999] will-change-transform"
+      {/* Trail chevron (ghost) */}
+      <div
+        ref={trailRef}
+        className="fixed top-0 left-0 pointer-events-none z-[9998] will-change-transform"
+        style={{
+          opacity: isVisible ? 0.25 : 0,
+          transition: "opacity 0.15s ease-out",
+        }}
+      >
+        <svg
+          width={baseWidth}
+          height={baseHeight}
+          viewBox={`0 0 ${baseWidth} ${baseHeight}`}
+          fill="none"
           style={{
-            opacity: isVisible ? (i === 0 ? 0.4 : 0.2) : 0,
-            transition: "opacity 0.15s ease-out",
+            marginLeft: -baseWidth / 2,
+            marginTop: 0,
+            filter: "blur(1px)",
           }}
         >
-          <div
-            className="rounded-full bg-accent"
-            style={{
-              width: i === 0 ? "6px" : "4px",
-              height: i === 0 ? "6px" : "4px",
-              marginLeft: i === 0 ? "-3px" : "-2px",
-              marginTop: i === 0 ? "-3px" : "-2px",
-            }}
+          <path
+            d={`M ${strokeWidth / 2} ${baseHeight - strokeWidth / 2} L ${baseWidth / 2} ${strokeWidth / 2} L ${baseWidth - strokeWidth / 2} ${baseHeight - strokeWidth / 2}`}
+            stroke="#EDEDED"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
-        </div>
-      ))}
+        </svg>
+      </div>
 
-      {/* Main cursor dot */}
+      {/* Main cursor chevron - tip of V is at cursor position */}
       <div
         ref={cursorRef}
         className="fixed top-0 left-0 pointer-events-none z-[9999] will-change-transform"
@@ -231,16 +225,28 @@ export function CustomCursor() {
           transition: "opacity 0.15s ease-out",
         }}
       >
-        <div
-          className="rounded-full bg-accent transition-all duration-150 ease-out"
+        <svg
+          width={baseWidth}
+          height={baseHeight}
+          viewBox={`0 0 ${baseWidth} ${baseHeight}`}
+          fill="none"
+          className="transition-all duration-150 ease-out"
           style={{
-            width: isHovering ? "14px" : "10px",
-            height: isHovering ? "14px" : "10px",
-            marginLeft: isHovering ? "-7px" : "-5px",
-            marginTop: isHovering ? "-7px" : "-5px",
-            boxShadow: "0 0 10px rgba(91, 138, 154, 0.5), 0 0 20px rgba(91, 138, 154, 0.2)",
+            marginLeft: -baseWidth / 2,
+            marginTop: 0,
+            filter: isHovering
+              ? "drop-shadow(0 0 6px rgba(237, 237, 237, 0.6))"
+              : "drop-shadow(0 0 4px rgba(237, 237, 237, 0.3))",
           }}
-        />
+        >
+          <path
+            d={`M ${strokeWidth / 2} ${baseHeight - strokeWidth / 2} L ${baseWidth / 2} ${strokeWidth / 2} L ${baseWidth - strokeWidth / 2} ${baseHeight - strokeWidth / 2}`}
+            stroke="#EDEDED"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </div>
     </>
   );
