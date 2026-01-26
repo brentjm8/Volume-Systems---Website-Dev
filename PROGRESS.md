@@ -3,12 +3,14 @@
 ## Project: Volume Systems Website
 **Last Updated:** January 26, 2025
 **Session:** 2
-**Overall Progress:** 85%
-**Status:** V1 Homepage Complete — Ready for Review
+**V1 Progress:** 100% Complete
+**Status:** V1 Live in Production
+
+**Production URL:** https://volume-systems.vercel.app
 
 ---
 
-## What's Been Built
+## What's Been Built (V1 Scope)
 
 - [x] Project scaffolding (Next.js 16 with TypeScript, Tailwind, ESLint)
 - [x] Tailwind config with design tokens (via CSS variables in globals.css)
@@ -25,26 +27,36 @@
 - [x] SEO setup (meta, OG, Twitter cards)
 - [x] Performance optimization (97% Lighthouse)
 - [x] Accessibility audit (95% Lighthouse, WCAG AA)
-- [ ] Vercel deployment config
-- [ ] Content pages (Studio, Systems, Work, Contact — currently placeholders)
+- [x] Vercel deployment (production live, GitHub auto-deploy enabled)
+
+---
+
+## V2 Scope (Not Started)
+
+- [ ] Content: Studio page copy and design
+- [ ] Content: Systems page copy and design
+- [ ] Content: Work page (case studies)
+- [ ] Contact page form or Calendly embed
+- [ ] Custom domain configuration
+- [ ] Analytics integration
 
 ---
 
 ## Lighthouse Scores (Production Build)
 
-| Category | Score |
-|----------|-------|
-| Performance | 97 |
-| Accessibility | 95 |
-| Best Practices | 100 |
-| SEO | 100 |
+| Category | Score | Target | Status |
+|----------|-------|--------|--------|
+| Performance | 97 | 95+ | PASS |
+| Accessibility | 95 | 95+ | PASS |
+| Best Practices | 100 | 95+ | PASS |
+| SEO | 100 | 95+ | PASS |
 
 ---
 
 ## Current Focus
 
-**Active Task:** V1 Complete — Awaiting deployment or content phase
-**Blocked By:** None
+**Active Task:** V1 Complete — Ready for V2 content phase
+**Blocked By:** Content decisions (page copy, case studies, contact method)
 
 ---
 
@@ -52,6 +64,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Deployed to Vercel with GitHub integration | Auto-deploy on push, zero-config hosting | Jan 26, 2025 |
 | Changed text-tertiary from #555555 to #787878 | WCAG AA contrast requirement (4.5:1 ratio) | Jan 26, 2025 |
 | H1 in Hero has no initial animation | Prevents LCP delay from Framer Motion opacity:0 | Jan 26, 2025 |
 | Section labels are H2 elements | Proper heading hierarchy for accessibility | Jan 26, 2025 |
@@ -79,29 +92,32 @@
 
 ---
 
-## Open Questions
+## Open Questions (for V2)
 
-1. Calendly link URL for contact page? (Or placeholder for now)
+1. Calendly link URL for contact page? (Or custom form?)
 2. Any specific SEO keywords to target?
 3. Social media links for footer?
-4. Content for Studio, Systems, Work pages?
+4. Content/copy for Studio, Systems, Work pages?
+5. Case studies to feature on Work page?
+6. Custom domain to configure?
 
 ---
 
-## Next Steps (Priority Order)
+## Next Steps (V2 Priority Order)
 
-1. Deploy to Vercel for preview
-2. Content: Studio page copy and design
-3. Content: Systems page copy and design
-4. Content: Work page (case studies or coming soon)
-5. Contact page form or Calendly embed
+1. Gather content for Studio page
+2. Gather content for Systems page
+3. Design and build Work page with case studies
+4. Implement Contact page (form or Calendly)
+5. Configure custom domain
+6. Add analytics (Vercel Analytics or Plausible)
 
 ---
 
 ## Session Log
 
 ### Session 2 — January 26, 2025
-**Focus:** Complete V1 homepage implementation
+**Focus:** Complete V1 homepage implementation and deploy
 **Completed:**
 - Full project scaffold with Next.js 16, Tailwind v4, Framer Motion
 - All homepage sections: Nav, Hero, WhatWeBuild, HowWeWork, CTA, Footer
@@ -110,6 +126,8 @@
 - Full accessibility fixes (contrast, heading order, touch targets)
 - Performance optimization (LCP, static generation)
 - Lighthouse audit: 97/95/100/100
+- GitHub repo integration and push
+- Vercel production deployment with auto-deploy
 
 **Issues Fixed:**
 - text-tertiary contrast: #555555 → #787878 for 4.5:1 ratio
@@ -117,8 +135,13 @@
 - Hero LCP: Removed initial opacity:0 from H1
 - Touch targets: Added py-3 padding for 44px minimum
 
-**Stopped Because:** V1 complete, pushed to GitHub
-**Resume Point:** Deploy to Vercel, then begin content pages
+**Deployment:**
+- Production URL: https://volume-systems.vercel.app
+- GitHub connected: Auto-deploys on push to main
+- Build time: 26s
+
+**Stopped Because:** V1 scope 100% complete
+**Resume Point:** Begin V2 content phase — gather copy for Studio/Systems/Work pages
 
 ### Session 1 — January 2025
 **Focus:** Project initialization
@@ -151,6 +174,7 @@
 │       ├── CTA.tsx
 │       ├── Footer.tsx
 │       └── index.ts
+├── .vercel/                  # Vercel project config
 ├── CLAUDE.md
 ├── TEAM.md
 ├── PROGRESS.md
@@ -168,9 +192,12 @@
 Resuming Volume Systems website build.
 Read CLAUDE.md for project rules.
 Check PROGRESS.md for current state.
-Review TEAM.md for persona team.
-V1 homepage is complete (97/95/100/100 Lighthouse).
-Next: Deploy to Vercel, then content pages.
+
+V1 is COMPLETE and LIVE at https://volume-systems.vercel.app
+- Lighthouse: 97/95/100/100
+- GitHub auto-deploy enabled
+
+Ready for V2: Content pages (Studio, Systems, Work, Contact)
 ```
 
 ---
