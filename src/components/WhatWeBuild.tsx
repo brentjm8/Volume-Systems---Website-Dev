@@ -11,7 +11,7 @@ const cards = [
   {
     title: "Business Systems",
     description:
-      "End-to-end operational systems that connect data, automate workflows, and surface insights. Built to scale with your organization.",
+      "End-to-end operational systems that connect data, automate workflows, and surface insights. Revenue engines, lead funnels, and scalable processes—built to grow with your organization.",
   },
   {
     title: "Digital Infrastructure",
