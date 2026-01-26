@@ -2,9 +2,9 @@
 
 ## Project: Volume Systems Website
 **Last Updated:** January 26, 2025
-**Session:** 2
-**V1 Progress:** 100% Complete
-**Status:** V1 Live in Production
+**Session:** 2 (continued)
+**V1 Progress:** 100% Complete + Enhancements
+**Status:** V1 Live in Production with Visual Refinements
 
 **Production URL:** https://volume-systems.vercel.app
 
@@ -28,6 +28,7 @@
 - [x] Performance optimization (97% Lighthouse)
 - [x] Accessibility audit (95% Lighthouse, WCAG AA)
 - [x] Vercel deployment (production live, GitHub auto-deploy enabled)
+- [x] NetworkBackground animation (Hero + CTA sections)
 
 ---
 
@@ -55,7 +56,7 @@
 
 ## Current Focus
 
-**Active Task:** V1 Complete — Ready for V2 content phase
+**Active Task:** V1 Complete with enhancements — Ready for content pages or further refinements
 **Blocked By:** Content decisions (page copy, case studies, contact method)
 
 ---
@@ -64,14 +65,27 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added NetworkBackground animation | Premium visual texture for Hero/CTA sections | Jan 26, 2025 |
+| Updated Hero subline copy | Better positioning: "Proprietary AI tools and high-impact business systems" | Jan 26, 2025 |
+| Updated Business Systems card copy | Added "Revenue engines, lead funnels, and scalable processes" | Jan 26, 2025 |
 | Deployed to Vercel with GitHub integration | Auto-deploy on push, zero-config hosting | Jan 26, 2025 |
 | Changed text-tertiary from #555555 to #787878 | WCAG AA contrast requirement (4.5:1 ratio) | Jan 26, 2025 |
 | H1 in Hero has no initial animation | Prevents LCP delay from Framer Motion opacity:0 | Jan 26, 2025 |
 | Section labels are H2 elements | Proper heading hierarchy for accessibility | Jan 26, 2025 |
 | 44px min touch targets on nav links | WCAG 2.2 target size requirement | Jan 26, 2025 |
-| Using Inter instead of GT America | Avoid licensing fees, revisit later | Jan 2025 |
-| Framer Motion for animations | Best-in-class React animation library | Jan 2025 |
-| App Router (not Pages) | Modern Next.js, better server components | Jan 2025 |
+
+---
+
+## Current Copy (Homepage)
+
+**Hero Headline:**
+> "We build AI-powered products and systems that create leverage."
+
+**Hero Subline:**
+> "Proprietary AI tools and high-impact business systems—designed for operators who want speed, clarity, and durable advantage."
+
+**Business Systems Card:**
+> "End-to-end operational systems that connect data, automate workflows, and surface insights. Revenue engines, lead funnels, and scalable processes—built to grow with your organization."
 
 ---
 
@@ -103,18 +117,34 @@
 
 ---
 
-## Next Steps (V2 Priority Order)
+## Next Steps (Priority Order)
 
-1. Gather content for Studio page
-2. Gather content for Systems page
-3. Design and build Work page with case studies
-4. Implement Contact page (form or Calendly)
-5. Configure custom domain
-6. Add analytics (Vercel Analytics or Plausible)
+1. Content pages (Studio, Systems, Work, Contact)
+2. Configure custom domain
+3. Add analytics (Vercel Analytics or Plausible)
+4. Further visual refinements if needed
 
 ---
 
 ## Session Log
+
+### Session 2 (continued) — January 26, 2025
+**Focus:** Visual enhancements and copy refinements
+
+**Completed:**
+- NetworkBackground component: Canvas-based animated network with nodes and connections
+  - Accent color (#5B8A9A) at 15-20% opacity
+  - Responsive: 20 nodes mobile / 35 tablet / 50 desktop
+  - 3px node radius, 1.5px line width
+  - Distance-based line opacity (max 15%)
+  - Respects prefers-reduced-motion
+  - Applied to Hero and CTA sections
+- Copy update: Hero subline changed to "Proprietary AI tools and high-impact business systems—designed for operators who want speed, clarity, and durable advantage."
+- Copy update: Business Systems card added "Revenue engines, lead funnels, and scalable processes"
+- All changes auto-deployed via Vercel
+
+**Stopped Because:** Enhancements complete, awaiting next instructions
+**Resume Point:** Content pages or further refinements
 
 ### Session 2 — January 26, 2025
 **Focus:** Complete V1 homepage implementation and deploy
@@ -138,10 +168,6 @@
 **Deployment:**
 - Production URL: https://volume-systems.vercel.app
 - GitHub connected: Auto-deploys on push to main
-- Build time: 26s
-
-**Stopped Because:** V1 scope 100% complete
-**Resume Point:** Begin V2 content phase — gather copy for Studio/Systems/Work pages
 
 ### Session 1 — January 2025
 **Focus:** Project initialization
@@ -173,6 +199,7 @@
 │       ├── HowWeWork.tsx
 │       ├── CTA.tsx
 │       ├── Footer.tsx
+│       ├── NetworkBackground.tsx  # NEW: Animated network canvas
 │       └── index.ts
 ├── .vercel/                  # Vercel project config
 ├── CLAUDE.md
@@ -196,8 +223,10 @@ Check PROGRESS.md for current state.
 V1 is COMPLETE and LIVE at https://volume-systems.vercel.app
 - Lighthouse: 97/95/100/100
 - GitHub auto-deploy enabled
+- NetworkBackground animation added to Hero/CTA
+- Copy refined for Hero subline and Business Systems card
 
-Ready for V2: Content pages (Studio, Systems, Work, Contact)
+Ready for: Content pages (Studio, Systems, Work, Contact) or further refinements
 ```
 
 ---
