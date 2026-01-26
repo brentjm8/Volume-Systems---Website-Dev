@@ -9,7 +9,7 @@ export function Hero() {
       <div className="max-w-[1200px] mx-auto w-full">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight text-text-primary mb-6">
-            We build AI-powered products and business systems that create leverage.
+            We build AI-powered products and systems that create leverage.
           </h1>
 
           <motion.p
