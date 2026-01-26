@@ -22,11 +22,11 @@ export function NetworkBackground({ className = "" }: NetworkBackgroundProps) {
   const prefersReducedMotion = useRef(false);
 
   const getNodeCount = useCallback(() => {
-    if (typeof window === "undefined") return 30;
+    if (typeof window === "undefined") return 40;
     const width = window.innerWidth;
-    if (width < 640) return 15; // Mobile
-    if (width < 1024) return 25; // Tablet
-    return 40; // Desktop
+    if (width < 640) return 20; // Mobile
+    if (width < 1024) return 35; // Tablet
+    return 50; // Desktop
   }, []);
 
   const initNodes = useCallback(
@@ -57,11 +57,11 @@ export function NetworkBackground({ className = "" }: NetworkBackgroundProps) {
       ctx.clearRect(0, 0, width, height);
 
       const nodes = nodesRef.current;
-      const maxDistance = Math.min(width, height) * 0.25;
+      const maxDistance = Math.min(width, height) * 0.3; // Increased connection range
       const accentColor = "91, 138, 154"; // #5B8A9A in RGB
 
       // Draw connections first (behind nodes)
-      ctx.lineWidth = 1;
+      ctx.lineWidth = 1.5;
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
@@ -69,7 +69,7 @@ export function NetworkBackground({ className = "" }: NetworkBackgroundProps) {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < maxDistance) {
-            const opacity = (1 - distance / maxDistance) * 0.08;
+            const opacity = (1 - distance / maxDistance) * 0.15;
             ctx.strokeStyle = `rgba(${accentColor}, ${opacity})`;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
@@ -81,9 +81,9 @@ export function NetworkBackground({ className = "" }: NetworkBackgroundProps) {
 
       // Draw nodes
       for (const node of nodes) {
-        ctx.fillStyle = `rgba(${accentColor}, 0.15)`;
+        ctx.fillStyle = `rgba(${accentColor}, 0.20)`;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
         ctx.fill();
       }
     },
@@ -92,7 +92,7 @@ export function NetworkBackground({ className = "" }: NetworkBackgroundProps) {
 
   const updateNodes = useCallback((width: number, height: number) => {
     const nodes = nodesRef.current;
-    const wanderRadius = 50;
+    const wanderRadius = 60;
 
     for (const node of nodes) {
       // Gentle floating movement
@@ -186,7 +186,7 @@ export function NetworkBackground({ className = "" }: NetworkBackgroundProps) {
   return (
     <canvas
       ref={canvasRef}
-      className={`absolute inset-0 pointer-events-none ${className}`}
+      className={`absolute inset-0 w-full h-full pointer-events-none ${className}`}
       aria-hidden="true"
     />
   );
