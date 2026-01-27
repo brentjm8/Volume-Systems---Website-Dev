@@ -42,8 +42,8 @@ export function NetworkBackground({ className = "" }: NetworkBackgroundProps) {
           y,
           baseX: x,
           baseY: y,
-          vx: (Math.random() - 0.5) * 0.3,
-          vy: (Math.random() - 0.5) * 0.3,
+          vx: (Math.random() - 0.5) * 0.345,
+          vy: (Math.random() - 0.5) * 0.345,
         });
       }
 
@@ -110,8 +110,8 @@ export function NetworkBackground({ className = "" }: NetworkBackgroundProps) {
       }
 
       // Add slight randomness to velocity
-      node.vx += (Math.random() - 0.5) * 0.02;
-      node.vy += (Math.random() - 0.5) * 0.02;
+      node.vx += (Math.random() - 0.5) * 0.023;
+      node.vy += (Math.random() - 0.5) * 0.023;
 
       // Dampen velocity
       node.vx *= 0.99;
