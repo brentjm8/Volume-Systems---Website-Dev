@@ -9,10 +9,8 @@ interface CursorPosition {
 
 export function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
-  const trailRef = useRef<HTMLDivElement>(null);
   const position = useRef<CursorPosition>({ x: 0, y: 0 });
   const targetPosition = useRef<CursorPosition>({ x: 0, y: 0 });
-  const trailPosition = useRef<CursorPosition>({ x: 0, y: 0 });
   const animationRef = useRef<number>(0);
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -61,25 +59,9 @@ export function CustomCursor() {
       position.current.x = lerp(position.current.x, targetPosition.current.x, 0.15);
       position.current.y = lerp(position.current.y, targetPosition.current.y, 0.15);
 
-      // Trail follows main cursor with more lag
-      trailPosition.current.x = lerp(
-        trailPosition.current.x,
-        position.current.x,
-        0.08
-      );
-      trailPosition.current.y = lerp(
-        trailPosition.current.y,
-        position.current.y,
-        0.08
-      );
-
-      // Apply transforms (GPU-accelerated)
+      // Apply transform (GPU-accelerated)
       if (cursorRef.current) {
         cursorRef.current.style.transform = `translate3d(${position.current.x}px, ${position.current.y}px, 0)`;
-      }
-
-      if (trailRef.current) {
-        trailRef.current.style.transform = `translate3d(${trailPosition.current.x}px, ${trailPosition.current.y}px, 0)`;
       }
 
       animationRef.current = requestAnimationFrame(animate);
@@ -179,75 +161,45 @@ export function CustomCursor() {
 
   if (!isEnabled) return null;
 
-  // Chevron dimensions
-  const baseWidth = isHovering ? 22 : 18;
+  // Chevron dimensions - narrower and sharper
+  const baseWidth = isHovering ? 14 : 11;
   const baseHeight = isHovering ? 16 : 14;
   const strokeWidth = 2;
+  const rotation = -18; // Rotate left to point toward top-left like traditional cursor
 
   return (
-    <>
-      {/* Trail chevron (ghost) */}
-      <div
-        ref={trailRef}
-        className="fixed top-0 left-0 pointer-events-none z-[9998] will-change-transform"
+    <div
+      ref={cursorRef}
+      className="fixed top-0 left-0 pointer-events-none z-[9999] will-change-transform"
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transition: "opacity 0.15s ease-out",
+      }}
+    >
+      <svg
+        width={baseWidth}
+        height={baseHeight}
+        viewBox={`0 0 ${baseWidth} ${baseHeight}`}
+        fill="none"
+        className="transition-all duration-150 ease-out"
         style={{
-          opacity: isVisible ? 0.25 : 0,
-          transition: "opacity 0.15s ease-out",
+          transformOrigin: `${baseWidth / 2}px ${strokeWidth / 2}px`,
+          transform: `rotate(${rotation}deg)`,
+          marginLeft: -baseWidth / 2,
+          marginTop: 0,
+          filter: isHovering
+            ? "drop-shadow(0 0 6px rgba(237, 237, 237, 0.6))"
+            : "drop-shadow(0 0 4px rgba(237, 237, 237, 0.3))",
         }}
       >
-        <svg
-          width={baseWidth}
-          height={baseHeight}
-          viewBox={`0 0 ${baseWidth} ${baseHeight}`}
-          fill="none"
-          style={{
-            marginLeft: -baseWidth / 2,
-            marginTop: 0,
-            filter: "blur(1px)",
-          }}
-        >
-          <path
-            d={`M ${strokeWidth / 2} ${baseHeight - strokeWidth / 2} L ${baseWidth / 2} ${strokeWidth / 2} L ${baseWidth - strokeWidth / 2} ${baseHeight - strokeWidth / 2}`}
-            stroke="#EDEDED"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </div>
-
-      {/* Main cursor chevron - tip of V is at cursor position */}
-      <div
-        ref={cursorRef}
-        className="fixed top-0 left-0 pointer-events-none z-[9999] will-change-transform"
-        style={{
-          opacity: isVisible ? 1 : 0,
-          transition: "opacity 0.15s ease-out",
-        }}
-      >
-        <svg
-          width={baseWidth}
-          height={baseHeight}
-          viewBox={`0 0 ${baseWidth} ${baseHeight}`}
-          fill="none"
-          className="transition-all duration-150 ease-out"
-          style={{
-            marginLeft: -baseWidth / 2,
-            marginTop: 0,
-            filter: isHovering
-              ? "drop-shadow(0 0 6px rgba(237, 237, 237, 0.6))"
-              : "drop-shadow(0 0 4px rgba(237, 237, 237, 0.3))",
-          }}
-        >
-          <path
-            d={`M ${strokeWidth / 2} ${baseHeight - strokeWidth / 2} L ${baseWidth / 2} ${strokeWidth / 2} L ${baseWidth - strokeWidth / 2} ${baseHeight - strokeWidth / 2}`}
-            stroke="#EDEDED"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </div>
-    </>
+        <path
+          d={`M ${strokeWidth / 2} ${baseHeight - strokeWidth / 2} L ${baseWidth / 2} ${strokeWidth / 2} L ${baseWidth - strokeWidth / 2} ${baseHeight - strokeWidth / 2}`}
+          stroke="#EDEDED"
+          strokeWidth={strokeWidth}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </div>
   );
 }
