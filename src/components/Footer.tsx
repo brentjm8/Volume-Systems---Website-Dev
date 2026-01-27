@@ -28,6 +28,12 @@ export function Footer() {
               Systems
             </Link>
             <Link
+              href="/digital"
+              className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 flex items-center py-3 px-4"
+            >
+              Digital
+            </Link>
+            <Link
               href="/work"
               className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 flex items-center py-3 px-4"
             >
