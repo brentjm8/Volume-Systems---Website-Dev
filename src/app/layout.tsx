@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { DialRingsBackground } from "@/components";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -61,6 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="antialiased">
+        <DialRingsBackground />
         <div className="noise-overlay" aria-hidden="true" />
         {children}
       </body>
