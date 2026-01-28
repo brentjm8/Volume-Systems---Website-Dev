@@ -2,9 +2,10 @@
 
 ## Project: Volume Systems Website
 **Last Updated:** January 28, 2025
-**Session:** 2 (continued)
-**V1 Progress:** 100% Complete + Enhancements
-**Status:** V1 Live in Production with Visual Refinements
+**Session:** 3 (continued)
+**V1 Progress:** 100% Complete
+**V2 Progress:** Content Pages In Progress
+**Status:** Systems + Digital pages live, Studio + Contact placeholders updated
 
 **Production URL:** https://volume-systems.vercel.app
 
@@ -22,7 +23,11 @@
 - [x] HowWeWork section (numbered list, scroll animations)
 - [x] CTA section
 - [x] Footer component (proper touch targets, nav links)
-- [x] Placeholder pages (Studio, Systems, Digital, Work, Contact)
+- [x] Systems page (full content: hero, 4 cards, 4-step process, who it's for, CTA)
+- [x] Digital page (full content: hero, 5 cards, why it matters, CTA)
+- [x] Studio page (placeholder with early access CTA)
+- [x] Contact page (placeholder with email link)
+- [x] Work page (placeholder)
 - [x] 404 page
 - [x] SEO setup (meta, OG, Twitter cards)
 - [x] Performance optimization (97% Lighthouse)
@@ -33,10 +38,11 @@
 
 ---
 
-## V2 Scope (Not Started)
+## V2 Scope (In Progress)
 
-- [ ] Content: Studio page copy and design
-- [ ] Content: Systems page copy and design
+- [x] Content: Systems page (full content live)
+- [x] Content: Digital page (full content live)
+- [ ] Content: Studio page (currently placeholder)
 - [ ] Content: Work page (case studies)
 - [ ] Contact page form or Calendly embed
 - [ ] Custom domain configuration
@@ -57,8 +63,8 @@
 
 ## Current Focus
 
-**Active Task:** V1 Complete with enhancements — Ready for content pages or further refinements
-**Blocked By:** Content decisions (page copy, case studies, contact method)
+**Active Task:** V2 content pages — Systems and Digital complete, Studio and Work remaining
+**Blocked By:** Studio product content, Work page case studies, contact form integration
 
 ---
 
@@ -66,6 +72,11 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Built full Systems page | 4 cards, 4-step process with channel numbers, who it's for section | Jan 28, 2025 |
+| Built full Digital page | 5 cards (SEO, GEO, Lead Gen, Marketing, Websites), why it matters section | Jan 28, 2025 |
+| Updated Studio placeholder | Minimal "coming soon" with early access CTA | Jan 28, 2025 |
+| Updated Contact placeholder | Email link (hello@volumesystems.io), form coming soon | Jan 28, 2025 |
+| Added Contact to Nav | All main pages now accessible from navigation | Jan 28, 2025 |
 | Simplified VUMeterDivider | Symmetric 5-label layout (-12, -6, 0, +6, +12) at 10/30/50/70/90% positions | Jan 28, 2025 |
 | Removed NetworkBackground | Simplified visual hierarchy — dial rings are now the only background element | Jan 28, 2025 |
 | Updated DialRingsBackground | Full circles from bottom-right, scroll-based per-ring opacity (outer rings brighten) | Jan 28, 2025 |
@@ -113,27 +124,57 @@
 
 ---
 
-## Open Questions (for V2)
+## Open Questions (Remaining)
 
 1. Calendly link URL for contact page? (Or custom form?)
-2. Any specific SEO keywords to target?
-3. Social media links for footer?
-4. Content/copy for Studio, Systems, Work pages?
-5. Case studies to feature on Work page?
-6. Custom domain to configure?
+2. Social media links for footer?
+3. Content/copy for Studio page (product details)?
+4. Case studies to feature on Work page?
+5. Custom domain to configure?
 
 ---
 
 ## Next Steps (Priority Order)
 
-1. Content pages (Studio, Systems, Work, Contact)
-2. Configure custom domain
-3. Add analytics (Vercel Analytics or Plausible)
-4. Further visual refinements if needed
+1. Studio page content (when product details available)
+2. Work page with case studies
+3. Contact form integration (Calendly or custom)
+4. Configure custom domain
+5. Add analytics (Vercel Analytics or Plausible)
 
 ---
 
 ## Session Log
+
+### Session 3 (continued) — January 28, 2025
+**Focus:** Content pages (Systems, Digital, Studio, Contact)
+
+**Completed:**
+- Systems page (/systems) — full content:
+  - Hero: "We design and deploy AI-powered systems inside real businesses."
+  - What We Build: 4 cards (Data Infrastructure, Custom AI Tools, Workflow Automations, Revenue Engines)
+  - How We Work: 4 items with channel numbers (Discovery, Architecture, Build & Deploy, Optimize)
+  - Who It's For: 3 statements
+  - CTA: "Ready to build a system?"
+  - VU meter dividers between sections
+- Digital page (/digital) — full content:
+  - Hero: "AI-powered growth. Visibility, traffic, and leads."
+  - Subline about search, AI discovery, lead engines, websites
+  - What We Build: 5 cards (SEO, GEO, Lead Generation, Digital Marketing, Websites)
+  - Why It Matters: 2 paragraphs about search fragmentation
+  - CTA: "Ready to grow?"
+- Studio page (/studio) — updated placeholder:
+  - "Proprietary AI products. Coming soon."
+  - Early access CTA
+- Contact page (/contact) — updated placeholder:
+  - "Start a Conversation" headline
+  - Email: hello@volumesystems.io
+  - Contact form coming soon note
+- Navigation: Added Contact link
+- All changes auto-deployed via Vercel
+
+**Stopped Because:** Content pages complete, awaiting further instructions
+**Resume Point:** Studio content, Work page case studies, or contact form integration
 
 ### Session 3 — January 28, 2025
 **Focus:** Visual refinements (backgrounds, dividers)
@@ -154,8 +195,8 @@
   - Removed -∞, -24, -3, +3 for cleaner appearance
 - All changes auto-deployed via Vercel
 
-**Stopped Because:** VU meter refinements complete, awaiting next instructions
-**Resume Point:** Content pages or further refinements
+**Stopped Because:** VU meter refinements complete, content pages next
+**Resume Point:** Content pages
 
 ### Session 2 (continued) — January 26, 2025
 **Focus:** Visual enhancements and copy refinements
@@ -229,11 +270,11 @@
 │   │   ├── globals.css      # Design tokens, base styles
 │   │   ├── icon.svg         # Favicon
 │   │   ├── not-found.tsx    # 404 page
-│   │   ├── studio/page.tsx  # Placeholder
-│   │   ├── systems/page.tsx # Placeholder
-│   │   ├── digital/page.tsx # SEO/digital marketing
+│   │   ├── studio/page.tsx  # Placeholder (coming soon)
+│   │   ├── systems/page.tsx # Full content page
+│   │   ├── digital/page.tsx # Full content page
 │   │   ├── work/page.tsx    # Placeholder
-│   │   └── contact/page.tsx # Placeholder
+│   │   └── contact/page.tsx # Placeholder (email link)
 │   └── components/
 │       ├── Nav.tsx
 │       ├── Hero.tsx
@@ -264,15 +305,22 @@ Resuming Volume Systems website build.
 Read CLAUDE.md for project rules.
 Check PROGRESS.md for current state.
 
-V1 is COMPLETE and LIVE at https://volume-systems.vercel.app
+LIVE at https://volume-systems.vercel.app
 - Lighthouse: 97/95/100/100
 - GitHub auto-deploy enabled
-- DialRingsBackground: concentric circles from bottom-right (scroll-based per-ring opacity)
-- VUMeterDivider: symmetric 5-label layout (-12, -6, 0, +6, +12)
-- Audio-inspired accents: VU meter dividers, channel numbers
-- NetworkBackground removed (dial rings are now the only background element)
 
-Ready for: Content pages or further refinements
+Content pages complete:
+- Systems: full page (4 cards, 4-step process, who it's for, CTA)
+- Digital: full page (5 cards, why it matters, CTA)
+- Studio: placeholder (coming soon)
+- Contact: placeholder (email link)
+
+Visual elements:
+- DialRingsBackground: concentric circles, scroll-based per-ring opacity
+- VUMeterDivider: symmetric 5-label layout (-12, -6, 0, +6, +12)
+- Audio-inspired accents throughout
+
+Ready for: Studio content, Work page case studies, contact form
 ```
 
 ---
