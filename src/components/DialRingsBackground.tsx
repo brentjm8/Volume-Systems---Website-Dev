@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export function DialRingsBackground() {
-  const [opacity, setOpacity] = useState(0.05);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   // Ring configuration: 10 evenly spaced rings
   const ringCount = 10;
@@ -13,9 +13,10 @@ export function DialRingsBackground() {
   // Generate ring radii
   const rings = Array.from({ length: ringCount }, (_, i) => ({
     radius: startRadius + i * ringSpacing,
+    index: i,
   }));
 
-  const largestRadius = rings[rings.length - 1].radius; // ~510px radius = ~1020px diameter
+  const largestRadius = rings[rings.length - 1].radius;
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -26,17 +27,14 @@ export function DialRingsBackground() {
     ).matches;
 
     if (prefersReducedMotion) {
-      setOpacity(0.08); // Static 8% opacity
+      setScrollProgress(0.5); // Static middle value
       return;
     }
 
     const handleScroll = () => {
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollProgress = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;
-
-      // Interpolate between 5% and 12% based on scroll
-      const newOpacity = 0.05 + scrollProgress * 0.07;
-      setOpacity(newOpacity);
+      const progress = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;
+      setScrollProgress(progress);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -44,6 +42,22 @@ export function DialRingsBackground() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Calculate opacity for each ring based on scroll and ring index
+  // Outer rings (higher index) get more opacity boost from scrolling
+  const getOpacity = (ringIndex: number) => {
+    const baseOpacity = 0.08;
+    const maxOpacity = 0.22;
+
+    // Normalized position (0 = innermost, 1 = outermost)
+    const ringPosition = ringIndex / (ringCount - 1);
+
+    // Outer rings get more of the scroll-based boost
+    // Inner rings stay closer to base, outer rings can reach max
+    const scrollBoost = scrollProgress * (maxOpacity - baseOpacity) * ringPosition;
+
+    return baseOpacity + scrollBoost;
+  };
 
   // SVG size needs to accommodate the largest ring from origin at bottom-right
   const svgSize = largestRadius * 2 + 100;
@@ -66,14 +80,14 @@ export function DialRingsBackground() {
         viewBox={`0 0 ${svgSize} ${svgSize}`}
       >
         <g transform={`translate(${svgSize / 2}, ${svgSize / 2})`}>
-          {rings.map((ring, i) => (
+          {rings.map((ring) => (
             <circle
-              key={i}
+              key={ring.index}
               cx={0}
               cy={0}
               r={ring.radius}
               fill="none"
-              stroke="rgba(255, 255, 255, 0.15)"
+              stroke={`rgba(255, 255, 255, ${getOpacity(ring.index)})`}
               strokeWidth={1}
             />
           ))}

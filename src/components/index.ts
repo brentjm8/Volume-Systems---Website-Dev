@@ -4,7 +4,6 @@ export { WhatWeBuild } from "./WhatWeBuild";
 export { HowWeWork } from "./HowWeWork";
 export { CTA } from "./CTA";
 export { Footer } from "./Footer";
-export { NetworkBackground } from "./NetworkBackground";
 export { VUMeterDivider } from "./VUMeterDivider";
 export { ChannelNumber } from "./ChannelNumber";
 export { DialRingsBackground } from "./DialRingsBackground";

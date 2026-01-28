@@ -2,12 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { NetworkBackground } from "./NetworkBackground";
 
 export function CTA() {
   return (
     <section className="relative py-32 md:py-40 px-6 md:px-8 bg-bg-subtle overflow-hidden">
-      <NetworkBackground />
       <div className="relative max-w-[1200px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
