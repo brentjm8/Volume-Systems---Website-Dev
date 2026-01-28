@@ -28,9 +28,8 @@
 - [x] Performance optimization (97% Lighthouse)
 - [x] Accessibility audit (95% Lighthouse, WCAG AA)
 - [x] Vercel deployment (production live, GitHub auto-deploy enabled)
-- [x] NetworkBackground animation (Hero + CTA sections)
 - [x] Audio-inspired accents (VUMeterDivider, ChannelNumber)
-- [x] DialRingsBackground (concentric arcs with scroll/cursor animation)
+- [x] DialRingsBackground (concentric circles from bottom-right, scroll-based per-ring opacity)
 
 ---
 
@@ -67,7 +66,8 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
-| Added DialRingsBackground | Concentric dial arcs in top-right, scroll + cursor reactive | Jan 28, 2025 |
+| Removed NetworkBackground | Simplified visual hierarchy — dial rings are now the only background element | Jan 28, 2025 |
+| Updated DialRingsBackground | Full circles from bottom-right, scroll-based per-ring opacity (outer rings brighten) | Jan 28, 2025 |
 | Added audio-inspired accents | VU meter dividers, channel numbers — subtle brand DNA | Jan 28, 2025 |
 | Added Digital page | SEO and digital marketing capabilities placeholder | Jan 26, 2025 |
 | Removed CustomCursor component | Reverted to default browser cursor | Jan 26, 2025 |
@@ -159,16 +159,17 @@
   - Simple 1px hr divider between WhatWeBuild and HowWeWork (--bg-subtle at 30%)
   - Placed: VU after Hero, hr after WhatWeBuild, VU before CTA
   - Design: Muted tertiary colors at 30-40% opacity, rewards close inspection
-- DialRingsBackground: Concentric dial rings in top-right corner
-  - 8 arc rings (180°) with varying spacing, tick marks on outer ring
-  - Scroll-based opacity: 1.5% at top → 6% at bottom
-  - Cursor proximity: +2.5% boost within 400px of origin (desktop only)
-  - Reduced motion fallback: static 3% opacity
-  - Touch fallback: scroll-only, no cursor interaction
+- DialRingsBackground: Concentric dial rings in bottom-right corner
+  - 10 full circles (not arcs), evenly spaced 50px apart
+  - Starting radius 60px, largest ~510px
+  - Scroll-based per-ring opacity: outer rings get brighter as user scrolls
+  - Base opacity 8%, max opacity 22% for outermost ring at full scroll
+  - Reduced motion fallback: static 50% scroll position
   - Added to root layout for global coverage
+- Removed NetworkBackground entirely (deleted file, removed from Hero/CTA)
 - All changes auto-deployed via Vercel
 
-**Stopped Because:** Dial rings complete, awaiting next instructions
+**Stopped Because:** Background refinements complete, awaiting next instructions
 **Resume Point:** Content pages or further refinements
 
 ### Session 2 — January 26, 2025
@@ -225,10 +226,9 @@
 │       ├── HowWeWork.tsx
 │       ├── CTA.tsx
 │       ├── Footer.tsx
-│       ├── NetworkBackground.tsx  # Animated network canvas
 │       ├── VUMeterDivider.tsx     # Audio-inspired section divider
 │       ├── ChannelNumber.tsx      # Mixer channel-style numbers
-│       ├── DialRingsBackground.tsx # Concentric dial arcs background
+│       ├── DialRingsBackground.tsx # Concentric circles background (scroll-reactive)
 │       └── index.ts
 ├── .vercel/                  # Vercel project config
 ├── CLAUDE.md
@@ -252,10 +252,10 @@ Check PROGRESS.md for current state.
 V1 is COMPLETE and LIVE at https://volume-systems.vercel.app
 - Lighthouse: 97/95/100/100
 - GitHub auto-deploy enabled
-- NetworkBackground animation added to Hero/CTA
-- DialRingsBackground: concentric dial arcs (scroll + cursor reactive)
+- DialRingsBackground: concentric circles from bottom-right (scroll-based per-ring opacity)
 - Audio-inspired accents: VU meter dividers, channel numbers
 - Digital page added (SEO/digital marketing)
+- NetworkBackground removed (dial rings are now the only background element)
 
 Ready for: Content pages or further refinements
 ```
