@@ -4,16 +4,17 @@ interface VUMeterDividerProps {
 
 export function VUMeterDivider({ className = "" }: VUMeterDividerProps) {
   // dB scale positions (normalized 0-1 across width)
-  // 0 at center, negatives left, positives right
+  // 0 at center, negatives left with progressive spacing (mimics logarithmic dB scale)
+  // Gaps decrease as values approach 0, matching real VU meter behavior
   const ticks = [
     { pos: 0, label: "-∞", height: 8 },
-    { pos: 0.12, label: "-24", height: 6 },
-    { pos: 0.24, label: "-12", height: 10 },
-    { pos: 0.36, label: "-6", height: 8 },
-    { pos: 0.44, label: "-3", height: 6 },
+    { pos: 0.14, label: "-24", height: 6 },
+    { pos: 0.27, label: "-12", height: 10 },
+    { pos: 0.37, label: "-6", height: 8 },
+    { pos: 0.45, label: "-3", height: 6 },
     { pos: 0.5, label: "0", height: 12 },
-    { pos: 0.7, label: "+3", height: 8 },
-    { pos: 1, label: "+6", height: 6 },
+    { pos: 0.68, label: "+3", height: 8 },
+    { pos: 0.88, label: "+6", height: 6 },
   ];
 
   return (
