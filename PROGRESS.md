@@ -76,6 +76,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Increased OG image text size | Wordmark 72px→80px, subline 24px→32px for better thumbnail readability | Jan 28, 2025 |
 | Created OG image | 1200x630 PNG with wordmark, subline, dial rings, noise overlay for social sharing | Jan 28, 2025 |
 | Added comprehensive SEO infrastructure | Unique meta per page, OG tags, sitemap.xml, robots.txt, JSON-LD schema, canonical URLs | Jan 28, 2025 |
 | Added mobile hamburger menu | Nav items were truncated on mobile; full-screen overlay with stagger animation | Jan 28, 2025 |
@@ -206,9 +207,10 @@
 - OG image (public/og-image.png):
   - 1200x630 PNG for social sharing
   - Background: #0A0A0A with subtle noise/grain overlay
-  - "VOLUME" wordmark centered with tight tracking
-  - Subline: "AI-Powered Products & Business Systems"
+  - "VOLUME" wordmark centered (80px, tight tracking)
+  - Subline: "AI-Powered Products & Business Systems" (32px)
   - Dial rings in bottom-right corner (~8% opacity)
+  - Text sized for thumbnail readability (~400px preview width)
   - Generated via scripts/generate-og-image.js (canvas library)
 - All changes auto-deployed via Vercel
 
