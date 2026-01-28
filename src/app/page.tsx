@@ -21,7 +21,7 @@ export default function Home() {
           />
         </div>
         <HowWeWork />
-        <VUMeterDivider showLabels={false} opacity={0.3} />
+        <VUMeterDivider />
         <CTA />
       </main>
       <Footer />
