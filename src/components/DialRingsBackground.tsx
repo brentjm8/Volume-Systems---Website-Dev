@@ -65,10 +65,7 @@ export function DialRingsBackground() {
         }}
         viewBox={`0 0 ${svgSize} ${svgSize}`}
       >
-        <g
-          transform={`translate(${svgSize / 2}, ${svgSize / 2})`}
-          style={{ opacity }}
-        >
+        <g transform={`translate(${svgSize / 2}, ${svgSize / 2})`}>
           {rings.map((ring, i) => (
             <circle
               key={i}
@@ -76,7 +73,7 @@ export function DialRingsBackground() {
               cy={0}
               r={ring.radius}
               fill="none"
-              stroke="#555555"
+              stroke="rgba(255, 255, 255, 0.15)"
               strokeWidth={1}
             />
           ))}
