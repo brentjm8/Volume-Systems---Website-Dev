@@ -29,6 +29,7 @@
 - [x] Accessibility audit (95% Lighthouse, WCAG AA)
 - [x] Vercel deployment (production live, GitHub auto-deploy enabled)
 - [x] NetworkBackground animation (Hero + CTA sections)
+- [x] Audio-inspired accents (VUMeterDivider, WaveformDivider, ChannelNumber)
 
 ---
 
@@ -65,6 +66,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added audio-inspired accents | VU meter dividers, waveform divider, channel numbers — subtle brand DNA | Jan 28, 2025 |
 | Added Digital page | SEO and digital marketing capabilities placeholder | Jan 26, 2025 |
 | Removed CustomCursor component | Reverted to default browser cursor | Jan 26, 2025 |
 | Added NetworkBackground animation | Premium visual texture for Hero/CTA sections | Jan 26, 2025 |
@@ -149,9 +151,15 @@
   - Added /digital/page.tsx with headline, subline, and CTA
   - Added Digital link to Nav (after Systems)
   - Added Digital link to Footer navigation
+- Audio-inspired visual accents (brand DNA):
+  - VUMeterDivider: Section divider with tick marks and dB labels (-∞ to +6)
+  - WaveformDivider: Subtle undulating SVG line between sections
+  - ChannelNumber: Mixer channel-style labels for How We Work (01, 02, 03)
+  - Placed: VU after Hero, Waveform after WhatWeBuild, VU before CTA
+  - Design: Muted tertiary colors at 30-40% opacity, rewards close inspection
 - All changes auto-deployed via Vercel
 
-**Stopped Because:** Digital page complete, awaiting next instructions
+**Stopped Because:** Audio accents complete, awaiting next instructions
 **Resume Point:** Content pages or further refinements
 
 ### Session 2 — January 26, 2025
@@ -209,6 +217,9 @@
 │       ├── CTA.tsx
 │       ├── Footer.tsx
 │       ├── NetworkBackground.tsx  # Animated network canvas
+│       ├── VUMeterDivider.tsx     # Audio-inspired section divider
+│       ├── WaveformDivider.tsx    # Undulating line divider
+│       ├── ChannelNumber.tsx      # Mixer channel-style numbers
 │       └── index.ts
 ├── .vercel/                  # Vercel project config
 ├── CLAUDE.md
@@ -233,8 +244,8 @@ V1 is COMPLETE and LIVE at https://volume-systems.vercel.app
 - Lighthouse: 97/95/100/100
 - GitHub auto-deploy enabled
 - NetworkBackground animation added to Hero/CTA
+- Audio-inspired accents: VU meter dividers, waveform divider, channel numbers
 - Digital page added (SEO/digital marketing)
-- Copy refined for Hero subline and Business Systems card
 
 Ready for: Content pages or further refinements
 ```
