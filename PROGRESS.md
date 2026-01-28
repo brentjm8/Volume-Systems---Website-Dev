@@ -29,7 +29,9 @@
 - [x] Contact page (placeholder with email link)
 - [x] Work page (placeholder)
 - [x] 404 page
-- [x] SEO setup (meta, OG, Twitter cards)
+- [x] SEO setup (unique meta per page, OG, Twitter cards, canonical URLs, JSON-LD)
+- [x] Sitemap.xml (auto-generated via sitemap.ts)
+- [x] Robots.txt (auto-generated via robots.ts)
 - [x] Performance optimization (97% Lighthouse)
 - [x] Accessibility audit (95% Lighthouse, WCAG AA)
 - [x] Vercel deployment (production live, GitHub auto-deploy enabled)
@@ -73,6 +75,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added comprehensive SEO infrastructure | Unique meta per page, OG tags, sitemap.xml, robots.txt, JSON-LD schema, canonical URLs | Jan 28, 2025 |
 | Added mobile hamburger menu | Nav items were truncated on mobile; full-screen overlay with stagger animation | Jan 28, 2025 |
 | Added VolumeMeter component | LED-style scroll indicator on left side, segments light up as user scrolls | Jan 28, 2025 |
 | Built full Systems page | 4 cards, 4-step process with channel numbers, who it's for section | Jan 28, 2025 |
@@ -129,11 +132,12 @@
 
 ## Open Questions (Remaining)
 
-1. Calendly link URL for contact page? (Or custom form?)
-2. Social media links for footer?
-3. Content/copy for Studio page (product details)?
-4. Case studies to feature on Work page?
-5. Custom domain to configure?
+1. Create og-image.png (1200x630px) for social sharing previews
+2. Calendly link URL for contact page? (Or custom form?)
+3. Social media links for footer?
+4. Content/copy for Studio page (product details)?
+5. Case studies to feature on Work page?
+6. Custom domain to configure (volumesystems.io)?
 
 ---
 
@@ -153,6 +157,16 @@
 **Focus:** Content pages and visual enhancements
 
 **Completed:**
+- Comprehensive SEO infrastructure:
+  - Unique title and meta description per page
+  - Open Graph tags (og:title, og:description, og:url, og:image) on all pages
+  - Twitter cards (summary_large_image) on all pages
+  - Canonical URLs on all pages
+  - sitemap.ts generates sitemap.xml automatically (5 pages with priorities)
+  - robots.ts generates robots.txt with sitemap reference
+  - JSON-LD Organization schema on homepage
+  - metadataBase set to volumesystems.io
+  - Refactored pages to server components + client content components
 - Mobile hamburger menu for navigation:
   - Desktop (768px+): horizontal nav links unchanged
   - Mobile: hamburger icon with full-screen overlay
@@ -283,15 +297,17 @@
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx       # Root layout, fonts, metadata
-│   │   ├── page.tsx         # Homepage
+│   │   ├── page.tsx         # Homepage with JSON-LD
+│   │   ├── sitemap.ts       # Auto-generates sitemap.xml
+│   │   ├── robots.ts        # Auto-generates robots.txt
 │   │   ├── globals.css      # Design tokens, base styles
 │   │   ├── icon.svg         # Favicon
 │   │   ├── not-found.tsx    # 404 page
-│   │   ├── studio/page.tsx  # Placeholder (coming soon)
-│   │   ├── systems/page.tsx # Full content page
-│   │   ├── digital/page.tsx # Full content page
+│   │   ├── studio/          # page.tsx + StudioContent.tsx
+│   │   ├── systems/         # page.tsx + SystemsContent.tsx
+│   │   ├── digital/         # page.tsx + DigitalContent.tsx
 │   │   ├── work/page.tsx    # Placeholder
-│   │   └── contact/page.tsx # Placeholder (email link)
+│   │   └── contact/         # page.tsx + ContactContent.tsx
 │   └── components/
 │       ├── Nav.tsx
 │       ├── Hero.tsx
@@ -333,13 +349,19 @@ Content pages complete:
 - Studio: placeholder (coming soon)
 - Contact: placeholder (email link)
 
+SEO infrastructure:
+- Unique meta per page, OG tags, Twitter cards, canonical URLs
+- sitemap.xml and robots.txt auto-generated
+- JSON-LD Organization schema on homepage
+- Need to create og-image.png (1200x630)
+
 Visual elements:
 - VolumeMeter: LED-style scroll indicator on left side
 - DialRingsBackground: concentric circles, scroll-based per-ring opacity
 - VUMeterDivider: symmetric 5-label layout (-12, -6, 0, +6, +12)
-- Audio-inspired accents throughout
+- Mobile hamburger menu with full-screen overlay
 
-Ready for: Studio content, Work page case studies, contact form
+Ready for: og-image.png, Studio content, Work page, contact form
 ```
 
 ---
