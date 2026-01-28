@@ -7,3 +7,4 @@ export { Footer } from "./Footer";
 export { VUMeterDivider } from "./VUMeterDivider";
 export { ChannelNumber } from "./ChannelNumber";
 export { DialRingsBackground } from "./DialRingsBackground";
+export { VolumeMeter } from "./VolumeMeter";
