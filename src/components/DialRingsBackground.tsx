@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 
 export function DialRingsBackground() {
-  const [opacity, setOpacity] = useState(0.015);
+  // TEMPORARY: High opacity for testing visibility (normally 0.015)
+  const [opacity, setOpacity] = useState(0.18);
   const [isEnabled, setIsEnabled] = useState(true);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const cursorBoostRef = useRef(0);
@@ -59,12 +60,12 @@ export function DialRingsBackground() {
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollProgress = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;
 
-      // Interpolate between 1.5% and 6% based on scroll
-      const baseOpacity = 0.015 + scrollProgress * 0.045;
+      // TEMPORARY: High opacity for testing (normally 0.015 + scrollProgress * 0.045)
+      const baseOpacity = 0.15 + scrollProgress * 0.05;
 
       // Add cursor boost
       const totalOpacity = baseOpacity + cursorBoostRef.current;
-      setOpacity(Math.min(totalOpacity, 0.1)); // Cap at 10%
+      setOpacity(Math.min(totalOpacity, 0.25)); // TEMPORARY: Cap at 25%
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -81,9 +82,10 @@ export function DialRingsBackground() {
     // Trigger scroll handler to update opacity
     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollProgress = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;
-    const baseOpacity = 0.015 + scrollProgress * 0.045;
+    // TEMPORARY: High opacity for testing (normally 0.015 + scrollProgress * 0.045)
+    const baseOpacity = 0.15 + scrollProgress * 0.05;
     const totalOpacity = baseOpacity + cursorBoostRef.current;
-    setOpacity(Math.min(totalOpacity, 0.1));
+    setOpacity(Math.min(totalOpacity, 0.25)); // TEMPORARY: Cap at 25%
 
     animationRef.current = requestAnimationFrame(updateCursorBoost);
   }, []);
