@@ -49,14 +49,14 @@ for (let i = 0; i < ringCount; i++) {
 
 // Draw "VOLUME" wordmark
 ctx.fillStyle = TEXT_PRIMARY;
-ctx.font = "500 72px Inter, -apple-system, BlinkMacSystemFont, sans-serif";
+ctx.font = "500 80px Inter, -apple-system, BlinkMacSystemFont, sans-serif";
 ctx.textAlign = "center";
 ctx.textBaseline = "middle";
 ctx.letterSpacing = "-0.02em";
 
 // Draw with tight tracking (manual letter spacing since canvas doesn't support letterSpacing well)
 const wordmark = "VOLUME";
-const letterSpacing = -2; // Tight tracking
+const letterSpacing = -3; // Tight tracking
 let totalWidth = 0;
 for (const char of wordmark) {
   totalWidth += ctx.measureText(char).width + letterSpacing;
@@ -64,7 +64,7 @@ for (const char of wordmark) {
 totalWidth -= letterSpacing; // Remove last spacing
 
 let x = (WIDTH - totalWidth) / 2;
-const y = HEIGHT / 2 - 20;
+const y = HEIGHT / 2 - 25; // Adjusted for better vertical centering with larger spacing
 
 for (let i = 0; i < wordmark.length; i++) {
   const char = wordmark[i];
@@ -74,9 +74,9 @@ for (let i = 0; i < wordmark.length; i++) {
 
 // Draw subline
 ctx.fillStyle = TEXT_SECONDARY;
-ctx.font = "400 24px Inter, -apple-system, BlinkMacSystemFont, sans-serif";
+ctx.font = "400 32px Inter, -apple-system, BlinkMacSystemFont, sans-serif";
 ctx.textAlign = "center";
-ctx.fillText("AI-Powered Products & Business Systems", WIDTH / 2, HEIGHT / 2 + 50);
+ctx.fillText("AI-Powered Products & Business Systems", WIDTH / 2, HEIGHT / 2 + 40);
 
 // Ensure public directory exists
 const publicDir = path.join(__dirname, "..", "public");
