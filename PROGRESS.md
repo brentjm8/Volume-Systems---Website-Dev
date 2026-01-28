@@ -1,7 +1,7 @@
 # PROGRESS.md
 
 ## Project: Volume Systems Website
-**Last Updated:** January 26, 2025
+**Last Updated:** January 28, 2025
 **Session:** 2 (continued)
 **V1 Progress:** 100% Complete + Enhancements
 **Status:** V1 Live in Production with Visual Refinements
@@ -66,6 +66,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Simplified VUMeterDivider | Symmetric 5-label layout (-12, -6, 0, +6, +12) at 10/30/50/70/90% positions | Jan 28, 2025 |
 | Removed NetworkBackground | Simplified visual hierarchy — dial rings are now the only background element | Jan 28, 2025 |
 | Updated DialRingsBackground | Full circles from bottom-right, scroll-based per-ring opacity (outer rings brighten) | Jan 28, 2025 |
 | Added audio-inspired accents | VU meter dividers, channel numbers — subtle brand DNA | Jan 28, 2025 |
@@ -134,6 +135,28 @@
 
 ## Session Log
 
+### Session 3 — January 28, 2025
+**Focus:** Visual refinements (backgrounds, dividers)
+
+**Completed:**
+- Removed NetworkBackground entirely (deleted file, removed from Hero/CTA)
+- DialRingsBackground: Concentric dial rings in bottom-right corner
+  - 10 full circles (not arcs), evenly spaced 50px apart
+  - Starting radius 60px, largest ~510px
+  - Scroll-based per-ring opacity: outer rings get brighter as user scrolls
+  - Base opacity 8%, max opacity 22% for outermost ring at full scroll
+  - Reduced motion fallback: static 50% scroll position
+  - Added to root layout for global coverage
+- VUMeterDivider simplified to symmetric 5-label layout:
+  - Labels: -12, -6, 0, +6, +12
+  - Positions: 10%, 30%, 50%, 70%, 90% (perfectly symmetric)
+  - Both dividers identical (after Hero, before CTA)
+  - Removed -∞, -24, -3, +3 for cleaner appearance
+- All changes auto-deployed via Vercel
+
+**Stopped Because:** VU meter refinements complete, awaiting next instructions
+**Resume Point:** Content pages or further refinements
+
 ### Session 2 (continued) — January 26, 2025
 **Focus:** Visual enhancements and copy refinements
 
@@ -154,19 +177,11 @@
   - Added Digital link to Nav (after Systems)
   - Added Digital link to Footer navigation
 - Audio-inspired visual accents (brand DNA):
-  - VUMeterDivider: Section divider with tick marks and dB labels (-∞ to +6)
+  - VUMeterDivider: Section divider with tick marks and dB labels
   - ChannelNumber: Mixer channel-style labels for How We Work (01, 02, 03)
   - Simple 1px hr divider between WhatWeBuild and HowWeWork (--bg-subtle at 30%)
   - Placed: VU after Hero, hr after WhatWeBuild, VU before CTA
   - Design: Muted tertiary colors at 30-40% opacity, rewards close inspection
-- DialRingsBackground: Concentric dial rings in bottom-right corner
-  - 10 full circles (not arcs), evenly spaced 50px apart
-  - Starting radius 60px, largest ~510px
-  - Scroll-based per-ring opacity: outer rings get brighter as user scrolls
-  - Base opacity 8%, max opacity 22% for outermost ring at full scroll
-  - Reduced motion fallback: static 50% scroll position
-  - Added to root layout for global coverage
-- Removed NetworkBackground entirely (deleted file, removed from Hero/CTA)
 - All changes auto-deployed via Vercel
 
 **Stopped Because:** Background refinements complete, awaiting next instructions
@@ -253,8 +268,8 @@ V1 is COMPLETE and LIVE at https://volume-systems.vercel.app
 - Lighthouse: 97/95/100/100
 - GitHub auto-deploy enabled
 - DialRingsBackground: concentric circles from bottom-right (scroll-based per-ring opacity)
+- VUMeterDivider: symmetric 5-label layout (-12, -6, 0, +6, +12)
 - Audio-inspired accents: VU meter dividers, channel numbers
-- Digital page added (SEO/digital marketing)
 - NetworkBackground removed (dial rings are now the only background element)
 
 Ready for: Content pages or further refinements
