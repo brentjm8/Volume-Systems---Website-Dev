@@ -30,6 +30,7 @@
 - [x] Vercel deployment (production live, GitHub auto-deploy enabled)
 - [x] NetworkBackground animation (Hero + CTA sections)
 - [x] Audio-inspired accents (VUMeterDivider, ChannelNumber)
+- [x] DialRingsBackground (concentric arcs with scroll/cursor animation)
 
 ---
 
@@ -66,6 +67,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added DialRingsBackground | Concentric dial arcs in top-right, scroll + cursor reactive | Jan 28, 2025 |
 | Added audio-inspired accents | VU meter dividers, channel numbers — subtle brand DNA | Jan 28, 2025 |
 | Added Digital page | SEO and digital marketing capabilities placeholder | Jan 26, 2025 |
 | Removed CustomCursor component | Reverted to default browser cursor | Jan 26, 2025 |
@@ -157,9 +159,16 @@
   - Simple 1px hr divider between WhatWeBuild and HowWeWork (--bg-subtle at 30%)
   - Placed: VU after Hero, hr after WhatWeBuild, VU before CTA
   - Design: Muted tertiary colors at 30-40% opacity, rewards close inspection
+- DialRingsBackground: Concentric dial rings in top-right corner
+  - 8 arc rings (180°) with varying spacing, tick marks on outer ring
+  - Scroll-based opacity: 1.5% at top → 6% at bottom
+  - Cursor proximity: +2.5% boost within 400px of origin (desktop only)
+  - Reduced motion fallback: static 3% opacity
+  - Touch fallback: scroll-only, no cursor interaction
+  - Added to root layout for global coverage
 - All changes auto-deployed via Vercel
 
-**Stopped Because:** Audio accents complete, awaiting next instructions
+**Stopped Because:** Dial rings complete, awaiting next instructions
 **Resume Point:** Content pages or further refinements
 
 ### Session 2 — January 26, 2025
@@ -219,6 +228,7 @@
 │       ├── NetworkBackground.tsx  # Animated network canvas
 │       ├── VUMeterDivider.tsx     # Audio-inspired section divider
 │       ├── ChannelNumber.tsx      # Mixer channel-style numbers
+│       ├── DialRingsBackground.tsx # Concentric dial arcs background
 │       └── index.ts
 ├── .vercel/                  # Vercel project config
 ├── CLAUDE.md
@@ -243,6 +253,7 @@ V1 is COMPLETE and LIVE at https://volume-systems.vercel.app
 - Lighthouse: 97/95/100/100
 - GitHub auto-deploy enabled
 - NetworkBackground animation added to Hero/CTA
+- DialRingsBackground: concentric dial arcs (scroll + cursor reactive)
 - Audio-inspired accents: VU meter dividers, channel numbers
 - Digital page added (SEO/digital marketing)
 
