@@ -30,6 +30,7 @@
 - [x] Work page (placeholder)
 - [x] 404 page
 - [x] SEO setup (unique meta per page, OG, Twitter cards, canonical URLs, JSON-LD)
+- [x] OG image (1200x630 PNG with wordmark, subline, dial rings)
 - [x] Sitemap.xml (auto-generated via sitemap.ts)
 - [x] Robots.txt (auto-generated via robots.ts)
 - [x] Performance optimization (97% Lighthouse)
@@ -75,6 +76,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Created OG image | 1200x630 PNG with wordmark, subline, dial rings, noise overlay for social sharing | Jan 28, 2025 |
 | Added comprehensive SEO infrastructure | Unique meta per page, OG tags, sitemap.xml, robots.txt, JSON-LD schema, canonical URLs | Jan 28, 2025 |
 | Added mobile hamburger menu | Nav items were truncated on mobile; full-screen overlay with stagger animation | Jan 28, 2025 |
 | Added VolumeMeter component | LED-style scroll indicator on left side, segments light up as user scrolls | Jan 28, 2025 |
@@ -132,12 +134,11 @@
 
 ## Open Questions (Remaining)
 
-1. Create og-image.png (1200x630px) for social sharing previews
-2. Calendly link URL for contact page? (Or custom form?)
-3. Social media links for footer?
-4. Content/copy for Studio page (product details)?
-5. Case studies to feature on Work page?
-6. Custom domain to configure (volumesystems.io)?
+1. Calendly link URL for contact page? (Or custom form?)
+2. Social media links for footer?
+3. Content/copy for Studio page (product details)?
+4. Case studies to feature on Work page?
+5. Custom domain to configure (volumesystems.io)?
 
 ---
 
@@ -202,10 +203,17 @@
   - Email: hello@volumesystems.io
   - Contact form coming soon note
 - Navigation: Added Contact link
+- OG image (public/og-image.png):
+  - 1200x630 PNG for social sharing
+  - Background: #0A0A0A with subtle noise/grain overlay
+  - "VOLUME" wordmark centered with tight tracking
+  - Subline: "AI-Powered Products & Business Systems"
+  - Dial rings in bottom-right corner (~8% opacity)
+  - Generated via scripts/generate-og-image.js (canvas library)
 - All changes auto-deployed via Vercel
 
-**Stopped Because:** Content pages complete, awaiting further instructions
-**Resume Point:** Studio content, Work page case studies, or contact form integration
+**Stopped Because:** Content pages and OG image complete, awaiting further instructions
+**Resume Point:** Studio content, Work page case studies, contact form integration, or custom domain
 
 ### Session 3 — January 28, 2025
 **Focus:** Visual refinements (backgrounds, dividers)
@@ -320,6 +328,10 @@
 │       ├── DialRingsBackground.tsx # Concentric circles background (scroll-reactive)
 │       ├── VolumeMeter.tsx        # LED-style scroll indicator (left side)
 │       └── index.ts
+├── public/
+│   └── og-image.png         # Social sharing image (1200x630)
+├── scripts/
+│   └── generate-og-image.js # Canvas script to generate OG image
 ├── .vercel/                  # Vercel project config
 ├── CLAUDE.md
 ├── TEAM.md
@@ -353,7 +365,7 @@ SEO infrastructure:
 - Unique meta per page, OG tags, Twitter cards, canonical URLs
 - sitemap.xml and robots.txt auto-generated
 - JSON-LD Organization schema on homepage
-- Need to create og-image.png (1200x630)
+- OG image: 1200x630 PNG with wordmark, subline, dial rings
 
 Visual elements:
 - VolumeMeter: LED-style scroll indicator on left side
@@ -361,7 +373,7 @@ Visual elements:
 - VUMeterDivider: symmetric 5-label layout (-12, -6, 0, +6, +12)
 - Mobile hamburger menu with full-screen overlay
 
-Ready for: og-image.png, Studio content, Work page, contact form
+Ready for: Studio content, Work page, contact form
 ```
 
 ---
