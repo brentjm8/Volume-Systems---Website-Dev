@@ -76,8 +76,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
-| Increased OG image text size | Wordmark 72px→80px, subline 24px→32px for better thumbnail readability | Jan 28, 2025 |
-| Created OG image | 1200x630 PNG with wordmark, subline, dial rings, noise overlay for social sharing | Jan 28, 2025 |
+| Switched OG image to SVG-based generation | Programmatic canvas approach had text sizing issues; static SVG with sharp conversion produces reliable 120px/36px text | Jan 28, 2025 |
 | Added comprehensive SEO infrastructure | Unique meta per page, OG tags, sitemap.xml, robots.txt, JSON-LD schema, canonical URLs | Jan 28, 2025 |
 | Added mobile hamburger menu | Nav items were truncated on mobile; full-screen overlay with stagger animation | Jan 28, 2025 |
 | Added VolumeMeter component | LED-style scroll indicator on left side, segments light up as user scrolls | Jan 28, 2025 |
@@ -206,12 +205,11 @@
 - Navigation: Added Contact link
 - OG image (public/og-image.png):
   - 1200x630 PNG for social sharing
-  - Background: #0A0A0A with subtle noise/grain overlay
-  - "VOLUME" wordmark centered (80px, tight tracking)
-  - Subline: "AI-Powered Products & Business Systems" (32px)
-  - Dial rings in bottom-right corner (~8% opacity)
-  - Text sized for thumbnail readability (~400px preview width)
-  - Generated via scripts/generate-og-image.js (canvas library)
+  - Background: #0A0A0A
+  - "VOLUME" wordmark centered (120px, semi-bold, letter-spacing)
+  - Subline: "AI-Powered Products & Business Systems" (36px)
+  - SVG source at public/og-image.svg, converted to PNG via sharp
+  - Clean, minimal design optimized for thumbnail readability
 - All changes auto-deployed via Vercel
 
 **Stopped Because:** Content pages and OG image complete, awaiting further instructions
@@ -331,9 +329,10 @@
 │       ├── VolumeMeter.tsx        # LED-style scroll indicator (left side)
 │       └── index.ts
 ├── public/
-│   └── og-image.png         # Social sharing image (1200x630)
+│   ├── og-image.png         # Social sharing image (1200x630)
+│   └── og-image.svg         # SVG source for OG image
 ├── scripts/
-│   └── generate-og-image.js # Canvas script to generate OG image
+│   └── generate-og-image.js # Legacy canvas script (SVG approach preferred)
 ├── .vercel/                  # Vercel project config
 ├── CLAUDE.md
 ├── TEAM.md
@@ -367,7 +366,7 @@ SEO infrastructure:
 - Unique meta per page, OG tags, Twitter cards, canonical URLs
 - sitemap.xml and robots.txt auto-generated
 - JSON-LD Organization schema on homepage
-- OG image: 1200x630 PNG with wordmark, subline, dial rings
+- OG image: 1200x630 PNG (SVG source, 120px/36px text)
 
 Visual elements:
 - VolumeMeter: LED-style scroll indicator on left side
