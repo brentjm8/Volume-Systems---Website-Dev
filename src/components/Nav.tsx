@@ -51,6 +51,12 @@ export function Nav() {
             >
               Digital
             </Link>
+            <Link
+              href="/contact"
+              className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 flex items-center justify-center py-3 px-4"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>
