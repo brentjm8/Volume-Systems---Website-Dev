@@ -44,7 +44,7 @@ export function VolumeMeter() {
 
   return (
     <div
-      className="fixed left-5 top-1/2 -translate-y-1/2 flex flex-col-reverse gap-[3px] pointer-events-none"
+      className="fixed left-0 md:left-5 top-1/2 -translate-y-1/2 flex flex-col-reverse gap-[3px] pointer-events-none"
       style={{
         zIndex: 1,
         height: `${totalHeight}px`,
