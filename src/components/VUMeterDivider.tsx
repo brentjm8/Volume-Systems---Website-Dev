@@ -3,17 +3,13 @@ interface VUMeterDividerProps {
 }
 
 export function VUMeterDivider({ className = "" }: VUMeterDividerProps) {
-  // dB scale positions (normalized 0-1 across width)
-  // Visually balanced spacing with slight compression around 0
+  // dB scale positions — symmetric layout across full width
   const ticks = [
-    { pos: 0.05, label: "-∞", height: 8 },
-    { pos: 0.20, label: "-24", height: 6 },
-    { pos: 0.35, label: "-12", height: 10 },
-    { pos: 0.45, label: "-6", height: 8 },
-    { pos: 0.48, label: "-3", height: 6 },
+    { pos: 0.10, label: "-12", height: 8 },
+    { pos: 0.30, label: "-6", height: 8 },
     { pos: 0.50, label: "0", height: 12 },
-    { pos: 0.52, label: "+3", height: 8 },
-    { pos: 0.65, label: "+6", height: 6 },
+    { pos: 0.70, label: "+6", height: 8 },
+    { pos: 0.90, label: "+12", height: 8 },
   ];
 
   return (
