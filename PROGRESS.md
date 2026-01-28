@@ -35,6 +35,7 @@
 - [x] Vercel deployment (production live, GitHub auto-deploy enabled)
 - [x] Audio-inspired accents (VUMeterDivider, ChannelNumber)
 - [x] DialRingsBackground (concentric circles from bottom-right, scroll-based per-ring opacity)
+- [x] VolumeMeter (LED-style scroll indicator on left side, segments light up as user scrolls)
 
 ---
 
@@ -72,6 +73,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added VolumeMeter component | LED-style scroll indicator on left side, segments light up as user scrolls | Jan 28, 2025 |
 | Built full Systems page | 4 cards, 4-step process with channel numbers, who it's for section | Jan 28, 2025 |
 | Built full Digital page | 5 cards (SEO, GEO, Lead Gen, Marketing, Websites), why it matters section | Jan 28, 2025 |
 | Updated Studio placeholder | Minimal "coming soon" with early access CTA | Jan 28, 2025 |
@@ -147,9 +149,16 @@
 ## Session Log
 
 ### Session 3 (continued) — January 28, 2025
-**Focus:** Content pages (Systems, Digital, Studio, Contact)
+**Focus:** Content pages and visual enhancements
 
 **Completed:**
+- VolumeMeter component — LED-style scroll indicator:
+  - 12 horizontal bar segments on left side of viewport
+  - Fixed position, flush on mobile, 20px inset on desktop
+  - Segments light up bottom-to-top as user scrolls
+  - Accent color with glow, brightness increases toward top
+  - 200ms transitions, reduced motion fallback
+  - Added to root layout (appears on all pages)
 - Systems page (/systems) — full content:
   - Hero: "We design and deploy AI-powered systems inside real businesses."
   - What We Build: 4 cards (Data Infrastructure, Custom AI Tools, Workflow Automations, Revenue Engines)
@@ -285,6 +294,7 @@
 │       ├── VUMeterDivider.tsx     # Audio-inspired section divider
 │       ├── ChannelNumber.tsx      # Mixer channel-style numbers
 │       ├── DialRingsBackground.tsx # Concentric circles background (scroll-reactive)
+│       ├── VolumeMeter.tsx        # LED-style scroll indicator (left side)
 │       └── index.ts
 ├── .vercel/                  # Vercel project config
 ├── CLAUDE.md
@@ -316,6 +326,7 @@ Content pages complete:
 - Contact: placeholder (email link)
 
 Visual elements:
+- VolumeMeter: LED-style scroll indicator on left side
 - DialRingsBackground: concentric circles, scroll-based per-ring opacity
 - VUMeterDivider: symmetric 5-label layout (-12, -6, 0, +6, +12)
 - Audio-inspired accents throughout
