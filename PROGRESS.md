@@ -17,7 +17,7 @@
 - [x] Tailwind config with design tokens (via CSS variables in globals.css)
 - [x] Base layout and globals.css
 - [x] NoiseOverlay (CSS-based, 2.5% opacity)
-- [x] Nav component (fixed, blur on scroll, 44px touch targets)
+- [x] Nav component (fixed, blur on scroll, 44px touch targets, mobile hamburger menu)
 - [x] Hero section (H1 visible immediately for LCP, animated subtext/CTAs)
 - [x] WhatWeBuild section (3-card grid, scroll animations)
 - [x] HowWeWork section (numbered list, scroll animations)
@@ -73,6 +73,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added mobile hamburger menu | Nav items were truncated on mobile; full-screen overlay with stagger animation | Jan 28, 2025 |
 | Added VolumeMeter component | LED-style scroll indicator on left side, segments light up as user scrolls | Jan 28, 2025 |
 | Built full Systems page | 4 cards, 4-step process with channel numbers, who it's for section | Jan 28, 2025 |
 | Built full Digital page | 5 cards (SEO, GEO, Lead Gen, Marketing, Websites), why it matters section | Jan 28, 2025 |
@@ -152,6 +153,13 @@
 **Focus:** Content pages and visual enhancements
 
 **Completed:**
+- Mobile hamburger menu for navigation:
+  - Desktop (768px+): horizontal nav links unchanged
+  - Mobile: hamburger icon with full-screen overlay
+  - Hamburger animates to X when open
+  - Links fade in with stagger animation
+  - Body scroll locked when menu open
+  - Proper accessibility (aria-label, aria-expanded)
 - VolumeMeter component — LED-style scroll indicator:
   - 12 horizontal bar segments on left side of viewport
   - Fixed position, flush on mobile, 20px inset on desktop
