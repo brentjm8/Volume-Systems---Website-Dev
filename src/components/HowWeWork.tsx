@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ChannelNumber } from "./ChannelNumber";
 
 const items = [
   {
@@ -51,9 +52,7 @@ export function HowWeWork() {
               }}
               className="grid md:grid-cols-[auto_1fr] gap-6 md:gap-12 items-start"
             >
-              <span className="font-mono text-sm text-text-tertiary">
-                {item.number}
-              </span>
+              <ChannelNumber number={parseInt(item.number)} />
               <div className="max-w-2xl">
                 <h3 className="text-2xl md:text-3xl font-medium text-text-primary mb-4">
                   {item.title}

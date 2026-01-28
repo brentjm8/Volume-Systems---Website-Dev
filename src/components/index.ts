@@ -5,3 +5,6 @@ export { HowWeWork } from "./HowWeWork";
 export { CTA } from "./CTA";
 export { Footer } from "./Footer";
 export { NetworkBackground } from "./NetworkBackground";
+export { VUMeterDivider } from "./VUMeterDivider";
+export { WaveformDivider } from "./WaveformDivider";
+export { ChannelNumber } from "./ChannelNumber";
