@@ -22,9 +22,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Volume Systems | Applied AI Studio",
+  metadataBase: new URL("https://volumesystems.io"),
+  title: {
+    default: "Volume Systems · AI-Powered Products and Business Systems",
+    template: "%s | Volume Systems",
+  },
   description:
-    "We build AI-powered products and systems that create leverage. An applied AI studio focused on product-first, system-level solutions.",
+    "We build AI-powered products and business systems that create leverage. Proprietary AI tools and high-impact systems for operators.",
   keywords: [
     "AI",
     "artificial intelligence",
@@ -32,25 +36,40 @@ export const metadata: Metadata = {
     "AI products",
     "business systems",
     "digital infrastructure",
+    "SEO",
+    "automation",
   ],
   authors: [{ name: "Volume Systems" }],
   openGraph: {
-    title: "Volume Systems | Applied AI Studio",
+    title: "Volume Systems · AI-Powered Products and Business Systems",
     description:
-      "We build AI-powered products and systems that create leverage.",
-    type: "website",
-    locale: "en_US",
+      "We build AI-powered products and business systems that create leverage. Proprietary AI tools and high-impact systems for operators.",
+    url: "https://volumesystems.io",
     siteName: "Volume Systems",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Volume Systems",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Volume Systems | Applied AI Studio",
+    title: "Volume Systems · AI-Powered Products and Business Systems",
     description:
-      "We build AI-powered products and systems that create leverage.",
+      "We build AI-powered products and business systems that create leverage. Proprietary AI tools and high-impact systems for operators.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
     follow: true,
+  },
+  alternates: {
+    canonical: "https://volumesystems.io",
   },
 };
 
