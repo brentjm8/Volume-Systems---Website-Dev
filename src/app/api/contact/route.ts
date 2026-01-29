@@ -3,6 +3,15 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
+    // Check if API key is configured
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY is not configured");
+      return NextResponse.json(
+        { error: "Email service not configured" },
+        { status: 500 }
+      );
+    }
+
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     const body = await request.json();
@@ -68,19 +77,32 @@ export async function POST(request: Request) {
       </div>
     `;
 
-    await resend.emails.send({
-      from: "Volume Systems <notifications@volumesystems.io>",
+    console.log("Sending email to hello@volumesystems.io...");
+
+    const { data, error } = await resend.emails.send({
+      from: "Volume Systems <hello@volumesystems.io>",
       to: "hello@volumesystems.io",
       replyTo: email,
       subject: `New inquiry from ${name}`,
       html: emailHtml,
     });
 
-    return NextResponse.json({ success: true });
+    if (error) {
+      console.error("Resend API error:", JSON.stringify(error, null, 2));
+      return NextResponse.json(
+        { error: error.message || "Failed to send email" },
+        { status: 500 }
+      );
+    }
+
+    console.log("Email sent successfully:", data);
+    return NextResponse.json({ success: true, id: data?.id });
   } catch (error) {
     console.error("Contact form error:", error);
+    const errorMessage =
+      error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
-      { error: "Failed to send message" },
+      { error: `Failed to send message: ${errorMessage}` },
       { status: 500 }
     );
   }
