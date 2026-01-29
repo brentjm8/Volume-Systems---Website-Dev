@@ -1,8 +1,8 @@
 # PROGRESS.md
 
 ## Project: Volume Systems Website
-**Last Updated:** January 28, 2025
-**Session:** 3 (continued)
+**Last Updated:** January 28, 2026
+**Session:** 4
 **V1 Progress:** 100% Complete
 **V2 Progress:** Content Pages In Progress
 **Status:** Contact form + About page live, Studio placeholder, Work placeholder
@@ -241,8 +241,44 @@
   - Created .env.example with RESEND_API_KEY placeholder
 - All changes auto-deployed via Vercel
 
-**Stopped Because:** Contact form and About page complete, awaiting RESEND_API_KEY
-**Resume Point:** Add Resend API key, then Studio content or Work page
+**Stopped Because:** Contact form UI complete, Resend API key issue pending
+**Resume Point:** Fix Resend API key in Vercel, then Studio content or Work page
+
+### Session 4 — January 28, 2026
+**Focus:** OG image fixes, Contact form, About page
+
+**Completed:**
+- OG image fixes:
+  - Attempted programmatic canvas generation (text too small)
+  - Switched to SVG-based approach with sharp conversion
+  - Final: 1200x630 PNG, 120px wordmark, 36px subline
+  - Clean, readable at thumbnail sizes (34KB)
+- Contact page (/contact) — full form:
+  - Hero: "Start a Conversation" / "Tell us what you're building."
+  - Form fields: Name, Email, Company (optional), Interests (checkbox group), Message
+  - Interest options: AI Products, Business Systems, Digital Growth, Lead Generation, Something else
+  - API route at /api/contact using Resend
+  - Success/error states with user feedback
+  - Email alternative section below form
+- About page (/about) — full content:
+  - Hero with studio description
+  - Philosophy section "WHAT WE BELIEVE" with channel numbers:
+    - 01 Leverage over volume
+    - 02 Systems over services
+    - 03 Outcomes over outputs
+  - CTA: "Want to work with us?" → "Start a Conversation →"
+- Navigation updates:
+  - Added About link (between Digital and Contact)
+  - Updated Nav, Footer, and sitemap
+- Resend integration:
+  - Installed resend package
+  - Created /api/contact route with error logging
+  - Created .env.example template
+  - Configured from: "Volume Systems <hello@volumesystems.io>"
+  - PENDING: Valid API key needs to be set in Vercel env vars
+
+**Blocked By:** Resend API key returning "invalid" — needs correct key in Vercel
+**Resume Point:** Fix API key, test form, then Studio or Work page content
 
 ### Session 3 — January 28, 2025
 **Focus:** Visual refinements (backgrounds, dividers)
