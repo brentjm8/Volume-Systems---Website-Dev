@@ -77,6 +77,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added brand assets page | /brand page with download links, asset previews, color palette; not in main nav (internal resource) | Jan 28, 2026 |
 | Created brand asset kit | Square logos (512/400/300), favicon with accent V, LinkedIn banner, Twitter header; SVG sources + PNG exports | Jan 28, 2026 |
 | Built Contact form with Resend | Functional form with name, email, company, interests (checkboxes), message; API route sends formatted email | Jan 28, 2025 |
 | Built About page | Hero, philosophy section with channel numbers (leverage/systems/outcomes), CTA to contact | Jan 28, 2025 |
@@ -284,6 +285,12 @@
   - LinkedIn banner: 1128x191 with wordmark, tagline, dial rings
   - Twitter header: 1500x500 with wordmark, tagline, dial rings
   - All SVG sources included for future edits
+- Brand assets page (/brand):
+  - Hero: "Brand Assets" / "Volume Systems brand resources."
+  - 6 asset cards with previews, dimensions, download buttons
+  - Color palette section with hex values
+  - Not in main navigation (internal resource)
+  - robots: noindex, nofollow
 
 **Blocked By:** Resend API key returning "invalid" — needs correct key in Vercel
 **Resume Point:** Fix API key, test form, then Studio or Work page content
@@ -387,6 +394,7 @@
 │   │   ├── api/
 │   │   │   └── contact/route.ts  # Resend email API
 │   │   ├── about/           # page.tsx + AboutContent.tsx
+│   │   ├── brand/           # page.tsx + BrandContent.tsx (internal)
 │   │   ├── studio/          # page.tsx + StudioContent.tsx
 │   │   ├── systems/         # page.tsx + SystemsContent.tsx
 │   │   ├── digital/         # page.tsx + DigitalContent.tsx
@@ -471,6 +479,7 @@ Brand assets (/public/brand/):
 - Favicon: V in accent color
 - LinkedIn banner: 1128x191
 - Twitter header: 1500x500
+- Download page: /brand (internal, not in nav)
 
 Ready for: RESEND_API_KEY, Studio content, Work page
 ```
