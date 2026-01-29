@@ -77,6 +77,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Created brand asset kit | Square logos (512/400/300), favicon with accent V, LinkedIn banner, Twitter header; SVG sources + PNG exports | Jan 28, 2026 |
 | Built Contact form with Resend | Functional form with name, email, company, interests (checkboxes), message; API route sends formatted email | Jan 28, 2025 |
 | Built About page | Hero, philosophy section with channel numbers (leverage/systems/outcomes), CTA to contact | Jan 28, 2025 |
 | Added About to navigation | Nav order: Studio, Systems, Digital, About, Contact | Jan 28, 2025 |
@@ -276,6 +277,13 @@
   - Created .env.example template
   - Configured from: "Volume Systems <hello@volumesystems.io>"
   - PENDING: Valid API key needs to be set in Vercel env vars
+- Brand asset kit (/public/brand/):
+  - Square logos: logo-512.png, logo-400.png, logo-300.png
+  - Favicon: favicon-512.png with bold "V" in accent color (#5B8A9A)
+  - Updated site favicon (src/app/icon.svg)
+  - LinkedIn banner: 1128x191 with wordmark, tagline, dial rings
+  - Twitter header: 1500x500 with wordmark, tagline, dial rings
+  - All SVG sources included for future edits
 
 **Blocked By:** Resend API key returning "invalid" — needs correct key in Vercel
 **Resume Point:** Fix API key, test form, then Studio or Work page content
@@ -398,7 +406,15 @@
 │       └── index.ts
 ├── public/
 │   ├── og-image.png         # Social sharing image (1200x630)
-│   └── og-image.svg         # SVG source for OG image
+│   ├── og-image.svg         # SVG source for OG image
+│   ├── favicon.svg          # Site favicon (V in accent color)
+│   └── brand/               # Brand asset kit
+│       ├── logo-512.png     # Square logo (512x512)
+│       ├── logo-400.png     # Square logo (400x400)
+│       ├── logo-300.png     # Square logo (300x300)
+│       ├── favicon-512.png  # Favicon at 512x512
+│       ├── linkedin-banner.png  # LinkedIn banner (1128x191)
+│       └── twitter-header.png   # Twitter header (1500x500)
 ├── scripts/
 │   └── generate-og-image.js # Legacy canvas script (SVG approach preferred)
 ├── .env.example              # Environment variable template
@@ -449,6 +465,12 @@ Visual elements:
 - DialRingsBackground: concentric circles, scroll-based per-ring opacity
 - VUMeterDivider: symmetric 5-label layout (-12, -6, 0, +6, +12)
 - Mobile hamburger menu with full-screen overlay
+
+Brand assets (/public/brand/):
+- Square logos: 512, 400, 300px
+- Favicon: V in accent color
+- LinkedIn banner: 1128x191
+- Twitter header: 1500x500
 
 Ready for: RESEND_API_KEY, Studio content, Work page
 ```
