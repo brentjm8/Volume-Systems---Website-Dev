@@ -1,8 +1,8 @@
 <svg width="1128" height="191" viewBox="0 0 1128 191" xmlns="http://www.w3.org/2000/svg">
   <rect width="1128" height="191" fill="#0A0A0A"/>
 
-  <!-- Volume Meter - left edge, 10 segments -->
-  <g transform="translate(-2, 20)">
+  <!-- Volume Meter - left side with padding, 10 segments -->
+  <g transform="translate(25, 20)">
     <!-- Dim segments (top 3) -->
     <rect x="0" y="0" width="20" height="12" rx="1" fill="rgba(255,255,255,0.1)"/>
     <rect x="0" y="16" width="20" height="12" rx="1" fill="rgba(255,255,255,0.1)"/>
@@ -17,8 +17,8 @@
     <rect x="0" y="144" width="20" height="12" rx="1" fill="#5B8A9A" opacity="1"/>
   </g>
 
-  <!-- Dial rings on bottom-right -->
-  <g opacity="0.1" stroke="#EDEDED" stroke-width="1" fill="none">
+  <!-- Dial rings on bottom-right - more visible -->
+  <g opacity="0.38" stroke="#EDEDED" stroke-width="2" fill="none">
     <circle cx="1080" cy="191" r="50"/>
     <circle cx="1080" cy="191" r="85"/>
     <circle cx="1080" cy="191" r="120"/>
