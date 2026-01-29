@@ -77,6 +77,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Updated LinkedIn banner | Volume meter on left, tagline right-aligned, dial rings; no wordmark (logo overlap zone) | Jan 28, 2026 |
 | Added brand assets page | /brand page with download links, asset previews, color palette; not in main nav (internal resource) | Jan 28, 2026 |
 | Created brand asset kit | Square logos (512/400/300), favicon with accent V, LinkedIn banner, Twitter header; SVG sources + PNG exports | Jan 28, 2026 |
 | Built Contact form with Resend | Functional form with name, email, company, interests (checkboxes), message; API route sends formatted email | Jan 28, 2025 |
@@ -291,6 +292,11 @@
   - Color palette section with hex values
   - Not in main navigation (internal resource)
   - robots: noindex, nofollow
+- Updated LinkedIn banner:
+  - Volume meter on left edge (10 segments, ~70% lit)
+  - Tagline right-aligned, no wordmark
+  - Dial rings in bottom-right (10% opacity)
+  - Empty left-center for logo overlap zone
 
 **Blocked By:** Resend API key returning "invalid" — needs correct key in Vercel
 **Resume Point:** Fix API key, test form, then Studio or Work page content
