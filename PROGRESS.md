@@ -5,7 +5,7 @@
 **Session:** 3 (continued)
 **V1 Progress:** 100% Complete
 **V2 Progress:** Content Pages In Progress
-**Status:** Systems + Digital pages live, Studio + Contact placeholders updated
+**Status:** Contact form + About page live, Studio placeholder, Work placeholder
 
 **Production URL:** https://volume-systems.vercel.app
 
@@ -46,9 +46,10 @@
 
 - [x] Content: Systems page (full content live)
 - [x] Content: Digital page (full content live)
+- [x] Content: About page (full content live)
+- [x] Contact page form (Resend email integration)
 - [ ] Content: Studio page (currently placeholder)
 - [ ] Content: Work page (case studies)
-- [ ] Contact page form or Calendly embed
 - [ ] Custom domain configuration
 - [ ] Analytics integration
 
@@ -67,8 +68,8 @@
 
 ## Current Focus
 
-**Active Task:** V2 content pages — Systems and Digital complete, Studio and Work remaining
-**Blocked By:** Studio product content, Work page case studies, contact form integration
+**Active Task:** V2 content pages — Systems, Digital, About, Contact complete; Studio and Work remaining
+**Blocked By:** Studio product content, Work page case studies, RESEND_API_KEY env var for contact form
 
 ---
 
@@ -76,6 +77,9 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Built Contact form with Resend | Functional form with name, email, company, interests (checkboxes), message; API route sends formatted email | Jan 28, 2025 |
+| Built About page | Hero, philosophy section with channel numbers (leverage/systems/outcomes), CTA to contact | Jan 28, 2025 |
+| Added About to navigation | Nav order: Studio, Systems, Digital, About, Contact | Jan 28, 2025 |
 | Switched OG image to SVG-based generation | Programmatic canvas approach had text sizing issues; static SVG with sharp conversion produces reliable 120px/36px text | Jan 28, 2025 |
 | Added comprehensive SEO infrastructure | Unique meta per page, OG tags, sitemap.xml, robots.txt, JSON-LD schema, canonical URLs | Jan 28, 2025 |
 | Added mobile hamburger menu | Nav items were truncated on mobile; full-screen overlay with stagger animation | Jan 28, 2025 |
@@ -134,7 +138,7 @@
 
 ## Open Questions (Remaining)
 
-1. Calendly link URL for contact page? (Or custom form?)
+1. RESEND_API_KEY — needs to be added to Vercel environment variables
 2. Social media links for footer?
 3. Content/copy for Studio page (product details)?
 4. Case studies to feature on Work page?
@@ -144,9 +148,9 @@
 
 ## Next Steps (Priority Order)
 
-1. Studio page content (when product details available)
-2. Work page with case studies
-3. Contact form integration (Calendly or custom)
+1. Add RESEND_API_KEY to Vercel environment variables
+2. Studio page content (when product details available)
+3. Work page with case studies
 4. Configure custom domain
 5. Add analytics (Vercel Analytics or Plausible)
 
@@ -210,10 +214,35 @@
   - Subline: "AI-Powered Products & Business Systems" (36px)
   - SVG source at public/og-image.svg, converted to PNG via sharp
   - Clean, minimal design optimized for thumbnail readability
+- Contact page (/contact) — full form:
+  - Hero: "Start a Conversation" / "Tell us what you're building."
+  - Form fields: Name, Email, Company (optional), Interests (checkbox group), Message
+  - Interest options: AI Products, Business Systems, Digital Growth, Lead Generation, Something else
+  - API route at /api/contact using Resend for email delivery
+  - Success state: "Thanks for reaching out. We'll be in touch soon."
+  - Error state with retry message
+  - Email alternative section below form
+  - VU meter divider after hero
+- About page (/about) — full content:
+  - Hero: "About" / "Volume Systems is an applied AI studio..."
+  - Philosophy section "WHAT WE BELIEVE" with 3 items:
+    - 01 Leverage over volume
+    - 02 Systems over services
+    - 03 Outcomes over outputs
+  - Channel numbers matching Systems page style
+  - CTA: "Want to work with us?" → "Start a Conversation →"
+  - VU meter divider after hero, simple divider above CTA
+- Navigation updates:
+  - Added About link to Nav (between Digital and Contact)
+  - Added About link to Footer
+  - Updated sitemap.ts with /about page
+- Environment setup:
+  - Installed Resend package (npm install resend)
+  - Created .env.example with RESEND_API_KEY placeholder
 - All changes auto-deployed via Vercel
 
-**Stopped Because:** Content pages and OG image complete, awaiting further instructions
-**Resume Point:** Studio content, Work page case studies, contact form integration, or custom domain
+**Stopped Because:** Contact form and About page complete, awaiting RESEND_API_KEY
+**Resume Point:** Add Resend API key, then Studio content or Work page
 
 ### Session 3 — January 28, 2025
 **Focus:** Visual refinements (backgrounds, dividers)
@@ -311,11 +340,14 @@
 │   │   ├── globals.css      # Design tokens, base styles
 │   │   ├── icon.svg         # Favicon
 │   │   ├── not-found.tsx    # 404 page
+│   │   ├── api/
+│   │   │   └── contact/route.ts  # Resend email API
+│   │   ├── about/           # page.tsx + AboutContent.tsx
 │   │   ├── studio/          # page.tsx + StudioContent.tsx
 │   │   ├── systems/         # page.tsx + SystemsContent.tsx
 │   │   ├── digital/         # page.tsx + DigitalContent.tsx
 │   │   ├── work/page.tsx    # Placeholder
-│   │   └── contact/         # page.tsx + ContactContent.tsx
+│   │   └── contact/         # page.tsx + ContactContent.tsx (full form)
 │   └── components/
 │       ├── Nav.tsx
 │       ├── Hero.tsx
@@ -333,6 +365,7 @@
 │   └── og-image.svg         # SVG source for OG image
 ├── scripts/
 │   └── generate-og-image.js # Legacy canvas script (SVG approach preferred)
+├── .env.example              # Environment variable template
 ├── .vercel/                  # Vercel project config
 ├── CLAUDE.md
 ├── TEAM.md
@@ -359,12 +392,19 @@ LIVE at https://volume-systems.vercel.app
 Content pages complete:
 - Systems: full page (4 cards, 4-step process, who it's for, CTA)
 - Digital: full page (5 cards, why it matters, CTA)
+- About: full page (philosophy section with channel numbers, CTA)
+- Contact: full form (name, email, company, interests, message) + Resend API
 - Studio: placeholder (coming soon)
-- Contact: placeholder (email link)
+- Work: placeholder
+
+Contact form:
+- API route at /api/contact using Resend
+- Needs RESEND_API_KEY in Vercel environment variables
+- .env.example included in repo
 
 SEO infrastructure:
 - Unique meta per page, OG tags, Twitter cards, canonical URLs
-- sitemap.xml and robots.txt auto-generated
+- sitemap.xml and robots.txt auto-generated (6 pages)
 - JSON-LD Organization schema on homepage
 - OG image: 1200x630 PNG (SVG source, 120px/36px text)
 
@@ -374,7 +414,7 @@ Visual elements:
 - VUMeterDivider: symmetric 5-label layout (-12, -6, 0, +6, +12)
 - Mobile hamburger menu with full-screen overlay
 
-Ready for: Studio content, Work page, contact form
+Ready for: RESEND_API_KEY, Studio content, Work page
 ```
 
 ---
