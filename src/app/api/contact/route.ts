@@ -80,7 +80,7 @@ export async function POST(request: Request) {
     console.log("Sending email to hello@volumesystems.io...");
 
     const { data, error } = await resend.emails.send({
-      from: "Volume Systems <onboarding@resend.dev>",
+      from: "Volume Systems <hello@volumesystems.io>",
       to: "hello@volumesystems.io",
       replyTo: email,
       subject: `New inquiry from ${name}`,
