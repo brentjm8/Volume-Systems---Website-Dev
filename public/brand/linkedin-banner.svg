@@ -1,8 +1,8 @@
 <svg width="1128" height="191" viewBox="0 0 1128 191" xmlns="http://www.w3.org/2000/svg">
   <rect width="1128" height="191" fill="#0A0A0A"/>
 
-  <!-- Volume Meter - top-left area, 12px padding -->
-  <g transform="translate(12, 15)">
+  <!-- Volume Meter - left side, 12px padding, positioned near bottom -->
+  <g transform="translate(12, 40)">
     <!-- Dim segments (top 3) -->
     <rect x="0" y="0" width="18" height="11" rx="1" fill="rgba(255,255,255,0.1)"/>
     <rect x="0" y="14" width="18" height="11" rx="1" fill="rgba(255,255,255,0.1)"/>
