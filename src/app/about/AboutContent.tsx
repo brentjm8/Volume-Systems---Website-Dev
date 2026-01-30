@@ -256,9 +256,9 @@ export function AboutContent() {
                 {workWithList.map((item, index) => (
                   <li
                     key={index}
-                    className="text-text-secondary text-lg flex items-start gap-3"
+                    className="text-text-secondary text-lg flex items-baseline gap-3"
                   >
-                    <span className="text-text-tertiary mt-2">•</span>
+                    <span className="text-text-tertiary">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -307,9 +307,9 @@ export function AboutContent() {
               {notForList.map((item, index) => (
                 <li
                   key={index}
-                  className="text-text-secondary text-lg flex items-start gap-3"
+                  className="text-text-secondary text-lg flex items-baseline gap-3"
                 >
-                  <span className="text-text-tertiary mt-2">•</span>
+                  <span className="text-text-tertiary">•</span>
                   <span>{item}</span>
                 </li>
               ))}
