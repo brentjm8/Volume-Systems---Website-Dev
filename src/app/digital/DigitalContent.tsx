@@ -103,6 +103,81 @@ export function DigitalContent() {
 
         <VUMeterDivider />
 
+        {/* Understanding the Landscape Section */}
+        <section className="py-20 md:py-28 px-6 md:px-8">
+          <div className="max-w-[1200px] mx-auto w-full">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="label text-text-tertiary mb-12"
+            >
+              UNDERSTANDING THE LANDSCAPE
+            </motion.p>
+
+            <div className="max-w-3xl space-y-12">
+              {/* What is SEO? */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="space-y-4"
+              >
+                <h3 className="text-xl md:text-2xl font-medium text-text-primary">
+                  What is SEO?
+                </h3>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  Search Engine Optimization (SEO) is the practice of improving a
+                  website&apos;s visibility in traditional search engines like Google
+                  and Bing. This includes technical optimization, content strategy,
+                  and building authority through backlinks.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  SEO remains foundational — but it&apos;s no longer enough on its
+                  own. The search landscape is fragmenting, and businesses need to
+                  optimize for both traditional and AI-powered discovery.
+                </p>
+              </motion.div>
+
+              {/* Divider */}
+              <hr className="border-t border-bg-subtle opacity-30" />
+
+              {/* What is GEO? */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.4, ease: "easeOut", delay: 0.05 }}
+                className="space-y-4"
+              >
+                <h3 className="text-xl md:text-2xl font-medium text-text-primary">
+                  What is GEO?
+                </h3>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  Generative Engine Optimization (GEO) is the practice of optimizing
+                  content and digital presence to be discovered, cited, and
+                  recommended by AI-powered search systems — including ChatGPT,
+                  Perplexity, Claude, Google AI Overviews, and other large language
+                  models.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  Traditional SEO focuses on ranking in search engine results pages.
+                  GEO focuses on being the answer — the source that AI systems pull
+                  from when users ask questions.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  As search shifts from links to answers, GEO is becoming essential
+                  for businesses that want to remain visible.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        <VUMeterDivider />
+
         {/* Why It Matters Section */}
         <section className="py-32 md:py-40 px-6 md:px-8">
           <div className="max-w-[1200px] mx-auto">

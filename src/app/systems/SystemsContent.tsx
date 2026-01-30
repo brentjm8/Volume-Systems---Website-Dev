@@ -120,13 +120,135 @@ export function SystemsContent() {
           </div>
         </section>
 
-        {/* Simple Divider */}
-        <div className="py-12 md:py-16 px-6 md:px-8">
-          <hr
-            className="max-w-[1200px] mx-auto border-0 h-px"
-            style={{ backgroundColor: "rgba(26, 26, 26, 0.3)" }}
-          />
-        </div>
+        <VUMeterDivider />
+
+        {/* What These Mean Section */}
+        <section className="py-20 md:py-28 px-6 md:px-8">
+          <div className="max-w-[1200px] mx-auto w-full">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="label text-text-tertiary mb-12"
+            >
+              WHAT THESE MEAN
+            </motion.p>
+
+            <div className="max-w-3xl space-y-12">
+              {/* What is Data Infrastructure? */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="space-y-4"
+              >
+                <h3 className="text-xl md:text-2xl font-medium text-text-primary">
+                  What is Data Infrastructure?
+                </h3>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  Data infrastructure is the foundation that allows businesses to
+                  collect, store, unify, and operationalize their data across
+                  platforms and sources. It includes pipelines, integrations,
+                  warehouses, and the systems that make data accessible and
+                  actionable for decision-making and automation.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  Without solid data infrastructure, AI tools and automations have
+                  nothing reliable to work with. It&apos;s the unglamorous but
+                  critical layer that makes everything else possible.
+                </p>
+              </motion.div>
+
+              {/* Divider */}
+              <hr className="border-t border-bg-subtle opacity-30" />
+
+              {/* What is Workflow Automation? */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.4, ease: "easeOut", delay: 0.05 }}
+                className="space-y-4"
+              >
+                <h3 className="text-xl md:text-2xl font-medium text-text-primary">
+                  What is Workflow Automation?
+                </h3>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  Workflow automation is the use of technology to execute recurring
+                  tasks and processes without manual intervention. This includes
+                  everything from simple triggers and notifications to complex,
+                  multi-step processes that span teams and systems.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  Effective workflow automation eliminates manual bottlenecks,
+                  reduces errors, and frees teams to focus on higher-value work.
+                  When done well, it compounds — each automated process creates
+                  capacity for the next.
+                </p>
+              </motion.div>
+
+              {/* Divider */}
+              <hr className="border-t border-bg-subtle opacity-30" />
+
+              {/* What is a Revenue Engine? */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
+                className="space-y-4"
+              >
+                <h3 className="text-xl md:text-2xl font-medium text-text-primary">
+                  What is a Revenue Engine?
+                </h3>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  A revenue engine is an integrated system designed to drive
+                  predictable, scalable growth. It connects sales, marketing, and
+                  customer operations into a unified infrastructure — automating
+                  lead flow, optimizing conversion, and surfacing the data needed
+                  to make smart decisions.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  Unlike disconnected tools or one-off campaigns, a revenue engine
+                  is built to compound. It gets smarter and more efficient over
+                  time.
+                </p>
+              </motion.div>
+
+              {/* Divider */}
+              <hr className="border-t border-bg-subtle opacity-30" />
+
+              {/* What are Custom AI Tools? */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.4, ease: "easeOut", delay: 0.15 }}
+                className="space-y-4"
+              >
+                <h3 className="text-xl md:text-2xl font-medium text-text-primary">
+                  What are Custom AI Tools?
+                </h3>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  Custom AI tools are purpose-built applications that use artificial
+                  intelligence to solve specific business problems. Unlike
+                  off-the-shelf software, they&apos;re designed around your
+                  workflows, data, and goals — giving you capabilities your
+                  competitors can&apos;t buy.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  These tools can automate complex decisions, surface insights from
+                  unstructured data, augment human judgment, or create entirely new
+                  efficiencies.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        <VUMeterDivider />
 
         {/* How We Work Section */}
         <section className="py-32 md:py-40 px-6 md:px-8">
