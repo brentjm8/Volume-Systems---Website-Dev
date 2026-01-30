@@ -77,6 +77,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added Google Search Console verification | Meta tag in layout.tsx for domain ownership verification | Jan 28, 2026 |
 | Refined LinkedIn banner | Volume meter left-bottom, tagline centered, 6 dial rings at 27% opacity; no wordmark | Jan 28, 2026 |
 | Added brand assets page | /brand page with download links, asset previews, color palette; not in main nav (internal resource) | Jan 28, 2026 |
 | Created brand asset kit | Square logos (512/400/300), favicon with accent V, LinkedIn banner, Twitter header; SVG sources + PNG exports | Jan 28, 2026 |
@@ -297,6 +298,9 @@
   - Tagline: Centered horizontally and vertically
   - Dial rings: 6 rings, 27% opacity, 2px stroke
   - No wordmark (logo overlap zone in bottom-left)
+- Google Search Console verification:
+  - Added meta tag to layout.tsx
+  - Applies to all pages via Next.js metadata API
 
 **Blocked By:** Resend API key returning "invalid" — needs correct key in Vercel
 **Resume Point:** Fix API key, test form, then Studio or Work page content
