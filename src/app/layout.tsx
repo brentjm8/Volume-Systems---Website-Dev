@@ -71,6 +71,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://volumesystems.io",
   },
+  verification: {
+    google: "GHZdCpWVXL1WY4GUg6WjZsqdhnJx_AbYjnAm1z7V6P0",
+  },
 };
 
 export default function RootLayout({
