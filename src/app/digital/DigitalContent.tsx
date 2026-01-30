@@ -25,7 +25,7 @@ const whatWeBuildCards = [
   {
     title: "Digital Marketing",
     description:
-      "AI-enhanced campaigns across paid and organic channels — strategy, execution, and optimization.",
+      "AI-enhanced campaigns across organic channels — strategy, execution, and optimization.",
   },
   {
     title: "Websites",
