@@ -1,8 +1,8 @@
 # PROGRESS.md
 
 ## Project: Volume Systems Website
-**Last Updated:** January 28, 2026
-**Session:** 4
+**Last Updated:** January 30, 2026
+**Session:** 5
 **V1 Progress:** 100% Complete
 **V2 Progress:** Content Pages In Progress
 **Status:** Contact form + About page live, Studio placeholder, Work placeholder
@@ -77,6 +77,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Expanded About page with full narrative | 7 sections: Why We Exist, Who We Are, What We Believe, Who We Work With, Who We're Not For, What Makes Us Different, CTA | Jan 30, 2026 |
 | Added Google Search Console verification | Meta tag in layout.tsx for domain ownership verification | Jan 28, 2026 |
 | Refined LinkedIn banner | Volume meter left-bottom, tagline centered, 6 dial rings at 27% opacity; no wordmark | Jan 28, 2026 |
 | Added brand assets page | /brand page with download links, asset previews, color palette; not in main nav (internal resource) | Jan 28, 2026 |
@@ -305,6 +306,38 @@
 **Blocked By:** Resend API key returning "invalid" — needs correct key in Vercel
 **Resume Point:** Fix API key, test form, then Studio or Work page content
 
+### Session 5 — January 30, 2026
+**Focus:** Expanded About page content
+
+**Completed:**
+- About page (/about) — comprehensive expansion:
+  - "WHY VOLUME EXISTS" section: 3 paragraphs about founding story and mission
+  - "WHO WE ARE" section: 2 paragraphs about team background and expertise
+  - "WHAT WE BELIEVE" section: Expanded descriptions for all 3 principles
+    - Leverage over volume: Selective partnerships, intentional engagements
+    - Systems over services: Infrastructure not deliverables, tailored not templated
+    - Outcomes over outputs: Working backwards from change, measuring impact
+  - "WHO WE WORK WITH" section: "Operators tired of:" + 8 pain points
+    - Agencies that overpromise and underdeliver
+    - Wasted resources on guesswork solutions
+    - Revenue bogged down by manual workflows
+    - Decisions clouded by fragmented or cluttered data
+    - Fancy tools that never reach their potential
+    - Sales lost to slow processes
+    - Margin eaten by overhead that could be automated
+    - Knowing there's a bottleneck but not knowing the fix
+  - "WHO WE'RE NOT FOR" section: 4 honest disqualifiers
+    - Companies looking for the cheapest option
+    - Teams who want to hand off a task list without collaboration
+    - Organizations that aren't ready to invest in real infrastructure
+    - Anyone expecting overnight results without strategic commitment
+  - "WHAT MAKES US DIFFERENT" section: 3 paragraphs about builder mindset
+  - Updated CTA: "Ready to build something that compounds?"
+  - VU meter dividers and simple hr dividers between sections
+
+**Stopped Because:** About page expansion complete
+**Resume Point:** Resend API key fix, then Studio or Work page content
+
 ### Session 3 — January 28, 2025
 **Focus:** Visual refinements (backgrounds, dividers)
 
@@ -462,7 +495,7 @@ LIVE at https://volume-systems.vercel.app
 Content pages complete:
 - Systems: full page (4 cards, 4-step process, who it's for, CTA)
 - Digital: full page (5 cards, why it matters, CTA)
-- About: full page (philosophy section with channel numbers, CTA)
+- About: full page (7 sections: Why We Exist, Who We Are, What We Believe, Who We Work With, Who We're Not For, What Makes Us Different, CTA)
 - Contact: full form (name, email, company, interests, message) + Resend API
 - Studio: placeholder (coming soon)
 - Work: placeholder
