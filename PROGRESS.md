@@ -77,6 +77,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Updated Digital Marketing card copy | Removed "paid and" — now focuses on organic channels only | Jan 30, 2026 |
 | Added "What is..." definitions to Digital/Systems | AI-optimized quotable content for SEO, GEO, Data Infrastructure, Workflow Automation, Revenue Engine, Custom AI Tools | Jan 30, 2026 |
 | Fixed VolumeMeter mobile positioning | Inline styles for top/transform instead of Tailwind classes; fixes Safari scroll jumping | Jan 30, 2026 |
 | Fixed About page bullet alignment | items-baseline instead of items-start; proper text baseline alignment | Jan 30, 2026 |
@@ -344,8 +345,11 @@
   - What are Custom AI Tools? (2 paragraphs): Purpose-built AI applications
   - Structured for AI citation with quotable paragraphs
   - Dividers between definitions, VU meter dividers around section
+- Digital page copy update:
+  - Digital Marketing card: removed "paid and" from description
+  - Now reads: "AI-enhanced campaigns across organic channels..."
 
-**Stopped Because:** Definition sections complete
+**Stopped Because:** Copy updates complete
 **Resume Point:** Resend API key fix, then Studio or Work page content
 
 ### Session 3 — January 28, 2025
