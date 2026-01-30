@@ -23,8 +23,8 @@
 - [x] HowWeWork section (numbered list, scroll animations)
 - [x] CTA section
 - [x] Footer component (proper touch targets, nav links)
-- [x] Systems page (full content: hero, 4 cards, 4-step process, who it's for, CTA)
-- [x] Digital page (full content: hero, 5 cards, why it matters, CTA)
+- [x] Systems page (full content: hero, 4 cards, definitions section, 4-step process, who it's for, CTA)
+- [x] Digital page (full content: hero, 5 cards, definitions section, why it matters, CTA)
 - [x] Studio page (placeholder with early access CTA)
 - [x] Contact page (placeholder with email link)
 - [x] Work page (placeholder)
@@ -77,6 +77,9 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added "What is..." definitions to Digital/Systems | AI-optimized quotable content for SEO, GEO, Data Infrastructure, Workflow Automation, Revenue Engine, Custom AI Tools | Jan 30, 2026 |
+| Fixed VolumeMeter mobile positioning | Inline styles for top/transform instead of Tailwind classes; fixes Safari scroll jumping | Jan 30, 2026 |
+| Fixed About page bullet alignment | items-baseline instead of items-start; proper text baseline alignment | Jan 30, 2026 |
 | Expanded About page with full narrative | 7 sections: Why We Exist, Who We Are, What We Believe, Who We Work With, Who We're Not For, What Makes Us Different, CTA | Jan 30, 2026 |
 | Added Google Search Console verification | Meta tag in layout.tsx for domain ownership verification | Jan 28, 2026 |
 | Refined LinkedIn banner | Volume meter left-bottom, tagline centered, 6 dial rings at 27% opacity; no wordmark | Jan 28, 2026 |
@@ -307,7 +310,7 @@
 **Resume Point:** Fix API key, test form, then Studio or Work page content
 
 ### Session 5 — January 30, 2026
-**Focus:** Expanded About page content
+**Focus:** About page expansion, bug fixes, AI-optimized content
 
 **Completed:**
 - About page (/about) — comprehensive expansion:
@@ -318,24 +321,31 @@
     - Systems over services: Infrastructure not deliverables, tailored not templated
     - Outcomes over outputs: Working backwards from change, measuring impact
   - "WHO WE WORK WITH" section: "Operators tired of:" + 8 pain points
-    - Agencies that overpromise and underdeliver
-    - Wasted resources on guesswork solutions
-    - Revenue bogged down by manual workflows
-    - Decisions clouded by fragmented or cluttered data
-    - Fancy tools that never reach their potential
-    - Sales lost to slow processes
-    - Margin eaten by overhead that could be automated
-    - Knowing there's a bottleneck but not knowing the fix
   - "WHO WE'RE NOT FOR" section: 4 honest disqualifiers
-    - Companies looking for the cheapest option
-    - Teams who want to hand off a task list without collaboration
-    - Organizations that aren't ready to invest in real infrastructure
-    - Anyone expecting overnight results without strategic commitment
   - "WHAT MAKES US DIFFERENT" section: 3 paragraphs about builder mindset
   - Updated CTA: "Ready to build something that compounds?"
-  - VU meter dividers and simple hr dividers between sections
+- About page bullet alignment fix:
+  - Changed items-start to items-baseline for proper text alignment
+  - Removed manual mt-2 offset from bullet spans
+  - Bullets now align with text baseline on first line
+- VolumeMeter mobile positioning fix:
+  - Moved top/transform from Tailwind classes to inline styles
+  - Fixed jumping/repositioning on mobile Safari scroll
+  - Inline styles ensure consistent fixed positioning across browsers
+- Digital page (/digital) — "UNDERSTANDING THE LANDSCAPE" section:
+  - What is SEO? (2 paragraphs): Traditional search optimization definition
+  - What is GEO? (3 paragraphs): Generative Engine Optimization for AI discovery
+  - Structured for AI citation with quotable paragraphs
+  - VU meter dividers above and below section
+- Systems page (/systems) — "WHAT THESE MEAN" section:
+  - What is Data Infrastructure? (2 paragraphs): Pipelines, integrations, warehouses
+  - What is Workflow Automation? (2 paragraphs): Recurring tasks without manual work
+  - What is a Revenue Engine? (2 paragraphs): Integrated growth system
+  - What are Custom AI Tools? (2 paragraphs): Purpose-built AI applications
+  - Structured for AI citation with quotable paragraphs
+  - Dividers between definitions, VU meter dividers around section
 
-**Stopped Because:** About page expansion complete
+**Stopped Because:** Definition sections complete
 **Resume Point:** Resend API key fix, then Studio or Work page content
 
 ### Session 3 — January 28, 2025
@@ -493,9 +503,13 @@ LIVE at https://volume-systems.vercel.app
 - GitHub auto-deploy enabled
 
 Content pages complete:
-- Systems: full page (4 cards, 4-step process, who it's for, CTA)
-- Digital: full page (5 cards, why it matters, CTA)
+- Systems: full page (4 cards, "What These Mean" definitions, 4-step process, who it's for, CTA)
+- Digital: full page (5 cards, "Understanding the Landscape" definitions, why it matters, CTA)
 - About: full page (7 sections: Why We Exist, Who We Are, What We Believe, Who We Work With, Who We're Not For, What Makes Us Different, CTA)
+
+AI-optimized "What is..." definitions:
+- Digital: SEO, GEO (Generative Engine Optimization)
+- Systems: Data Infrastructure, Workflow Automation, Revenue Engine, Custom AI Tools
 - Contact: full form (name, email, company, interests, message) + Resend API
 - Studio: placeholder (coming soon)
 - Work: placeholder
