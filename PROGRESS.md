@@ -5,7 +5,7 @@
 **Session:** 5
 **V1 Progress:** 100% Complete
 **V2 Progress:** Content Pages In Progress
-**Status:** Systems, Digital, About, Contact complete; Studio and Work placeholders remaining
+**Status:** Systems, Digital, About, Contact, Insights complete; Studio and Work placeholders remaining
 
 **Production URL:** https://volume-systems.vercel.app
 
@@ -48,6 +48,7 @@
 - [x] Content: Digital page (full content live)
 - [x] Content: About page (full content live)
 - [x] Contact page form (Resend email integration)
+- [x] Insights blog section (3 posts live)
 - [ ] Content: Studio page (currently placeholder)
 - [ ] Content: Work page (case studies)
 - [ ] Custom domain configuration
@@ -68,9 +69,9 @@
 
 ## Current Focus
 
-**Active Task:** Session 5 complete — all content pages enhanced with AI-optimized definitions
+**Active Task:** Session 5 complete — Insights blog section launched with 3 posts
 **Blocked By:** Studio product content, Work page case studies
-**Last Session:** January 30, 2026 — About page expansion, bug fixes, definition sections, copy updates
+**Last Session:** January 30, 2026 — About page expansion, bug fixes, definitions, Insights blog
 
 ---
 
@@ -78,6 +79,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added Insights blog section | /insights index + 3 posts (GEO, AI failures, SEO evolution); Footer link added; Sitemap updated | Jan 30, 2026 |
 | Updated Digital Marketing card copy | Removed "paid and" — now focuses on organic channels only | Jan 30, 2026 |
 | Added "What is..." definitions to Digital/Systems | AI-optimized quotable content for SEO, GEO, Data Infrastructure, Workflow Automation, Revenue Engine, Custom AI Tools | Jan 30, 2026 |
 | Fixed VolumeMeter mobile positioning | Inline styles for top/transform instead of Tailwind classes; fixes Safari scroll jumping | Jan 30, 2026 |
@@ -347,8 +349,19 @@
 - Digital page copy update:
   - Digital Marketing card: removed "paid and" from description
   - Now reads: "AI-enhanced campaigns across organic channels..."
+- Insights blog section (/insights):
+  - Index page with headline, subline, and post cards
+  - Dynamic route /insights/[slug] for individual posts
+  - Full article layout with proper typography, VU meter dividers, CTA
+  - Meta tags (title, description, OG) per post
+  - Three posts published:
+    - what-is-geo: Complete guide to Generative Engine Optimization
+    - why-ai-implementations-fail: Common failure patterns and solutions
+    - seo-is-dead-long-live-seo: Evolution of search optimization
+  - Sitemap updated with /insights and all post URLs
+  - Footer updated with Insights link (between About and Contact)
 
-**Stopped Because:** Copy updates complete
+**Stopped Because:** Insights section complete
 **Resume Point:** Studio or Work page content
 
 ### Session 3 — January 28, 2025
@@ -522,9 +535,15 @@ Contact form:
 - Resend API key configured and working
 - .env.example included in repo
 
+Insights blog (/insights):
+- Index page with post cards
+- 3 posts: what-is-geo, why-ai-implementations-fail, seo-is-dead-long-live-seo
+- Dynamic route with full article layout
+- Footer link added (not in main nav)
+
 SEO infrastructure:
 - Unique meta per page, OG tags, Twitter cards, canonical URLs
-- sitemap.xml and robots.txt auto-generated (6 pages)
+- sitemap.xml and robots.txt auto-generated (10 pages including insights)
 - JSON-LD Organization schema on homepage
 - OG image: 1200x630 PNG (SVG source, 120px/36px text)
 
