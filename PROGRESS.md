@@ -69,9 +69,9 @@
 
 ## Current Focus
 
-**Active Task:** Session 5 complete — Insights blog section launched with 3 posts
+**Active Task:** Session 5 complete
 **Blocked By:** Studio product content, Work page case studies
-**Last Session:** January 30, 2026 — About page expansion, bug fixes, definitions, Insights blog
+**Last Session:** January 30, 2026 — About page expansion, bug fixes, definitions, copy updates, Insights blog (3 posts)
 
 ---
 
