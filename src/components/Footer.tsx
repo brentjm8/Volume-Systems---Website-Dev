@@ -46,6 +46,12 @@ export function Footer() {
               About
             </Link>
             <Link
+              href="/insights"
+              className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 flex items-center py-3 px-4"
+            >
+              Insights
+            </Link>
+            <Link
               href="/contact"
               className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 flex items-center py-3 px-4"
             >
