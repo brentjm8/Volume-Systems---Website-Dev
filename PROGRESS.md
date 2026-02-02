@@ -23,8 +23,8 @@
 - [x] HowWeWork section (numbered list, scroll animations)
 - [x] CTA section
 - [x] Footer component (proper touch targets, nav links)
-- [x] Systems page (full content: hero, 4 cards, definitions section, 4-step process, who it's for, CTA)
-- [x] Digital page (full content: hero, 5 cards, definitions section, why it matters, CTA)
+- [x] Systems page (full content: hero, 4 cards, definitions, 4-step process, who it's for, FAQ, CTA)
+- [x] Digital page (full content: hero, 5 cards, definitions, why it matters, FAQ, CTA)
 - [x] Studio page (placeholder with early access CTA)
 - [x] Contact page (placeholder with email link)
 - [x] Work page (placeholder)
@@ -79,6 +79,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added FAQ sections + JSON-LD schemas | Digital (6 FAQs), Systems (6 FAQs), Blog posts (Article schema); Rich results optimization | Jan 30, 2026 |
 | Added Insights blog section | /insights index + 3 posts (GEO, AI failures, SEO evolution); Footer link added; Sitemap updated | Jan 30, 2026 |
 | Updated Digital Marketing card copy | Removed "paid and" — now focuses on organic channels only | Jan 30, 2026 |
 | Added "What is..." definitions to Digital/Systems | AI-optimized quotable content for SEO, GEO, Data Infrastructure, Workflow Automation, Revenue Engine, Custom AI Tools | Jan 30, 2026 |
@@ -360,8 +361,15 @@
     - seo-is-dead-long-live-seo: Evolution of search optimization
   - Sitemap updated with /insights and all post URLs
   - Footer updated with Insights link (between About and Contact)
+- FAQ sections added to Digital and Systems pages:
+  - Digital: 6 FAQs (SEO timing, SEO vs GEO, referrals, GEO definition, success metrics, paid ads)
+  - Systems: 6 FAQs (who needs AI tools, vs off-the-shelf, data infrastructure, timeline, existing tools, post-build)
+  - FAQPage JSON-LD schema on both pages for rich results
+- Article JSON-LD schema on all blog posts:
+  - Includes headline, description, datePublished, author, publisher
+  - Enables rich results in search
 
-**Stopped Because:** Insights section complete
+**Stopped Because:** FAQ sections and schemas complete
 **Resume Point:** Studio or Work page content
 
 ### Session 3 — January 28, 2025
@@ -519,8 +527,8 @@ LIVE at https://volume-systems.vercel.app
 - GitHub auto-deploy enabled
 
 Content pages complete:
-- Systems: full page (4 cards, "What These Mean" definitions, 4-step process, who it's for, CTA)
-- Digital: full page (5 cards, "Understanding the Landscape" definitions, why it matters, CTA)
+- Systems: full page (4 cards, definitions, 4-step process, who it's for, FAQ section, CTA)
+- Digital: full page (5 cards, definitions, why it matters, FAQ section, CTA)
 - About: full page (7 sections: Why We Exist, Who We Are, What We Believe, Who We Work With, Who We're Not For, What Makes Us Different, CTA)
 
 AI-optimized "What is..." definitions:
@@ -544,7 +552,7 @@ Insights blog (/insights):
 SEO infrastructure:
 - Unique meta per page, OG tags, Twitter cards, canonical URLs
 - sitemap.xml and robots.txt auto-generated (10 pages including insights)
-- JSON-LD Organization schema on homepage
+- JSON-LD schemas: Organization (homepage), FAQPage (Digital, Systems), Article (blog posts)
 - OG image: 1200x630 PNG (SVG source, 120px/36px text)
 
 Visual elements:
