@@ -22,6 +22,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     },
   },
   {
+    term: "AI Overviews",
+    slug: "ai-overviews",
+    definition: [
+      "AI Overviews are Google's AI-generated answer summaries that appear at the top of search results, synthesizing information from multiple sources to answer queries directly. They represent a fundamental shift in how search engines present information — from listing links to providing answers.",
+      "For businesses, AI Overviews change the visibility equation. Being cited in an AI Overview can drive significant traffic, while being excluded means losing visibility even for queries you previously ranked well for. This makes GEO optimization increasingly critical.",
+    ],
+    relatedLink: {
+      text: "Learn about GEO",
+      href: "/digital",
+    },
+  },
+  {
     term: "API",
     slug: "api",
     definition: [
@@ -102,6 +114,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     },
   },
   {
+    term: "Crawlability",
+    slug: "crawlability",
+    definition: [
+      "Crawlability is a measure of how easily search engines and AI systems can access and read your website's content. It's affected by site structure, robots.txt configuration, internal linking, page load speed, and technical performance.",
+      "Poor crawlability means search engines and AI systems can't discover or index your content effectively — regardless of how good that content is. Ensuring strong crawlability is a foundational requirement for both SEO and GEO success.",
+    ],
+    relatedLink: {
+      text: "Learn about Technical SEO",
+      href: "/digital",
+    },
+  },
+  {
     term: "Custom AI Tools",
     slug: "custom-ai-tools",
     definition: [
@@ -171,6 +195,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     ],
     relatedLink: {
       text: "Learn about our GEO services",
+      href: "/digital",
+    },
+  },
+  {
+    term: "JSON-LD",
+    slug: "json-ld",
+    definition: [
+      "JSON-LD (JavaScript Object Notation for Linked Data) is a lightweight data format used to implement structured data on websites. It helps search engines and AI systems understand page content by explicitly defining entities, relationships, and meaning in a machine-readable way.",
+      "JSON-LD is the preferred format for structured data implementation because it can be added to a page without modifying the visible HTML. It enables rich results in search, improves AI citation accuracy, and helps systems understand context that might otherwise be ambiguous.",
+    ],
+    relatedLink: {
+      text: "Learn about Technical SEO",
       href: "/digital",
     },
   },
@@ -255,6 +291,30 @@ export const glossaryTerms: GlossaryTerm[] = [
     ],
     relatedLink: {
       text: "Learn about our SEO services",
+      href: "/digital",
+    },
+  },
+  {
+    term: "Sitemap",
+    slug: "sitemap",
+    definition: [
+      "A sitemap is an XML file that lists all pages on a website, helping search engines discover and index content efficiently. It provides metadata about each page including when it was last modified, how often it changes, and its relative importance within the site.",
+      "Sitemaps are essential for SEO and increasingly important for GEO. They ensure that search engines and AI systems can find all your content, even pages that might not be easily discoverable through internal linking alone.",
+    ],
+    relatedLink: {
+      text: "Learn about Technical SEO",
+      href: "/digital",
+    },
+  },
+  {
+    term: "Structured Data",
+    slug: "structured-data",
+    definition: [
+      "Structured data is code added to a website that helps search engines and AI systems understand the content. It explicitly defines what things are — a product, an article, a FAQ, an organization — rather than leaving systems to infer meaning from unstructured text.",
+      "Commonly implemented using JSON-LD format, structured data enables rich results in search (star ratings, FAQ dropdowns, product information) and improves how AI systems parse and cite your content. It's a foundational element of both SEO and GEO.",
+    ],
+    relatedLink: {
+      text: "Learn about GEO",
       href: "/digital",
     },
   },
