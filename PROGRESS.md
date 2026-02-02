@@ -44,15 +44,32 @@
 
 ## V2 Scope (In Progress)
 
-- [x] Content: Systems page (full content live)
-- [x] Content: Digital page (full content live)
-- [x] Content: About page (full content live)
+### Completed
+- [x] Content: Systems page (full content + definitions + FAQ)
+- [x] Content: Digital page (full content + definitions + FAQ)
+- [x] Content: About page (7 sections)
 - [x] Contact page form (Resend email integration)
 - [x] Insights blog section (3 posts live)
-- [ ] Content: Studio page (currently placeholder)
+- [x] FAQ sections with JSON-LD FAQPage schema
+- [x] Article JSON-LD schema on blog posts
+- [x] Brand asset kit + /brand page
+- [x] Site favicon (accent V)
+- [x] Google Search Console verified + sitemap submitted
+
+### Remaining
+- [ ] Write 5-7 more blog posts
+- [ ] Internal linking strategy across all pages
+- [ ] Glossary page (/glossary)
+- [ ] Directory submissions
+- [ ] Page speed optimization
+- [ ] Image optimization (alt tags, compression, lazy loading)
+- [ ] Breadcrumbs
+- [ ] Content: Studio page (when products ready)
 - [ ] Content: Work page (case studies)
-- [ ] Custom domain configuration
 - [ ] Analytics integration
+
+### Separate Projects
+- [ ] LinkedIn content engine (Content project)
 
 ---
 
@@ -69,9 +86,10 @@
 
 ## Current Focus
 
-**Active Task:** Session 5 complete
+**Active Task:** Session 5 complete — full content infrastructure in place
 **Blocked By:** Studio product content, Work page case studies
-**Last Session:** January 30, 2026 — About expansion, bug fixes, definitions, Insights blog (3 posts), FAQ sections (12 Qs), JSON-LD schemas (3 posts)
+**Next Priority:** More blog posts, internal linking, glossary page
+**Last Session:** January 30, 2026
 
 ---
 
@@ -369,8 +387,25 @@
   - Includes headline, description, datePublished, author, publisher
   - Enables rich results in search
 
-**Stopped Because:** FAQ sections and schemas complete
-**Resume Point:** Studio or Work page content
+**Session 5 Summary — Everything Completed:**
+- About page expanded (7 sections)
+- Bullet point alignment fix on About page
+- Volume meter mobile positioning fix
+- Digital page: "Understanding the Landscape" section (SEO + GEO definitions)
+- Systems page: "What These Mean" section (4 term definitions)
+- Digital Marketing card updated (organic only, no paid)
+- FAQ sections added to Digital and Systems pages (6 questions each)
+- FAQ structured data (JSON-LD FAQPage schema) on both pages
+- JSON-LD Article schema on all 3 blog posts
+- Insights section created (/insights) with 3 posts
+- Insights link added to footer
+- Google Search Console verified (HTML tag method) + sitemap submitted
+- Brand asset kit created (/public/brand/)
+- Brand assets page at /brand
+- Site favicon updated to accent "V"
+
+**Stopped Because:** Full content infrastructure complete
+**Resume Point:** More blog posts, internal linking, glossary page
 
 ### Session 3 — January 28, 2025
 **Focus:** Visual refinements (backgrounds, dividers)
@@ -568,7 +603,18 @@ Brand assets (/public/brand/):
 - Twitter header: 1500x500
 - Download page: /brand (internal, not in nav)
 
-Ready for: Studio content, Work page
+Remaining work:
+- Write 5-7 more blog posts
+- Internal linking strategy across all pages
+- Glossary page (/glossary)
+- Directory submissions
+- Page speed optimization
+- Image optimization (alt tags, compression, lazy loading)
+- Breadcrumbs
+- Studio page content (when products ready)
+- Work/case studies page
+- Analytics integration
+- LinkedIn content engine (separate project)
 ```
 
 ---
