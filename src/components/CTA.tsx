@@ -23,12 +23,19 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.05 }}
+            className="flex flex-wrap gap-4"
           >
             <Link
               href="/contact"
               className="inline-flex items-center justify-center px-6 py-3 bg-accent text-bg-primary font-medium rounded-sm hover:bg-accent-hover transition-colors duration-200"
             >
               Get in touch
+            </Link>
+            <Link
+              href="/insights"
+              className="inline-flex items-center justify-center px-6 py-3 border border-white/10 text-text-primary font-medium rounded-sm hover:border-white/20 hover:bg-bg-elevated transition-colors duration-200"
+            >
+              Read Our Thinking
             </Link>
           </motion.div>
         </motion.div>

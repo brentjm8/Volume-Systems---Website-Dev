@@ -164,13 +164,39 @@ export function DigitalContent() {
                 <p className="text-lg text-text-secondary leading-relaxed">
                   Search Engine Optimization (SEO) is the practice of improving a
                   website&apos;s visibility in traditional search engines like Google
-                  and Bing. This includes technical optimization, content strategy,
-                  and building authority through backlinks.
+                  and Bing. This includes{" "}
+                  <Link
+                    href="/glossary#technical-seo"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    technical optimization
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/glossary#content-strategy"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    content strategy
+                  </Link>
+                  , and building authority through{" "}
+                  <Link
+                    href="/glossary#backlinks"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    backlinks
+                  </Link>
+                  .
                 </p>
                 <p className="text-lg text-text-secondary leading-relaxed">
                   SEO remains foundational — but it&apos;s no longer enough on its
                   own. The search landscape is fragmenting, and businesses need to
-                  optimize for both traditional and AI-powered discovery.
+                  optimize for both traditional and AI-powered discovery.{" "}
+                  <Link
+                    href="/insights/seo-is-dead-long-live-seo"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    Read more →
+                  </Link>
                 </p>
               </motion.div>
 
@@ -192,8 +218,21 @@ export function DigitalContent() {
                   Generative Engine Optimization (GEO) is the practice of optimizing
                   content and digital presence to be discovered, cited, and
                   recommended by AI-powered search systems — including ChatGPT,
-                  Perplexity, Claude, Google AI Overviews, and other large language
-                  models.
+                  Perplexity, Claude,{" "}
+                  <Link
+                    href="/glossary#ai-overviews"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    Google AI Overviews
+                  </Link>
+                  , and other{" "}
+                  <Link
+                    href="/glossary#llm"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    large language models
+                  </Link>
+                  .
                 </p>
                 <p className="text-lg text-text-secondary leading-relaxed">
                   Traditional SEO focuses on ranking in search engine results pages.
@@ -202,7 +241,13 @@ export function DigitalContent() {
                 </p>
                 <p className="text-lg text-text-secondary leading-relaxed">
                   As search shifts from links to answers, GEO is becoming essential
-                  for businesses that want to remain visible.
+                  for businesses that want to remain visible.{" "}
+                  <Link
+                    href="/insights/what-is-geo"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    Read the complete guide →
+                  </Link>
                 </p>
               </motion.div>
             </div>
@@ -317,6 +362,7 @@ export function DigitalContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.4, ease: "easeOut", delay: 0.05 }}
+                className="flex flex-wrap gap-4"
               >
                 <Link
                   href="/contact"
@@ -324,7 +370,20 @@ export function DigitalContent() {
                 >
                   Start a Conversation →
                 </Link>
+                <Link
+                  href="/systems"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-white/10 text-text-primary font-medium rounded-sm hover:border-white/20 hover:bg-bg-elevated transition-colors duration-200"
+                >
+                  Explore Systems
+                </Link>
               </motion.div>
+              <p className="text-text-tertiary text-sm mt-6">
+                Digital growth works best when paired with solid{" "}
+                <Link href="/systems" className="text-text-secondary hover:text-text-primary">
+                  business infrastructure
+                </Link>
+                .
+              </p>
             </motion.div>
           </div>
         </section>

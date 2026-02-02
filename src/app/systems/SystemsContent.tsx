@@ -183,14 +183,26 @@ export function SystemsContent() {
                 <p className="text-lg text-text-secondary leading-relaxed">
                   Data infrastructure is the foundation that allows businesses to
                   collect, store, unify, and operationalize their data across
-                  platforms and sources. It includes pipelines, integrations,
-                  warehouses, and the systems that make data accessible and
-                  actionable for decision-making and automation.
+                  platforms and sources. It includes{" "}
+                  <Link
+                    href="/glossary#data-pipeline"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    pipelines
+                  </Link>
+                  , integrations, warehouses, and the systems that make data
+                  accessible and actionable for decision-making and automation.
                 </p>
                 <p className="text-lg text-text-secondary leading-relaxed">
-                  Without solid data infrastructure, AI tools and automations have
-                  nothing reliable to work with. It&apos;s the unglamorous but
-                  critical layer that makes everything else possible.
+                  Without solid data infrastructure,{" "}
+                  <Link
+                    href="/glossary#custom-ai-tools"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    AI tools
+                  </Link>{" "}
+                  and automations have nothing reliable to work with. It&apos;s the
+                  unglamorous but critical layer that makes everything else possible.
                 </p>
               </motion.div>
 
@@ -239,14 +251,27 @@ export function SystemsContent() {
                 <p className="text-lg text-text-secondary leading-relaxed">
                   A revenue engine is an integrated system designed to drive
                   predictable, scalable growth. It connects sales, marketing, and
-                  customer operations into a unified infrastructure — automating
-                  lead flow, optimizing conversion, and surfacing the data needed
-                  to make smart decisions.
+                  customer operations into a unified infrastructure — automating{" "}
+                  <Link
+                    href="/glossary#lead-generation"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    lead flow
+                  </Link>
+                  , optimizing conversion, and surfacing the data needed to make
+                  smart decisions.
                 </p>
                 <p className="text-lg text-text-secondary leading-relaxed">
                   Unlike disconnected tools or one-off campaigns, a revenue engine
                   is built to compound. It gets smarter and more efficient over
-                  time.
+                  time. Revenue engines pair well with{" "}
+                  <Link
+                    href="/digital"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    digital growth strategies
+                  </Link>{" "}
+                  that drive qualified traffic.
                 </p>
               </motion.div>
 
@@ -274,7 +299,13 @@ export function SystemsContent() {
                 <p className="text-lg text-text-secondary leading-relaxed">
                   These tools can automate complex decisions, surface insights from
                   unstructured data, augment human judgment, or create entirely new
-                  efficiencies.
+                  efficiencies.{" "}
+                  <Link
+                    href="/insights/why-ai-implementations-fail"
+                    className="text-accent hover:text-accent-hover"
+                  >
+                    Learn why most AI implementations fail →
+                  </Link>
                 </p>
               </motion.div>
             </div>
@@ -429,6 +460,7 @@ export function SystemsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.4, ease: "easeOut", delay: 0.05 }}
+                className="flex flex-wrap gap-4"
               >
                 <Link
                   href="/contact"
@@ -436,7 +468,20 @@ export function SystemsContent() {
                 >
                   Start a Conversation →
                 </Link>
+                <Link
+                  href="/digital"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-white/10 text-text-primary font-medium rounded-sm hover:border-white/20 hover:bg-bg-elevated transition-colors duration-200"
+                >
+                  Explore Digital Growth
+                </Link>
               </motion.div>
+              <p className="text-text-tertiary text-sm mt-6">
+                Systems work best when paired with{" "}
+                <Link href="/digital" className="text-text-secondary hover:text-text-primary">
+                  digital visibility
+                </Link>
+                .
+              </p>
             </motion.div>
           </div>
         </section>

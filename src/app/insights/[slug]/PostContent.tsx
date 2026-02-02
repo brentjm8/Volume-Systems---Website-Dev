@@ -96,22 +96,32 @@ function WhatIsGEOContent() {
   return (
     <div className="space-y-6 text-text-secondary">
       <p className="text-lg leading-relaxed">
-        Search is changing. For two decades, SEO meant one thing: rank higher on
-        Google. Get the blue link. Win the click.
+        Search is changing. For two decades,{" "}
+        <Link href="/glossary#seo" className="text-accent hover:text-accent-hover">
+          SEO
+        </Link>{" "}
+        meant one thing: rank higher on Google. Get the blue link. Win the click.
       </p>
       <p className="text-lg leading-relaxed">
         That era isn&apos;t over — but it&apos;s no longer the whole picture.
       </p>
       <p className="text-lg leading-relaxed">
         A growing share of discovery now happens inside AI systems. When someone
-        asks ChatGPT a question, searches Perplexity, or reads a Google AI
-        Overview, the answer they get doesn&apos;t come from a ranked list of
+        asks ChatGPT a question, searches Perplexity, or reads a{" "}
+        <Link href="/glossary#ai-overviews" className="text-accent hover:text-accent-hover">
+          Google AI Overview
+        </Link>
+        , the answer they get doesn&apos;t come from a ranked list of
         links. It comes from content that the AI system selected, synthesized,
         and cited as a source.
       </p>
       <p className="text-lg leading-relaxed">
         The practice of making your business the source that gets cited is
-        called Generative Engine Optimization — or GEO.
+        called{" "}
+        <Link href="/glossary#geo" className="text-accent hover:text-accent-hover">
+          Generative Engine Optimization
+        </Link>{" "}
+        — or GEO.
       </p>
 
       <h2 className="text-2xl font-medium text-text-primary pt-8 pb-2">
@@ -207,7 +217,10 @@ function WhatIsGEOContent() {
       </p>
       <p className="text-lg leading-relaxed">
         <strong className="text-text-primary">Build authority signals.</strong>{" "}
-        Backlinks, citations from other sources, and consistent publishing all
+        <Link href="/glossary#backlinks" className="text-accent hover:text-accent-hover">
+          Backlinks
+        </Link>
+        , citations from other sources, and consistent publishing all
         signal to AI systems that your content is trustworthy.
       </p>
       <p className="text-lg leading-relaxed">
@@ -228,10 +241,26 @@ function WhatIsGEOContent() {
         GEO is how you ensure that when someone asks an AI system about your
         space, you&apos;re not just visible — you&apos;re the answer.
       </p>
-      <p className="text-lg leading-relaxed italic text-text-tertiary pt-4">
+      <p className="text-lg leading-relaxed pt-4">
         Volume Systems helps businesses build GEO strategies and digital
-        infrastructure that compounds visibility over time.
+        infrastructure that compounds visibility over time.{" "}
+        <Link href="/digital" className="text-accent hover:text-accent-hover">
+          Explore our digital growth services →
+        </Link>
       </p>
+
+      {/* Related Reading */}
+      <div className="pt-8 mt-8 border-t border-bg-subtle">
+        <p className="text-sm text-text-tertiary uppercase tracking-wider mb-4">Related Reading</p>
+        <div className="space-y-2">
+          <Link href="/insights/seo-is-dead-long-live-seo" className="block text-accent hover:text-accent-hover">
+            SEO is Dead. Long Live SEO. →
+          </Link>
+          <Link href="/glossary" className="block text-text-secondary hover:text-text-primary">
+            Glossary: SEO, GEO, and digital terminology →
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
@@ -296,10 +325,16 @@ function WhyAIFailsContent() {
         it&apos;s working exactly as well as the data allows.
       </p>
       <p className="text-lg leading-relaxed">
-        Before any AI implementation, the data infrastructure needs to be right.
-        That means unified sources, clean pipelines, and reliable access.
-        It&apos;s not the exciting part — but it&apos;s the part that determines
-        whether everything else works.
+        Before any AI implementation, the{" "}
+        <Link href="/glossary#data-infrastructure" className="text-accent hover:text-accent-hover">
+          data infrastructure
+        </Link>{" "}
+        needs to be right. That means unified sources, clean{" "}
+        <Link href="/glossary#data-pipeline" className="text-accent hover:text-accent-hover">
+          pipelines
+        </Link>
+        , and reliable access. It&apos;s not the exciting part — but it&apos;s
+        the part that determines whether everything else works.
       </p>
 
       <h2 className="text-2xl font-medium text-text-primary pt-8 pb-2">
@@ -307,7 +342,11 @@ function WhyAIFailsContent() {
       </h2>
       <p className="text-lg leading-relaxed">
         A surprising number of AI implementations fail at the last mile:
-        integration into actual workflows.
+        integration into actual{" "}
+        <Link href="/glossary#workflow-automation" className="text-accent hover:text-accent-hover">
+          workflows
+        </Link>
+        .
       </p>
       <p className="text-lg leading-relaxed">
         The tool works in testing. It produces good outputs. But it sits outside
@@ -370,10 +409,29 @@ function WhyAIFailsContent() {
         That&apos;s the difference between an AI implementation that makes a
         good demo and one that actually changes how a business operates.
       </p>
-      <p className="text-lg leading-relaxed italic text-text-tertiary pt-4">
-        Volume Systems builds AI-powered systems designed for real businesses —
-        not demos.
+      <p className="text-lg leading-relaxed pt-4">
+        Volume Systems builds{" "}
+        <Link href="/glossary#custom-ai-tools" className="text-accent hover:text-accent-hover">
+          AI-powered systems
+        </Link>{" "}
+        designed for real businesses — not demos.{" "}
+        <Link href="/systems" className="text-accent hover:text-accent-hover">
+          Explore our systems work →
+        </Link>
       </p>
+
+      {/* Related Reading */}
+      <div className="pt-8 mt-8 border-t border-bg-subtle">
+        <p className="text-sm text-text-tertiary uppercase tracking-wider mb-4">Related Reading</p>
+        <div className="space-y-2">
+          <Link href="/insights/what-is-geo" className="block text-accent hover:text-accent-hover">
+            What is GEO? The Complete Guide →
+          </Link>
+          <Link href="/glossary#data-infrastructure" className="block text-text-secondary hover:text-text-primary">
+            Glossary: Data Infrastructure →
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
@@ -382,8 +440,11 @@ function SEOIsDeadContent() {
   return (
     <div className="space-y-6 text-text-secondary">
       <p className="text-lg leading-relaxed">
-        Every few years, someone declares SEO dead. And every time, they&apos;re
-        wrong — sort of.
+        Every few years, someone declares{" "}
+        <Link href="/glossary#seo" className="text-accent hover:text-accent-hover">
+          SEO
+        </Link>{" "}
+        dead. And every time, they&apos;re wrong — sort of.
       </p>
       <p className="text-lg leading-relaxed">
         SEO as a discipline isn&apos;t dying. But the version of SEO that most
@@ -404,10 +465,13 @@ function SEOIsDeadContent() {
         Two things are happening simultaneously:
       </p>
       <p className="text-lg leading-relaxed">
-        First, Google itself is changing. AI Overviews now answer queries
-        directly at the top of the results page. For many searches, users get
-        what they need without clicking a single link. The click-through rates
-        that SEO has always depended on are declining.
+        First, Google itself is changing.{" "}
+        <Link href="/glossary#ai-overviews" className="text-accent hover:text-accent-hover">
+          AI Overviews
+        </Link>{" "}
+        now answer queries directly at the top of the results page. For many
+        searches, users get what they need without clicking a single link. The
+        click-through rates that SEO has always depended on are declining.
       </p>
       <p className="text-lg leading-relaxed">
         Second, search is fragmenting. People are asking ChatGPT instead of
@@ -435,14 +499,27 @@ function SEOIsDeadContent() {
         AI-generated answer.
       </p>
       <p className="text-lg leading-relaxed">
-        Technical SEO still matters. Site speed, crawlability, structured data —
-        these determine whether your content is accessible to any discovery
+        <Link href="/glossary#technical-seo" className="text-accent hover:text-accent-hover">
+          Technical SEO
+        </Link>{" "}
+        still matters. Site speed,{" "}
+        <Link href="/glossary#crawlability" className="text-accent hover:text-accent-hover">
+          crawlability
+        </Link>
+        ,{" "}
+        <Link href="/glossary#structured-data" className="text-accent hover:text-accent-hover">
+          structured data
+        </Link>{" "}
+        — these determine whether your content is accessible to any discovery
         system, traditional or AI-powered.
       </p>
       <p className="text-lg leading-relaxed">
-        Authority still matters. Backlinks, brand mentions, and being referenced
-        by other credible sources signal trust to both search engines and AI
-        systems.
+        Authority still matters.{" "}
+        <Link href="/glossary#backlinks" className="text-accent hover:text-accent-hover">
+          Backlinks
+        </Link>
+        , brand mentions, and being referenced by other credible sources signal
+        trust to both search engines and AI systems.
       </p>
       <p className="text-lg leading-relaxed">
         The fundamentals haven&apos;t changed. What&apos;s changed is what
@@ -489,10 +566,17 @@ function SEOIsDeadContent() {
         source on your topic, be that source.
       </p>
       <p className="text-lg leading-relaxed">
-        <strong className="text-text-primary">Build a GEO layer.</strong> Audit
-        your content for citability. Are your key claims structured in a way
-        that AI systems can extract? Are your definitions clear and quotable? Is
-        your content the kind of thing a system would confidently recommend?
+        <strong className="text-text-primary">
+          Build a{" "}
+          <Link href="/glossary#geo" className="text-accent hover:text-accent-hover">
+            GEO
+          </Link>{" "}
+          layer.
+        </strong>{" "}
+        Audit your content for citability. Are your key claims structured in a
+        way that AI systems can extract? Are your definitions clear and
+        quotable? Is your content the kind of thing a system would confidently
+        recommend?
       </p>
       <p className="text-lg leading-relaxed">
         <strong className="text-text-primary">Diversify discovery.</strong>{" "}
@@ -518,10 +602,26 @@ function SEOIsDeadContent() {
         The old game was about gaming an algorithm. The new game is about being
         the best answer. And that&apos;s a game worth playing.
       </p>
-      <p className="text-lg leading-relaxed italic text-text-tertiary pt-4">
+      <p className="text-lg leading-relaxed pt-4">
         Volume Systems builds SEO and GEO strategies that compound organic
-        visibility over time.
+        visibility over time.{" "}
+        <Link href="/digital" className="text-accent hover:text-accent-hover">
+          Explore our digital growth services →
+        </Link>
       </p>
+
+      {/* Related Reading */}
+      <div className="pt-8 mt-8 border-t border-bg-subtle">
+        <p className="text-sm text-text-tertiary uppercase tracking-wider mb-4">Related Reading</p>
+        <div className="space-y-2">
+          <Link href="/insights/what-is-geo" className="block text-accent hover:text-accent-hover">
+            What is GEO? The Complete Guide →
+          </Link>
+          <Link href="/glossary" className="block text-text-secondary hover:text-text-primary">
+            Glossary: SEO, GEO, and digital terminology →
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
