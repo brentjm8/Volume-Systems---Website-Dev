@@ -56,10 +56,10 @@
 - [x] Site favicon (accent V)
 - [x] Google Search Console verified + sitemap submitted
 - [x] Glossary page (/glossary) with 28 terms + JSON-LD DefinedTermSet schema
+- [x] Internal linking strategy (blog→glossary, service page cross-refs, homepage→insights)
 
 ### Remaining
 - [ ] Write 5-7 more blog posts
-- [ ] Internal linking strategy across all pages
 - [ ] Directory submissions
 - [ ] Page speed optimization
 - [ ] Image optimization (alt tags, compression, lazy loading)
@@ -86,9 +86,9 @@
 
 ## Current Focus
 
-**Active Task:** Session 6 in progress — SEO/GEO roadmap
+**Active Task:** Session 6 complete — SEO/GEO roadmap (glossary + internal linking)
 **Blocked By:** Studio product content, Work page case studies
-**Next Priority:** More blog posts, internal linking, directory submissions
+**Next Priority:** More blog posts, directory submissions
 **Last Session:** February 2, 2026
 
 ---
@@ -97,6 +97,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Implemented internal linking strategy | Blog posts link to glossary terms + service CTAs + related posts; Service pages cross-reference each other; Homepage links to /insights | Feb 2, 2026 |
 | Added 5 technical SEO terms to glossary | AI Overviews, Crawlability, JSON-LD, Sitemap, Structured Data — total 28 terms | Feb 2, 2026 |
 | Created Glossary page (/glossary) | 23 AI/systems/digital terms with "What is X?" format, alphabetical nav, JSON-LD DefinedTermSet schema, internal links to service pages | Feb 2, 2026 |
 | Added FAQ sections + JSON-LD schemas | Digital (6 FAQs), Systems (6 FAQs), Blog posts (Article schema); Rich results optimization | Jan 30, 2026 |
@@ -333,7 +334,7 @@
 **Resume Point:** Studio content or Work page
 
 ### Session 6 — February 2, 2026
-**Focus:** SEO/GEO roadmap — Glossary page
+**Focus:** SEO/GEO roadmap — Glossary page + Internal linking
 
 **Completed:**
 - Glossary page (/glossary) — comprehensive term definitions:
@@ -349,9 +350,21 @@
   - CTA: "Ready to put these concepts to work?"
 - Footer updated: Added Glossary link (between Insights and Contact)
 - Sitemap updated: Added /glossary at priority 0.7
+- Internal linking strategy implemented:
+  - Blog posts: Added glossary links (SEO, GEO, AI Overviews, backlinks, data infrastructure, technical SEO, etc.)
+  - Blog posts: Added service page CTAs ("Explore our digital growth services →", "Explore our systems work →")
+  - Blog posts: Added "Related Reading" sections with cross-links to other posts and glossary
+  - Digital page: Linked to glossary terms (technical SEO, content strategy, backlinks, LLM, AI Overviews)
+  - Digital page: Linked to blog posts ("What is GEO?", "SEO is Dead")
+  - Digital page: Added secondary CTA "Explore Systems" with cross-reference text
+  - Systems page: Linked to glossary terms (data pipeline, custom AI tools, lead generation)
+  - Systems page: Linked to blog post ("Why AI Implementations Fail")
+  - Systems page: Added cross-link to /digital in Revenue Engine section
+  - Systems page: Added secondary CTA "Explore Digital Growth" with cross-reference text
+  - Homepage: Added "Read Our Thinking" CTA button linking to /insights
 
-**Stopped Because:** Session complete
-**Resume Point:** More blog posts, internal linking, directory submissions
+**Stopped Because:** Session complete — glossary and internal linking done
+**Resume Point:** More blog posts, directory submissions
 
 ### Session 5 — January 30, 2026
 **Focus:** About page expansion, bug fixes, AI-optimized content
