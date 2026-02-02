@@ -1,11 +1,11 @@
 # PROGRESS.md
 
 ## Project: Volume Systems Website
-**Last Updated:** January 30, 2026
-**Session:** 5
+**Last Updated:** February 2, 2026
+**Session:** 6
 **V1 Progress:** 100% Complete
 **V2 Progress:** Content Pages In Progress
-**Status:** Systems, Digital, About, Contact, Insights complete; Studio and Work placeholders remaining
+**Status:** Systems, Digital, About, Contact, Insights, Glossary complete; Studio and Work placeholders remaining
 
 **Production URL:** https://volume-systems.vercel.app
 
@@ -55,11 +55,11 @@
 - [x] Brand asset kit + /brand page
 - [x] Site favicon (accent V)
 - [x] Google Search Console verified + sitemap submitted
+- [x] Glossary page (/glossary) with 23 terms + JSON-LD DefinedTermSet schema
 
 ### Remaining
 - [ ] Write 5-7 more blog posts
 - [ ] Internal linking strategy across all pages
-- [ ] Glossary page (/glossary)
 - [ ] Directory submissions
 - [ ] Page speed optimization
 - [ ] Image optimization (alt tags, compression, lazy loading)
@@ -86,10 +86,10 @@
 
 ## Current Focus
 
-**Active Task:** Session 5 complete — full content infrastructure in place
+**Active Task:** Session 6 in progress — SEO/GEO roadmap
 **Blocked By:** Studio product content, Work page case studies
-**Next Priority:** More blog posts, internal linking, glossary page
-**Last Session:** January 30, 2026
+**Next Priority:** More blog posts, internal linking, directory submissions
+**Last Session:** February 2, 2026
 
 ---
 
@@ -97,6 +97,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Created Glossary page (/glossary) | 23 AI/systems/digital terms with "What is X?" format, alphabetical nav, JSON-LD DefinedTermSet schema, internal links to service pages | Feb 2, 2026 |
 | Added FAQ sections + JSON-LD schemas | Digital (6 FAQs), Systems (6 FAQs), Blog posts (Article schema); Rich results optimization | Jan 30, 2026 |
 | Added Insights blog section | /insights index + 3 posts (GEO, AI failures, SEO evolution); Footer link added; Sitemap updated | Jan 30, 2026 |
 | Updated Digital Marketing card copy | Removed "paid and" — now focuses on organic channels only | Jan 30, 2026 |
@@ -329,6 +330,26 @@
 
 **Blocked By:** None (Resend API key now configured)
 **Resume Point:** Studio content or Work page
+
+### Session 6 — February 2, 2026
+**Focus:** SEO/GEO roadmap — Glossary page
+
+**Completed:**
+- Glossary page (/glossary) — comprehensive term definitions:
+  - 23 terms covering AI, systems, and digital growth terminology
+  - "What is X?" format for each term (GEO-optimized, quotable)
+  - Alphabetical organization with letter-based quick navigation
+  - Terms: AI Agent, API, Applied AI, Backlinks, Business Systems, Content Strategy, Conversion Rate Optimization, CRM Integration, Custom AI Tools, Data Infrastructure, Data Pipeline, Domain Authority, ETL, GEO, Lead Generation, LLM, Marketing Automation, Prompt Engineering, RAG, Revenue Engine, SEO, Technical SEO, Workflow Automation
+  - Internal links to relevant service pages (/systems, /digital)
+  - JSON-LD DefinedTermSet schema for rich results
+  - Scroll-anchored navigation with smooth scroll-mt-24 offset
+  - VU meter dividers between sections
+  - CTA: "Ready to put these concepts to work?"
+- Footer updated: Added Glossary link (between Insights and Contact)
+- Sitemap updated: Added /glossary at priority 0.7
+
+**Stopped Because:** Glossary page complete
+**Resume Point:** More blog posts, internal linking, directory submissions
 
 ### Session 5 — January 30, 2026
 **Focus:** About page expansion, bug fixes, AI-optimized content

@@ -52,6 +52,12 @@ export function Footer() {
               Insights
             </Link>
             <Link
+              href="/glossary"
+              className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 flex items-center py-3 px-4"
+            >
+              Glossary
+            </Link>
+            <Link
               href="/contact"
               className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 flex items-center py-3 px-4"
             >
