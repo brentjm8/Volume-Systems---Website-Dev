@@ -55,7 +55,7 @@
 - [x] Brand asset kit + /brand page
 - [x] Site favicon (accent V)
 - [x] Google Search Console verified + sitemap submitted
-- [x] Glossary page (/glossary) with 23 terms + JSON-LD DefinedTermSet schema
+- [x] Glossary page (/glossary) with 28 terms + JSON-LD DefinedTermSet schema
 
 ### Remaining
 - [ ] Write 5-7 more blog posts
@@ -97,6 +97,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added 5 technical SEO terms to glossary | AI Overviews, Crawlability, JSON-LD, Sitemap, Structured Data — total 28 terms | Feb 2, 2026 |
 | Created Glossary page (/glossary) | 23 AI/systems/digital terms with "What is X?" format, alphabetical nav, JSON-LD DefinedTermSet schema, internal links to service pages | Feb 2, 2026 |
 | Added FAQ sections + JSON-LD schemas | Digital (6 FAQs), Systems (6 FAQs), Blog posts (Article schema); Rich results optimization | Jan 30, 2026 |
 | Added Insights blog section | /insights index + 3 posts (GEO, AI failures, SEO evolution); Footer link added; Sitemap updated | Jan 30, 2026 |
@@ -336,10 +337,11 @@
 
 **Completed:**
 - Glossary page (/glossary) — comprehensive term definitions:
-  - 23 terms covering AI, systems, and digital growth terminology
+  - 28 terms covering AI, systems, and digital growth terminology
   - "What is X?" format for each term (GEO-optimized, quotable)
   - Alphabetical organization with letter-based quick navigation
-  - Terms: AI Agent, API, Applied AI, Backlinks, Business Systems, Content Strategy, Conversion Rate Optimization, CRM Integration, Custom AI Tools, Data Infrastructure, Data Pipeline, Domain Authority, ETL, GEO, Lead Generation, LLM, Marketing Automation, Prompt Engineering, RAG, Revenue Engine, SEO, Technical SEO, Workflow Automation
+  - Initial 23 terms: AI Agent, API, Applied AI, Backlinks, Business Systems, Content Strategy, Conversion Rate Optimization, CRM Integration, Custom AI Tools, Data Infrastructure, Data Pipeline, Domain Authority, ETL, GEO, Lead Generation, LLM, Marketing Automation, Prompt Engineering, RAG, Revenue Engine, SEO, Technical SEO, Workflow Automation
+  - Added 5 technical SEO terms: AI Overviews, Crawlability, JSON-LD, Sitemap, Structured Data
   - Internal links to relevant service pages (/systems, /digital)
   - JSON-LD DefinedTermSet schema for rich results
   - Scroll-anchored navigation with smooth scroll-mt-24 offset
@@ -348,7 +350,7 @@
 - Footer updated: Added Glossary link (between Insights and Contact)
 - Sitemap updated: Added /glossary at priority 0.7
 
-**Stopped Because:** Glossary page complete
+**Stopped Because:** Session complete
 **Resume Point:** More blog posts, internal linking, directory submissions
 
 ### Session 5 — January 30, 2026
