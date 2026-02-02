@@ -6,6 +6,39 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { VUMeterDivider } from "@/components/VUMeterDivider";
 
+const digitalFaqs = [
+  {
+    question: "How long does SEO take to show results?",
+    answer:
+      "Most businesses start seeing measurable improvements in 3-6 months, with compounding returns over time. SEO is infrastructure, not a campaign — the longer it runs, the stronger it gets.",
+  },
+  {
+    question: "What's the difference between SEO and GEO?",
+    answer:
+      "SEO optimizes your content for traditional search engine rankings. GEO optimizes your content to be cited and recommended by AI-powered search systems like ChatGPT, Perplexity, and Google AI Overviews. Both are essential for modern discovery.",
+  },
+  {
+    question: "Do we need SEO if we already get leads from referrals?",
+    answer:
+      "Referrals are powerful but unpredictable. SEO and GEO build a consistent, compounding pipeline of inbound discovery. They work alongside referrals, not instead of them.",
+  },
+  {
+    question: "What is Generative Engine Optimization?",
+    answer:
+      "Generative Engine Optimization (GEO) is the practice of structuring your digital presence so that AI systems cite your business as a source when answering relevant questions. It's the next evolution of search visibility.",
+  },
+  {
+    question: "How do you measure digital growth success?",
+    answer:
+      "We measure outcomes, not vanity metrics. That means qualified traffic, lead volume, conversion rates, and revenue impact — not just impressions or keyword rankings.",
+  },
+  {
+    question: "Do you run paid ads?",
+    answer:
+      "No. We focus exclusively on organic growth strategies — SEO, GEO, content, and lead generation systems. We build infrastructure that compounds, rather than campaigns that stop when spending stops.",
+  },
+];
+
 const whatWeBuildCards = [
   {
     title: "SEO",
@@ -212,6 +245,53 @@ export function DigitalContent() {
                 We build for both — so you&apos;re visible wherever your
                 customers are looking.
               </motion.p>
+            </div>
+          </div>
+        </section>
+
+        {/* Simple Divider */}
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <hr className="border-t border-bg-subtle opacity-30" />
+        </div>
+
+        {/* FAQ Section */}
+        <section className="py-20 md:py-28 px-6 md:px-8">
+          <div className="max-w-[1200px] mx-auto w-full">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="label text-text-tertiary mb-12"
+            >
+              FREQUENTLY ASKED QUESTIONS
+            </motion.p>
+
+            <div className="max-w-3xl space-y-8">
+              {digitalFaqs.map((faq, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{
+                    duration: 0.4,
+                    ease: "easeOut",
+                    delay: index * 0.03,
+                  }}
+                  className="space-y-3"
+                >
+                  <h3 className="text-lg md:text-xl font-medium text-text-primary">
+                    {faq.question}
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed">
+                    {faq.answer}
+                  </p>
+                  {index < digitalFaqs.length - 1 && (
+                    <hr className="border-t border-bg-subtle opacity-30 !mt-8" />
+                  )}
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>

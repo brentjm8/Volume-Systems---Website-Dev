@@ -63,6 +63,39 @@ const whoItsFor = [
   "Businesses ready to invest in durable infrastructure",
 ];
 
+const systemsFaqs = [
+  {
+    question: "What kind of businesses need custom AI tools?",
+    answer:
+      "Any business with repetitive decisions, unstructured data, or processes that don't scale well with headcount. If your team is doing work that a well-designed system could handle faster and more consistently, custom AI tools are worth exploring.",
+  },
+  {
+    question: "How is this different from buying off-the-shelf software?",
+    answer:
+      "Off-the-shelf tools are built for everyone. Custom systems are built for you — designed around your data, workflows, and goals. They become your proprietary competitive edge, not a commodity anyone can buy.",
+  },
+  {
+    question: "What does data infrastructure actually include?",
+    answer:
+      "Data infrastructure includes the pipelines, integrations, warehouses, and access layers that allow your business to collect, unify, and use data from across your operations. It's the foundation that makes AI tools, automations, and analytics reliable.",
+  },
+  {
+    question: "How long does a typical systems engagement take?",
+    answer:
+      "It depends on scope, but most engagements run 4-12 weeks from discovery to deployment. We scope carefully upfront so timelines are clear and realistic from day one.",
+  },
+  {
+    question: "Do we need to replace our existing tools?",
+    answer:
+      "Rarely. Most of our work integrates with your existing stack — connecting systems that don't talk to each other, automating workflows between tools, and building new capabilities on top of what you already have.",
+  },
+  {
+    question: "What happens after you build the system?",
+    answer:
+      "We build with ownership in mind. Every system is documented, the team is trained, and the infrastructure is designed to be maintainable. We're available for ongoing support, but the goal is for you to own and operate what we build.",
+  },
+];
+
 export function SystemsContent() {
   return (
     <>
@@ -323,6 +356,53 @@ export function SystemsContent() {
                 >
                   {statement}
                 </motion.p>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Simple Divider */}
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <hr className="border-t border-bg-subtle opacity-30" />
+        </div>
+
+        {/* FAQ Section */}
+        <section className="py-20 md:py-28 px-6 md:px-8">
+          <div className="max-w-[1200px] mx-auto w-full">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="label text-text-tertiary mb-12"
+            >
+              FREQUENTLY ASKED QUESTIONS
+            </motion.p>
+
+            <div className="max-w-3xl space-y-8">
+              {systemsFaqs.map((faq, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{
+                    duration: 0.4,
+                    ease: "easeOut",
+                    delay: index * 0.03,
+                  }}
+                  className="space-y-3"
+                >
+                  <h3 className="text-lg md:text-xl font-medium text-text-primary">
+                    {faq.question}
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed">
+                    {faq.answer}
+                  </p>
+                  {index < systemsFaqs.length - 1 && (
+                    <hr className="border-t border-bg-subtle opacity-30 !mt-8" />
+                  )}
+                </motion.div>
               ))}
             </div>
           </div>

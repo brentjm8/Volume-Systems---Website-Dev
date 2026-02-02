@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { notFound } from "next/navigation";
 import { PostContent } from "./PostContent";
 
@@ -83,6 +84,26 @@ export async function generateMetadata({
   };
 }
 
+function generateArticleSchema(post: PostData) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.metaTitle,
+    description: post.description,
+    datePublished: post.dateISO,
+    author: {
+      "@type": "Organization",
+      name: "Volume Systems",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Volume Systems",
+      url: "https://volumesystems.io",
+    },
+    mainEntityOfPage: `https://volumesystems.io/insights/${post.slug}`,
+  };
+}
+
 export default async function PostPage({
   params,
 }: {
@@ -95,5 +116,16 @@ export default async function PostPage({
     notFound();
   }
 
-  return <PostContent slug={slug} title={post.title} date={post.date} />;
+  const articleSchema = generateArticleSchema(post);
+
+  return (
+    <>
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <PostContent slug={slug} title={post.title} date={post.date} />
+    </>
+  );
 }
