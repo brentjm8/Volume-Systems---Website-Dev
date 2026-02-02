@@ -71,7 +71,7 @@
 
 **Active Task:** Session 5 complete
 **Blocked By:** Studio product content, Work page case studies
-**Last Session:** January 30, 2026 — About page expansion, bug fixes, definitions, copy updates, Insights blog (3 posts)
+**Last Session:** January 30, 2026 — About expansion, bug fixes, definitions, Insights blog (3 posts), FAQ sections (12 Qs), JSON-LD schemas (3 posts)
 
 ---
 
