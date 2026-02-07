@@ -14,6 +14,16 @@ type PostData = {
 };
 
 const posts: Record<string, PostData> = {
+  "ai-tools-vs-ai-systems": {
+    slug: "ai-tools-vs-ai-systems",
+    title: "The Difference Between AI Tools and AI Systems",
+    metaTitle: "The Difference Between AI Tools and AI Systems",
+    description:
+      "Every company is buying AI tools right now. Few are building AI systems. That's the gap where competitive advantage lives.",
+    date: "February 7, 2026",
+    dateISO: "2026-02-07",
+    content: null,
+  },
   "what-is-geo": {
     slug: "what-is-geo",
     title: "What is GEO? The Complete Guide to Generative Engine Optimization",

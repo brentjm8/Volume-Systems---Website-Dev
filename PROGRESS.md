@@ -1,11 +1,11 @@
 # PROGRESS.md
 
 ## Project: Volume Systems Website
-**Last Updated:** February 2, 2026
-**Session:** 6
+**Last Updated:** February 7, 2026
+**Session:** 7
 **V1 Progress:** 100% Complete
 **V2 Progress:** Content Pages In Progress
-**Status:** Systems, Digital, About, Contact, Insights, Glossary complete; Studio and Work placeholders remaining
+**Status:** Systems, Digital, About, Contact, Insights (4 posts), Glossary complete; Studio and Work placeholders remaining
 
 **Production URL:** https://volume-systems.vercel.app
 
@@ -49,7 +49,7 @@
 - [x] Content: Digital page (full content + definitions + FAQ)
 - [x] Content: About page (7 sections)
 - [x] Contact page form (Resend email integration)
-- [x] Insights blog section (3 posts live)
+- [x] Insights blog section (4 posts live)
 - [x] FAQ sections with JSON-LD FAQPage schema
 - [x] Article JSON-LD schema on blog posts
 - [x] Brand asset kit + /brand page
@@ -59,7 +59,7 @@
 - [x] Internal linking strategy (blog→glossary, service page cross-refs, homepage→insights)
 
 ### Remaining
-- [ ] Write 5-7 more blog posts
+- [ ] Write 4-6 more blog posts
 - [ ] Directory submissions
 - [ ] Page speed optimization
 - [ ] Image optimization (alt tags, compression, lazy loading)
@@ -86,10 +86,10 @@
 
 ## Current Focus
 
-**Active Task:** Session 6 complete — SEO/GEO roadmap (glossary + internal linking)
+**Active Task:** Session 7 complete — New blog post (AI Tools vs AI Systems)
 **Blocked By:** Studio product content, Work page case studies
 **Next Priority:** More blog posts, directory submissions
-**Last Session:** February 2, 2026
+**Last Session:** February 7, 2026
 
 ---
 
@@ -97,6 +97,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added "AI Tools vs AI Systems" blog post | 4th insight post covering tools vs systems thinking; internal links to glossary + related posts | Feb 7, 2026 |
 | Implemented internal linking strategy | Blog posts link to glossary terms + service CTAs + related posts; Service pages cross-reference each other; Homepage links to /insights | Feb 2, 2026 |
 | Added 5 technical SEO terms to glossary | AI Overviews, Crawlability, JSON-LD, Sitemap, Structured Data — total 28 terms | Feb 2, 2026 |
 | Created Glossary page (/glossary) | 23 AI/systems/digital terms with "What is X?" format, alphabetical nav, JSON-LD DefinedTermSet schema, internal links to service pages | Feb 2, 2026 |
@@ -366,6 +367,25 @@
 **Stopped Because:** Session complete — glossary and internal linking done
 **Resume Point:** More blog posts, directory submissions
 
+### Session 7 — February 7, 2026
+**Focus:** New blog post — "The Difference Between AI Tools and AI Systems"
+
+**Completed:**
+- New blog post: "The Difference Between AI Tools and AI Systems"
+  - Slug: ai-tools-vs-ai-systems
+  - Date: February 7, 2026
+  - Full article covering: The Tool Trap, Tools vs Systems core difference, why companies default to tools, the infrastructure layer, systems thinking, the leverage test, the real AI advantage
+  - Internal links: glossary terms (data-infrastructure, data-pipeline), /contact CTA
+  - Related Reading: links to "Why Most AI Implementations Fail" and /systems
+  - Added to InsightsContent.tsx posts array (first position — newest)
+  - Added to [slug]/page.tsx metadata with SEO/OG/Article schema
+  - Added AIToolsVsSystemsContent component to PostContent.tsx
+  - Added to sitemap.ts
+  - Deployed to production via Vercel
+
+**Stopped Because:** Blog post complete and deployed
+**Resume Point:** More blog posts, directory submissions
+
 ### Session 5 — January 30, 2026
 **Focus:** About page expansion, bug fixes, AI-optimized content
 
@@ -616,13 +636,13 @@ Contact form:
 
 Insights blog (/insights):
 - Index page with post cards
-- 3 posts: what-is-geo, why-ai-implementations-fail, seo-is-dead-long-live-seo
+- 4 posts: ai-tools-vs-ai-systems, what-is-geo, why-ai-implementations-fail, seo-is-dead-long-live-seo
 - Dynamic route with full article layout
 - Footer link added (not in main nav)
 
 SEO infrastructure:
 - Unique meta per page, OG tags, Twitter cards, canonical URLs
-- sitemap.xml and robots.txt auto-generated (10 pages including insights)
+- sitemap.xml and robots.txt auto-generated (11 pages including insights)
 - JSON-LD schemas: Organization (homepage), FAQPage (Digital, Systems), Article (blog posts)
 - OG image: 1200x630 PNG (SVG source, 120px/36px text)
 

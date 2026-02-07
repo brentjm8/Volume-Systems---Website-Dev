@@ -8,6 +8,14 @@ import { VUMeterDivider } from "@/components/VUMeterDivider";
 
 export const posts = [
   {
+    slug: "ai-tools-vs-ai-systems",
+    title: "The Difference Between AI Tools and AI Systems",
+    description:
+      "Every company is buying AI tools right now. Few are building AI systems. That's the gap where competitive advantage lives.",
+    date: "February 7, 2026",
+    dateISO: "2026-02-07",
+  },
+  {
     slug: "what-is-geo",
     title: "What is GEO? The Complete Guide to Generative Engine Optimization",
     description:
