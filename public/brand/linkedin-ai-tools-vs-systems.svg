@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+  <rect width="1200" height="1200" fill="#0A0A0A"/>
+
+  <!-- Subtle accent line divider -->
+  <line x1="480" y1="600" x2="720" y2="600" stroke="#5B8A9A" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Top section: Tool → Task -->
+  <text x="600" y="460" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="88">
+    <tspan font-weight="700">Tool</tspan>
+    <tspan font-weight="400" fill="#555555" dx="20">→</tspan>
+    <tspan font-weight="400" dx="20">Task</tspan>
+  </text>
+
+  <!-- Bottom section: System → Leverage -->
+  <text x="600" y="760" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="88">
+    <tspan font-weight="700">System</tspan>
+    <tspan font-weight="400" fill="#5B8A9A" dx="20">→</tspan>
+    <tspan font-weight="400" fill="#5B8A9A" dx="20">Leverage</tspan>
+  </text>
+
+  <!-- Volume Systems wordmark -->
+  <text x="600" y="1120" text-anchor="middle" fill="#555555" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="20" font-weight="500" letter-spacing="3">VOLUME SYSTEMS</text>
+</svg>
