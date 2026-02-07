@@ -97,6 +97,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added LinkedIn image for AI Tools vs Systems | 1200x1200 SVG+PNG, A/B contrast layout with brand colors | Feb 7, 2026 |
 | Added "AI Tools vs AI Systems" blog post | 4th insight post covering tools vs systems thinking; internal links to glossary + related posts | Feb 7, 2026 |
 | Implemented internal linking strategy | Blog posts link to glossary terms + service CTAs + related posts; Service pages cross-reference each other; Homepage links to /insights | Feb 2, 2026 |
 | Added 5 technical SEO terms to glossary | AI Overviews, Crawlability, JSON-LD, Sitemap, Structured Data — total 28 terms | Feb 2, 2026 |
@@ -382,8 +383,12 @@
   - Added AIToolsVsSystemsContent component to PostContent.tsx
   - Added to sitemap.ts
   - Deployed to production via Vercel
+- LinkedIn post image for "AI Tools vs AI Systems"
+  - SVG source + PNG export (1200x1200, 54KB)
+  - A/B contrast layout: "Tool → Task" (white) vs "System → Leverage" (teal accent)
+  - Saved to public/brand/linkedin-ai-tools-vs-systems.{svg,png}
 
-**Stopped Because:** Blog post complete and deployed
+**Stopped Because:** Blog post and LinkedIn image complete and deployed
 **Resume Point:** More blog posts, directory submissions
 
 ### Session 5 — January 30, 2026
