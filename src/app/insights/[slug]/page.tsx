@@ -14,6 +14,16 @@ type PostData = {
 };
 
 const posts: Record<string, PostData> = {
+  "ai-agents-infrastructure": {
+    slug: "ai-agents-infrastructure",
+    title: "AI Agents Are Coming. Your Infrastructure Isn't Ready.",
+    metaTitle: "AI Agents Are Coming. Your Infrastructure Isn't Ready.",
+    description:
+      "Gartner predicts 40% of enterprise apps will have embedded AI agents by year-end — up from 5% in 2025. That's not a trend. That's a phase change. And it's going to expose a fault line most companies aren't prepared for.",
+    date: "March 6, 2026",
+    dateISO: "2026-03-06",
+    content: null,
+  },
   "ai-tools-vs-ai-systems": {
     slug: "ai-tools-vs-ai-systems",
     title: "The Difference Between AI Tools and AI Systems",
