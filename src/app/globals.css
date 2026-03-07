@@ -108,3 +108,15 @@ body {
     display: none;
   }
 }
+
+/* Sentinel provenance chain animation */
+@keyframes pulse-travel {
+  0% { left: 0; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { left: calc(100% - 6px); opacity: 0; }
+}
+
+.animate-pulse-travel {
+  animation: pulse-travel 2s ease-in-out infinite;
+}
