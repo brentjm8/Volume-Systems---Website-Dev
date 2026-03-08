@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { VUMeterDivider } from "@/components/VUMeterDivider";
 
-const tags = ["AI Agent", "Compliance", "Healthcare"];
+const tags = ["AI Agent", "Compliance", "Utilities", "PropTech"];
 
 export function WorkContent() {
   return (
@@ -46,8 +46,8 @@ export function WorkContent() {
                       Sentinel
                     </h2>
                     <p className="text-text-secondary leading-relaxed mb-6">
-                      AI-powered compliance monitoring for Medicare Advantage
-                      plans.
+                      AI-powered utility compliance and billing engine for
+                      California manufactured housing operators.
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {tags.map((tag) => (
