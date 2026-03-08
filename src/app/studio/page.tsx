@@ -1,12 +1,34 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { StudioContent } from "./StudioContent";
+
+const studioSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Volume Systems",
+  url: "https://volumesystems.io",
+  description:
+    "Applied AI studio building proprietary products and high-leverage systems.",
+  makesOffer: {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "SoftwareApplication",
+      name: "Sentinel",
+      description:
+        "AI-powered utility compliance and billing engine for California manufactured housing operators.",
+      applicationCategory: "BusinessApplication",
+    },
+  },
+};
 
 export const metadata: Metadata = {
   title: "Studio",
-  description: "Proprietary AI products built by Volume Systems.",
+  description:
+    "Proprietary AI products built by Volume Systems. Purpose-built tools for regulated industries, compliance, and operational infrastructure.",
   openGraph: {
     title: "Studio | Volume Systems",
-    description: "Proprietary AI products built by Volume Systems.",
+    description:
+      "Proprietary AI products built by Volume Systems. Purpose-built tools for regulated industries, compliance, and operational infrastructure.",
     url: "https://volumesystems.io/studio",
     images: [
       {
@@ -20,7 +42,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Studio | Volume Systems",
-    description: "Proprietary AI products built by Volume Systems.",
+    description:
+      "Proprietary AI products built by Volume Systems. Purpose-built tools for regulated industries, compliance, and operational infrastructure.",
   },
   alternates: {
     canonical: "https://volumesystems.io/studio",
@@ -28,5 +51,14 @@ export const metadata: Metadata = {
 };
 
 export default function StudioPage() {
-  return <StudioContent />;
+  return (
+    <>
+      <Script
+        id="studio-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(studioSchema) }}
+      />
+      <StudioContent />
+    </>
+  );
 }
