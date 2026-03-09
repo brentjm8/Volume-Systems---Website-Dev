@@ -191,7 +191,7 @@ export function SentinelShowcase() {
   ];
 
   return (
-    <div className="space-y-0">
+    <div id="sentinel" className="space-y-0">
       {/* ===== HERO ===== */}
       <section className="pt-32 md:pt-40 pb-16 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto">

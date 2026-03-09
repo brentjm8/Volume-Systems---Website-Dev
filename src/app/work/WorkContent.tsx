@@ -22,7 +22,7 @@ const caseStudies: CaseStudy[] = [
     description:
       "AI-powered utility compliance and billing engine for California manufactured housing operators.",
     tags: ["AI Agent", "Compliance", "Utilities", "PropTech"],
-    href: "/studio",
+    href: "/studio#sentinel",
     status: "Live in Production",
   },
   {
