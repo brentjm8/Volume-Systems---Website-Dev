@@ -9,3 +9,4 @@ export { ChannelNumber } from "./ChannelNumber";
 export { DialRingsBackground } from "./DialRingsBackground";
 export { VolumeMeter } from "./VolumeMeter";
 export { SentinelShowcase } from "./SentinelShowcase";
+export { AllianceShowcase } from "./AllianceShowcase";

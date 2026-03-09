@@ -9,16 +9,28 @@ const studioSchema = {
   url: "https://volumesystems.io",
   description:
     "Applied AI studio building proprietary products and high-leverage systems.",
-  makesOffer: {
-    "@type": "Offer",
-    itemOffered: {
-      "@type": "SoftwareApplication",
-      name: "Sentinel",
-      description:
-        "AI-powered utility compliance and billing engine for California manufactured housing operators.",
-      applicationCategory: "BusinessApplication",
+  makesOffer: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "SoftwareApplication",
+        name: "Sentinel",
+        description:
+          "AI-powered utility compliance and billing engine for California manufactured housing operators.",
+        applicationCategory: "BusinessApplication",
+      },
     },
-  },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "SoftwareApplication",
+        name: "Alliance",
+        description:
+          "Partnership intelligence dashboard that turns messy CRM exports into strategic clarity for SaaS teams.",
+        applicationCategory: "BusinessApplication",
+      },
+    },
+  ],
 };
 
 export const metadata: Metadata = {
