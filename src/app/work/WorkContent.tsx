@@ -31,7 +31,7 @@ const caseStudies: CaseStudy[] = [
     description:
       "Partnership intelligence dashboard that turns messy CRM exports into strategic clarity for SaaS teams.",
     tags: ["SaaS", "Partnership Intelligence", "AI Insights", "Analytics"],
-    href: "/studio",
+    href: "/studio#alliance",
     status: "V1 Ship-Ready",
   },
 ];

@@ -61,7 +61,7 @@ export function AllianceShowcase() {
   ];
 
   return (
-    <div className="space-y-0">
+    <div id="alliance" className="space-y-0 scroll-mt-20">
       {/* ===== HERO ===== */}
       <section className="pt-16 md:pt-24 pb-16 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto">
