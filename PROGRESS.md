@@ -99,6 +99,7 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Enriched Alliance schema + /work ItemList JSON-LD | Alliance SoftwareApplication with featureList, operatingSystem, offers, creator; ItemList on /work with both products; anchor links for both showcases | Mar 9, 2026 |
 | Added Alliance showcase to /studio | Full product showcase: hero, problem, four questions framework, 6 capabilities, outcomes, tech stack, CTA | Mar 9, 2026 |
 | Added Sentinel showcase to /studio | Adapted from standalone JSX: provenance chain, compliance rules, outcomes, tech stack, security posture | Mar 9, 2026 |
 | Updated /work page with case studies | Data-driven card list: Sentinel + Alliance entries with tags, descriptions, links to /studio | Mar 9, 2026 |
@@ -409,8 +410,11 @@
 - Sentinel description fix: Corrected Medicare/healthcare references to utility compliance/manufactured housing on /work page
 - Components exported via index.ts: SentinelShowcase, AllianceShowcase
 - Alliance anchor link: id="alliance" on AllianceShowcase with scroll-mt-20; /work Alliance card links to /studio#alliance
+- Sentinel anchor link: id="sentinel" on SentinelShowcase; /work Sentinel card links to /studio#sentinel
+- Enriched Alliance JSON-LD on /studio: featureList (6 items), operatingSystem, offers (PreOrder), creator
+- Added ItemList JSON-LD to /work page: both products as ListItem → SoftwareApplication with anchor URLs
 
-**Stopped Because:** Session complete — both product showcases live, work page updated
+**Stopped Because:** Session complete — both product showcases live, work page updated, SEO/GEO optimized
 **Resume Point:** More blog posts, directory submissions, analytics integration
 
 ### Session 8 — March 6, 2026
