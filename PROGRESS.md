@@ -88,7 +88,7 @@
 
 ## Current Focus
 
-**Active Task:** Session 9 complete — Studio showcases (Sentinel + Alliance), Work page, favicon fix, SEO
+**Active Task:** Session 9 complete — Studio showcases, Work page, favicon fix, SEO, anchor links
 **Blocked By:** None
 **Next Priority:** More blog posts, directory submissions, analytics integration
 **Last Session:** March 9, 2026
@@ -408,6 +408,7 @@
 - Navigation: Added then removed "Work" from main nav per user preference
 - Sentinel description fix: Corrected Medicare/healthcare references to utility compliance/manufactured housing on /work page
 - Components exported via index.ts: SentinelShowcase, AllianceShowcase
+- Alliance anchor link: id="alliance" on AllianceShowcase with scroll-mt-20; /work Alliance card links to /studio#alliance
 
 **Stopped Because:** Session complete — both product showcases live, work page updated
 **Resume Point:** More blog posts, directory submissions, analytics integration
