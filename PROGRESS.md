@@ -1,11 +1,11 @@
 # PROGRESS.md
 
 ## Project: Volume Systems Website
-**Last Updated:** February 7, 2026
-**Session:** 7
+**Last Updated:** March 9, 2026
+**Session:** 9
 **V1 Progress:** 100% Complete
 **V2 Progress:** Content Pages In Progress
-**Status:** Systems, Digital, About, Contact, Insights (4 posts), Glossary complete; Studio and Work placeholders remaining
+**Status:** Systems, Digital, About, Contact, Insights (5 posts), Glossary complete; Studio (Sentinel + Alliance showcases live), Work (2 case studies live)
 
 **Production URL:** https://volume-systems.vercel.app
 
@@ -25,9 +25,9 @@
 - [x] Footer component (proper touch targets, nav links)
 - [x] Systems page (full content: hero, 4 cards, definitions, 4-step process, who it's for, FAQ, CTA)
 - [x] Digital page (full content: hero, 5 cards, definitions, why it matters, FAQ, CTA)
-- [x] Studio page (placeholder with early access CTA)
+- [x] Studio page (Sentinel + Alliance product showcases)
 - [x] Contact page (placeholder with email link)
-- [x] Work page (placeholder)
+- [x] Work page (2 case studies: Sentinel, Alliance)
 - [x] 404 page
 - [x] SEO setup (unique meta per page, OG, Twitter cards, canonical URLs, JSON-LD)
 - [x] OG image (1200x630 PNG with wordmark, subline, dial rings)
@@ -49,7 +49,7 @@
 - [x] Content: Digital page (full content + definitions + FAQ)
 - [x] Content: About page (7 sections)
 - [x] Contact page form (Resend email integration)
-- [x] Insights blog section (4 posts live)
+- [x] Insights blog section (5 posts live)
 - [x] FAQ sections with JSON-LD FAQPage schema
 - [x] Article JSON-LD schema on blog posts
 - [x] Brand asset kit + /brand page
@@ -59,13 +59,15 @@
 - [x] Internal linking strategy (blog→glossary, service page cross-refs, homepage→insights)
 
 ### Remaining
-- [ ] Write 4-6 more blog posts
+- [ ] Write 3-5 more blog posts
 - [ ] Directory submissions
 - [ ] Page speed optimization
 - [ ] Image optimization (alt tags, compression, lazy loading)
 - [ ] Breadcrumbs
-- [ ] Content: Studio page (when products ready)
-- [ ] Content: Work page (case studies)
+- [x] Content: Studio page (Sentinel showcase + Alliance showcase with VU divider)
+- [x] Content: Work page (data-driven case study cards for Sentinel + Alliance)
+- [x] Favicon restored (custom V in accent color, replaced Vercel default)
+- [x] Studio SEO (updated meta/OG descriptions, JSON-LD Organization + 2 SoftwareApplication schemas)
 - [ ] Analytics integration
 
 ### Separate Projects
@@ -86,10 +88,10 @@
 
 ## Current Focus
 
-**Active Task:** Session 7 complete — New blog post (AI Tools vs AI Systems)
-**Blocked By:** Studio product content, Work page case studies
-**Next Priority:** More blog posts, directory submissions
-**Last Session:** February 7, 2026
+**Active Task:** Session 9 complete — Studio showcases (Sentinel + Alliance), Work page, favicon fix, SEO
+**Blocked By:** None
+**Next Priority:** More blog posts, directory submissions, analytics integration
+**Last Session:** March 9, 2026
 
 ---
 
@@ -97,6 +99,12 @@
 
 | Decision | Rationale | Date |
 |----------|-----------|------|
+| Added Alliance showcase to /studio | Full product showcase: hero, problem, four questions framework, 6 capabilities, outcomes, tech stack, CTA | Mar 9, 2026 |
+| Added Sentinel showcase to /studio | Adapted from standalone JSX: provenance chain, compliance rules, outcomes, tech stack, security posture | Mar 9, 2026 |
+| Updated /work page with case studies | Data-driven card list: Sentinel + Alliance entries with tags, descriptions, links to /studio | Mar 9, 2026 |
+| Restored favicon.ico | Replaced Vercel default with custom V (#5B8A9A on #0A0A0A) at 16/32/48/256px | Mar 9, 2026 |
+| Added Studio SEO + JSON-LD | Updated meta/OG descriptions; Organization schema with 2 SoftwareApplication offers | Mar 9, 2026 |
+| Added "AI Agents Are Coming" blog post | 5th insight post on agentic AI infrastructure readiness; Gartner data, systems thinking, glossary links | Mar 6, 2026 |
 | Added LinkedIn image for AI Tools vs Systems | 1200x1200 SVG+PNG, A/B contrast layout with brand colors | Feb 7, 2026 |
 | Added "AI Tools vs AI Systems" blog post | 4th insight post covering tools vs systems thinking; internal links to glossary + related posts | Feb 7, 2026 |
 | Implemented internal linking strategy | Blog posts link to glossary terms + service CTAs + related posts; Service pages cross-reference each other; Homepage links to /insights | Feb 2, 2026 |
@@ -175,18 +183,19 @@
 ## Open Questions (Remaining)
 
 1. Social media links for footer?
-3. Content/copy for Studio page (product details)?
-4. Case studies to feature on Work page?
-5. Custom domain to configure (volumesystems.io)?
+2. Custom domain to configure (volumesystems.io)?
+3. Alliance — live demo link when ready?
+4. Individual product pages (/studio/sentinel, /studio/alliance) for dedicated SEO?
 
 ---
 
 ## Next Steps (Priority Order)
 
-1. Studio page content (when product details available)
-3. Work page with case studies
-4. Configure custom domain
-5. Add analytics (Vercel Analytics or Plausible)
+1. Write 3-5 more blog posts
+2. Directory submissions
+3. Configure custom domain
+4. Add analytics (Vercel Analytics or Plausible)
+5. Page speed optimization + image optimization
 
 ---
 
@@ -366,6 +375,60 @@
   - Homepage: Added "Read Our Thinking" CTA button linking to /insights
 
 **Stopped Because:** Session complete — glossary and internal linking done
+**Resume Point:** More blog posts, directory submissions
+
+### Session 9 — March 9, 2026
+**Focus:** Studio product showcases (Sentinel + Alliance), Work page, favicon fix, SEO
+
+**Completed:**
+- Sentinel showcase component (src/components/SentinelShowcase.tsx):
+  - Adapted from standalone JSX (sentinel-showcase.jsx) to site design system
+  - All inline styles replaced with Tailwind classes using site color tokens
+  - CSS animations replaced with Framer Motion whileInView patterns
+  - Sections: hero (live badge), problem (3 stat cards), provenance chain (interactive animation), compliance engine (8 MRL rules), outcomes (3 metrics), technology (6 stack cards + security badges), CTA
+  - Provenance chain: IntersectionObserver triggers sequential step activation
+  - Added pulse-travel CSS keyframe to globals.css
+- Alliance showcase component (src/components/AllianceShowcase.tsx):
+  - Built from ALLIANCE-STUDIO-HANDOFF.md, following Sentinel pattern exactly
+  - Sections: hero (V1 Ship-Ready amber badge), problem (3 stat cards), four questions framework (4 cards), key capabilities (6 feature items), outcomes (3 metrics), technology (6 stack cards + hardening badges), CTA
+  - All copy sourced from handoff doc — no invented messaging
+- Studio page (/studio) updated:
+  - Replaced placeholder with SentinelShowcase + VUMeterDivider + AllianceShowcase
+  - Updated meta/OG descriptions: "Purpose-built tools for regulated industries, compliance, and operational infrastructure"
+  - Added JSON-LD: Organization schema with makesOffer array (Sentinel + Alliance as SoftwareApplication)
+- Work page (/work) updated:
+  - Refactored from single card to data-driven case study list
+  - Sentinel: AI Agent, Compliance, Utilities, PropTech tags
+  - Alliance: SaaS, Partnership Intelligence, AI Insights, Analytics tags
+  - Both link to /studio
+- Favicon fix:
+  - Discovered src/app/favicon.ico was Vercel default (white triangle)
+  - src/app/icon.svg was correct (custom V) — modern browsers OK
+  - Regenerated favicon.ico with custom V (#5B8A9A on #0A0A0A) at 16/32/48/256px using Pillow
+- Navigation: Added then removed "Work" from main nav per user preference
+- Sentinel description fix: Corrected Medicare/healthcare references to utility compliance/manufactured housing on /work page
+- Components exported via index.ts: SentinelShowcase, AllianceShowcase
+
+**Stopped Because:** Session complete — both product showcases live, work page updated
+**Resume Point:** More blog posts, directory submissions, analytics integration
+
+### Session 8 — March 6, 2026
+**Focus:** New blog post — "AI Agents Are Coming. Your Infrastructure Isn't Ready."
+
+**Completed:**
+- New blog post: "AI Agents Are Coming. Your Infrastructure Isn't Ready."
+  - Slug: ai-agents-infrastructure
+  - Date: March 6, 2026
+  - Full article covering: agentic AI market data (Gartner/UiPath/ServiceNow/Snowflake), infrastructure readiness gap, bolt-on vs foundation approaches, systems thinking for agents, operator checklist, 3-6 month strategy window
+  - Internal links: glossary terms (ai-agent, data-infrastructure, workflow-automation), /contact CTA
+  - Related Reading: links to "AI Tools vs AI Systems", "Why AI Implementations Fail", and /systems
+  - Added to InsightsContent.tsx posts array (first position — newest)
+  - Added to [slug]/page.tsx metadata with SEO/OG/Article schema
+  - Added AIAgentsInfrastructureContent component to PostContent.tsx
+  - Added to sitemap.ts
+  - Pushed to main, auto-deployed via Vercel
+
+**Stopped Because:** Blog post complete and deployed
 **Resume Point:** More blog posts, directory submissions
 
 ### Session 7 — February 7, 2026
@@ -568,10 +631,10 @@
 │   │   │   └── contact/route.ts  # Resend email API
 │   │   ├── about/           # page.tsx + AboutContent.tsx
 │   │   ├── brand/           # page.tsx + BrandContent.tsx (internal)
-│   │   ├── studio/          # page.tsx + StudioContent.tsx
+│   │   ├── studio/          # page.tsx + StudioContent.tsx (Sentinel + Alliance)
 │   │   ├── systems/         # page.tsx + SystemsContent.tsx
 │   │   ├── digital/         # page.tsx + DigitalContent.tsx
-│   │   ├── work/page.tsx    # Placeholder
+│   │   ├── work/            # page.tsx + WorkContent.tsx (case studies)
 │   │   └── contact/         # page.tsx + ContactContent.tsx (full form)
 │   └── components/
 │       ├── Nav.tsx
@@ -584,6 +647,8 @@
 │       ├── ChannelNumber.tsx      # Mixer channel-style numbers
 │       ├── DialRingsBackground.tsx # Concentric circles background (scroll-reactive)
 │       ├── VolumeMeter.tsx        # LED-style scroll indicator (left side)
+│       ├── SentinelShowcase.tsx   # Sentinel product showcase (provenance chain, compliance)
+│       ├── AllianceShowcase.tsx   # Alliance product showcase (partnership intelligence)
 │       └── index.ts
 ├── public/
 │   ├── og-image.png         # Social sharing image (1200x630)
@@ -631,8 +696,8 @@ AI-optimized "What is..." definitions:
 - Digital: SEO, GEO (Generative Engine Optimization)
 - Systems: Data Infrastructure, Workflow Automation, Revenue Engine, Custom AI Tools
 - Contact: full form (name, email, company, interests, message) + Resend API
-- Studio: placeholder (coming soon)
-- Work: placeholder
+- Studio: Sentinel + Alliance product showcases (full content, JSON-LD schema)
+- Work: 2 case study cards (Sentinel, Alliance) linking to /studio
 
 Contact form:
 - API route at /api/contact using Resend
@@ -641,14 +706,16 @@ Contact form:
 
 Insights blog (/insights):
 - Index page with post cards
-- 4 posts: ai-tools-vs-ai-systems, what-is-geo, why-ai-implementations-fail, seo-is-dead-long-live-seo
+- 5 posts: ai-agents-infrastructure, ai-tools-vs-ai-systems, what-is-geo, why-ai-implementations-fail, seo-is-dead-long-live-seo
 - Dynamic route with full article layout
 - Footer link added (not in main nav)
 
 SEO infrastructure:
 - Unique meta per page, OG tags, Twitter cards, canonical URLs
 - sitemap.xml and robots.txt auto-generated (11 pages including insights)
-- JSON-LD schemas: Organization (homepage), FAQPage (Digital, Systems), Article (blog posts)
+- JSON-LD schemas: Organization (homepage), Organization+SoftwareApplication (studio), FAQPage (Digital, Systems), Article (blog posts)
+- sitemap includes 13 pages (added ai-agents-infrastructure)
+- Favicon: custom V in accent color (ico + svg)
 - OG image: 1200x630 PNG (SVG source, 120px/36px text)
 
 Visual elements:
@@ -665,16 +732,13 @@ Brand assets (/public/brand/):
 - Download page: /brand (internal, not in nav)
 
 Remaining work:
-- Write 5-7 more blog posts
-- Internal linking strategy across all pages
-- Glossary page (/glossary)
+- Write 3-5 more blog posts
 - Directory submissions
 - Page speed optimization
 - Image optimization (alt tags, compression, lazy loading)
 - Breadcrumbs
-- Studio page content (when products ready)
-- Work/case studies page
 - Analytics integration
+- Configure custom domain
 - LinkedIn content engine (separate project)
 ```
 
