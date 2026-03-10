@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+  <rect width="1200" height="1200" fill="#0A0A0A"/>
+
+  <!-- Bold statement, centered -->
+  <text x="600" y="580" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="88" font-weight="700">
+    More tools
+  </text>
+  <text x="600" y="690" text-anchor="middle" fill="#5B8A9A" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="88" font-weight="700">
+    ≠
+  </text>
+  <text x="600" y="800" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="88" font-weight="700">
+    more progress.
+  </text>
+
+  <!-- Volume Systems wordmark -->
+  <text x="600" y="1120" text-anchor="middle" fill="#555555" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="20" font-weight="500" letter-spacing="3">VOLUME SYSTEMS</text>
+</svg>
